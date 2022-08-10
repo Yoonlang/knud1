@@ -80,3 +80,28 @@ export { calcDist, getPosOfRightAnglePoints };
 //   ctx.lineTo(endPoints.x1, endPoints.y1);
 //   ctx.fill();
 // };
+
+// var now = 0;
+// const update = () => {
+//   if (!ctx) return;
+//   drawLineGradation(
+//     ctx,
+//     127,
+//     56,
+//     127,
+//     368,
+//     51,
+//     {
+//       first: 14,
+//       mid: 255,
+//       last: 37,
+//     },
+//     1400,
+//     0,
+//     now
+//   );
+//   const animation = requestAnimationFrame(update);
+//   now++;
+//   // cancelAnimationFrame(animation);
+// };
+// update();
