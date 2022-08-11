@@ -285,8 +285,8 @@ const MainIcon = () => {
           position: absolute;
           top: 0;
           left: 0;
-          width: 400px;
-          height: 400px;
+          width: 300px;
+          height: 300px;
         }
       `}</style>
     </>
