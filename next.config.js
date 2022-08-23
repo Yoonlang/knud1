@@ -4,10 +4,10 @@ const nextConfig = {
   pageExtensions: ['tsx'],
   trailingSlash: false,
   experimental: {
-    styledComponents: true,
     images: {
       allowFutureImage: true
-    }
+    },
+    styledComponents: true,
   },
 };
 

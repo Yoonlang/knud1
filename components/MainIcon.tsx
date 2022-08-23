@@ -241,7 +241,7 @@ const MainIcon = () => {
       now++;
       if (now > (2000 / 1000) * 60) cancelAnimationFrame(animation);
     };
-    update();
+    // update();
   }, []);
 
   useEffect(() => {
@@ -272,9 +272,9 @@ const MainIcon = () => {
   return (
     <>
       <div className="canvasDiv">
-        <canvas ref={canvasGradation} width="1920" height="1080"></canvas>
+        {/* <canvas ref={canvasGradation} width="1920" height="1080"></canvas> */}
         <canvas ref={canvasCurtain} width="1920" height="1080"></canvas>
-        <canvas ref={canvasUpper} width="1920" height="1080"></canvas>
+        {/* <canvas ref={canvasUpper} width="1920" height="1080"></canvas> */}
       </div>
       <style jsx>{`
         .canvasDiv {
@@ -284,9 +284,9 @@ const MainIcon = () => {
         canvas {
           position: absolute;
           top: 0;
-          left: 0;
+          right: 0;
           width: 300px;
-          height: 300px;
+          height: 800px;
         }
       `}</style>
     </>
