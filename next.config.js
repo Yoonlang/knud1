@@ -5,6 +5,9 @@ const nextConfig = {
   trailingSlash: false,
   experimental: {
     styledComponents: true,
+    images: {
+      allowFutureImage: true
+    }
   },
 };
 
