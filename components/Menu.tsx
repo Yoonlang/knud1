@@ -38,11 +38,11 @@ const Menu = () => {
           height={50}
         />
       </MenuButton>
-      <SideBar isOpen={isMenuOpen}>
+      <SideBar className={isMenuOpen ? 'open' : 'close'}>
         {linkList.map(({ linkText, href }, index) => {
           return (
             <Link href={href} passHref key={index}>
-              <MenuLink isOpen={isMenuOpen} main={href === router.asPath ? true : false}>
+              <MenuLink isOpen={isMenuOpen} main={href === router.asPath}>
                 {linkText}
               </MenuLink>
             </Link>
@@ -77,29 +77,34 @@ interface MenuImageProps {
 
 const MenuImage = styled(Image)<MenuImageProps>`
   display: ${(props) => (props.isOpen ? 'none' : 'flex')};
-  min-width: 50px !important;
-  min-height: 50px !important;
+  min-width: 50px;
+  min-height: 50px;
 `;
 
-interface SideBarProps {
-  isOpen: boolean;
-}
-
-const SideBar = styled.div<SideBarProps>`
+const SideBar = styled.div`
   display: flex;
-  visibility: ${(props) => (props.isOpen ? 'visible' : 'hidden')};
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 0;
   left: calc(100vw - 195px);
-  width: ${(props) => (props.isOpen ? '195px' : '245px')};
-  height: ${(props) => (props.isOpen ? '100vh' : 'calc(100vh + 100px)')};
   background: #fff;
-  opacity: ${(props) => (props.isOpen ? '1' : '0')};
   gap: 40px;
   transition: 0.5s;
+
+  &.open {
+    visibility: visible;
+    width: 195px;
+    height: 100vh;
+    opacity: 1;
+  }
+  &.close {
+    visibility: hidden;
+    width: 245px;
+    height: calc(100vh + 100px);
+    opacity: 0;
+  }
 `;
 
 interface MenuLinkProps {
