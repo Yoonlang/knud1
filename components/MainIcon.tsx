@@ -178,9 +178,9 @@ const MainIcon = () => {
     const update = () => {
       if (!ctx) return;
       //1
-      drawLine(ctx, 127, 53, 127, 108, 51, 200, 0, now);
+      drawLine(ctx, 127, 0, 127, 112, 51, 200, 0, now);
       drawCircle(ctx, 81, 102, 46, 51, 0, 0.3, 100, 200, now);
-      drawLine(ctx, 116, 132, 56, 204, 51, 200, 300, now);
+      drawLine(ctx, 116, 132, 56, 254, 51, 200, 300, now);
 
       //2
       drawLine(ctx, 197, 70.2, 321, 70.2, 35, 200, 500, now);
@@ -281,7 +281,6 @@ const MainIcon = () => {
 
 const CanvasDiv = styled.div`
   display: flex;
-  overflow: hidden;
 `;
 
 const Canvas = styled.canvas`

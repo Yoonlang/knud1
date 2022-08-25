@@ -6,14 +6,7 @@ import menuWhite from '../public/menuWhite.png';
 import cancel from '../public/cancel.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-const linkList = [
-  { linkText: 'Home', href: '/' },
-  { linkText: 'Identity', href: '/test' },
-  { linkText: 'Archive', href: '/test1' },
-  { linkText: 'Teams', href: '/test' },
-  { linkText: 'Thanks to', href: '/test' },
-];
+import { linkList } from '../others/linkList';
 
 const Menu = () => {
   const router = useRouter();
@@ -69,6 +62,10 @@ const MenuButton = styled.button`
   cursor: pointer;
   width: 30px;
   height: 30px;
+
+  @media (min-width: 1024px) {
+    display: none;
+  } ;
 `;
 
 interface MenuImageProps {
@@ -105,6 +102,9 @@ const SideBar = styled.div`
     height: calc(100vh + 100px);
     opacity: 0;
   }
+  @media (min-width: 1024px) {
+    display: none;
+  } ;
 `;
 
 interface MenuLinkProps {
@@ -120,6 +120,8 @@ const MenuLink = styled.a<MenuLinkProps>`
   font-size: 24px;
   letter-spacing: 0;
   line-height: 1.8;
+  transform: ${(props) => (props.isOpen ? 'scale(1)' : 'scale(1.2)')};
+  transition: 0.5s;
 `;
 
 export default Menu;
