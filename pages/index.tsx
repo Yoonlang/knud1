@@ -3,15 +3,15 @@ import MainIcon from '../components/MainIcon';
 import Menu from '../components/Menu';
 import styled from 'styled-components';
 import Nav from '../components/Nav';
-import Images from '../components/Images';
+import Works from '../components/Works';
 
 const Home: NextPage = () => {
   return (
     <Page>
-      {/* <MainIcon /> */}
+      <MainIcon />
       <Nav />
       <Menu />
-      <Images />
+      <Works />
     </Page>
   );
 };
