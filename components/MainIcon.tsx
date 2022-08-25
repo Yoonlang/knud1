@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import styled from 'styled-components';
 
 interface drawLineFunc {
   (
@@ -241,7 +242,7 @@ const MainIcon = () => {
       now++;
       if (now > (2000 / 1000) * 60) cancelAnimationFrame(animation);
     };
-    // update();
+    update();
   }, []);
 
   useEffect(() => {
@@ -270,27 +271,25 @@ const MainIcon = () => {
   }, []);
 
   return (
-    <>
-      <div className="canvasDiv">
-        {/* <canvas ref={canvasGradation} width="1920" height="1080"></canvas> */}
-        <canvas ref={canvasCurtain} width="1920" height="1080"></canvas>
-        {/* <canvas ref={canvasUpper} width="1920" height="1080"></canvas> */}
-      </div>
-      <style jsx>{`
-        .canvasDiv {
-          display: flex;
-          overflow: hidden;
-        }
-        canvas {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 300px;
-          height: 800px;
-        }
-      `}</style>
-    </>
+    <CanvasDiv>
+      <Canvas ref={canvasGradation} width="1920" height="1080"></Canvas>
+      <Canvas ref={canvasCurtain} width="1920" height="1080"></Canvas>
+      <Canvas ref={canvasUpper} width="1920" height="1080"></Canvas>
+    </CanvasDiv>
   );
 };
+
+const CanvasDiv = styled.div`
+  display: flex;
+  overflow: hidden;
+`;
+
+const Canvas = styled.canvas`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+`;
 
 export default MainIcon;
