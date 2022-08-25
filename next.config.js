@@ -4,6 +4,9 @@ const nextConfig = {
   pageExtensions: ['tsx'],
   trailingSlash: false,
   experimental: {
+    images: {
+      allowFutureImage: true
+    },
     styledComponents: true,
   },
 };
