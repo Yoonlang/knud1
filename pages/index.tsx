@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import MainIcon from '../components/MainIcon';
+import Menu from '../components/Menu';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <MainIcon />
+      <Menu />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
