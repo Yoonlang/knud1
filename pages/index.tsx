@@ -1,29 +1,31 @@
 import type { NextPage } from 'next';
-import MainIcon from '../components/MainIcon';
 import Menu from '../components/Menu';
 import styled from 'styled-components';
-import Nav from '../components/Nav';
-import Works from '../components/Works';
+import Rotates from '../components/Rotates';
 
 const Home: NextPage = () => {
   return (
     <Page>
-      <MainIcon />
-      <Nav />
       <Menu />
-      <Works />
+      <Rotates />
     </Page>
   );
 };
 
 const Page = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   background: #000;
-
-  @media (min-width: 1024px) {
-    /* transform: rotate(-15deg); */
-  }
 `;
+
+// const Limit = styled.div`
+//   display: flex;
+//   max-width: 1920px;
+//   max-height: 1000px; // 이건 임시
+//   overflow: hidden;
+// `;
 
 export default Home;
