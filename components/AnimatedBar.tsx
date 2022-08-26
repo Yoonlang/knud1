@@ -48,7 +48,7 @@ const BlockBar = styled.div`
   width: 100%;
   height: 27px;
   background: #000;
-  animation: ${moveToRight} 3.5s linear forwards;
+  animation: ${moveToRight} 1.5s linear forwards;
 `;
 
 const GradationColBar = styled.div`
@@ -74,7 +74,7 @@ const BlockColBar = styled.div`
   height: 200%;
   background: #000;
   transform: translate(-69px, -400px);
-  animation: ${moveToBottom} 1.6s linear forwards;
+  animation: ${moveToBottom} 0.7s linear forwards;
 `;
 
 export { AnimatedBar, AnimatedColBar };

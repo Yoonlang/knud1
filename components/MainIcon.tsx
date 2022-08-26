@@ -64,6 +64,8 @@ interface clearRectFunc {
 
 const drawLine: drawLineFunc = (ctx, x1, y1, x2, y2, bold, time, startTime, now) => {
   if (!ctx) return;
+  time /= 2;
+  startTime /= 2;
   const pieces = (time / 1000) * 60;
   const speed = now - (startTime / 1000) * 60;
   if (now / 60 < startTime / 1000) return;
@@ -89,6 +91,8 @@ const drawLine: drawLineFunc = (ctx, x1, y1, x2, y2, bold, time, startTime, now)
 
 const drawCircle: drawCircleFunc = (ctx, x, y, radius, bold, start, end, time, startTime, now, reverse = false) => {
   if (!ctx) return;
+  time /= 2;
+  startTime /= 2;
   const pieces = (time / 1000) * 60;
   const speed = now - (startTime / 1000) * 60;
   if (now / 60 < startTime / 1000) return;
@@ -126,6 +130,8 @@ const drawEllipse: drawEllipseFunc = (
   reverse = false
 ) => {
   if (!ctx) return;
+  time /= 2;
+  startTime /= 2;
   const pieces = (time / 1000) * 60;
   const speed = now - (startTime / 1000) * 60;
   if (now / 60 < startTime / 1000) return;
@@ -153,6 +159,8 @@ const drawEllipse: drawEllipseFunc = (
 
 const clearRect: clearRectFunc = (ctx, x1, y1, x2, y2, isCol, time, startTime, now) => {
   if (!ctx) return;
+  time /= 2;
+  startTime /= 2;
   const pieces = (time / 1000) * 60;
   const speed = now - (startTime / 1000) * 60;
   if (now / 60 < startTime / 1000) return;
