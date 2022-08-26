@@ -62,7 +62,7 @@ const MenuButton = styled.button`
   cursor: pointer;
   width: 30px;
   height: 30px;
-
+  z-index: 1;
   @media (min-width: 1024px) {
     display: none;
   } ;
@@ -89,7 +89,7 @@ const SideBar = styled.div`
   background: #fff;
   gap: 40px;
   transition: 0.5s;
-
+  z-index: 1;
   &.open {
     visibility: visible;
     width: 195px;

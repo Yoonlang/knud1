@@ -9,12 +9,15 @@ const AnimatedBar = () => {
   );
 };
 
-const AnimatedColBar = () => {
+interface AnimatedColBarProps {
+  mobile?: boolean;
+}
+
+const AnimatedColBar = ({ mobile = false }: AnimatedColBarProps) => {
   return (
-    <>
-      <GradationColBar />
-      <BlockColBar />
-    </>
+    <ColBarContainer className={mobile ? 'mobile' : ''}>
+      <GradationColBar className={mobile ? 'mobileGradation' : ''} />
+    </ColBarContainer>
   );
 };
 
@@ -51,28 +54,49 @@ const BlockBar = styled.div`
   animation: ${moveToRight} 1.5s linear forwards;
 `;
 
-const GradationColBar = styled.div`
-  position: absolute;
-  width: 70px;
-  height: 200%;
-  background: linear-gradient(to bottom, #000, #494949, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
-  transform: translate(-69px, -400px);
+const ColBarContainer = styled.div`
+  &.mobile {
+    transform: translate(100px);
+    z-index: 2;
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+  &.mobile > div {
+    width: 36px;
+    height: 100%;
+    transform: translate(-63px);
+  }
+  &.mobile > .mobileGradation {
+    mix-blend-mode: hard-light;
+    background: none;
+  }
+  &.mobile > .mobileGradation::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #000, transparent, #fff, #fff, #fff, #fff);
+  }
 `;
 
 const moveToBottom = keyframes`
 0%{
-  top: 0;
+  top: -150%;
+  opacity: 0;
 }
 100%{
-  top: 200%;
+  top: 0;
 }
 `;
 
-const BlockColBar = styled.div`
+const GradationColBar = styled.div`
   position: absolute;
   width: 70px;
-  height: 200%;
-  background: #000;
+  height: 150%;
+  background: linear-gradient(to bottom, #000, #494949, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
   transform: translate(-69px, -400px);
   animation: ${moveToBottom} 0.7s linear forwards;
 `;
