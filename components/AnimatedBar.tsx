@@ -9,6 +9,15 @@ const AnimatedBar = () => {
   );
 };
 
+const AnimatedColBar = () => {
+  return (
+    <>
+      <GradationColBar />
+      <BlockColBar />
+    </>
+  );
+};
+
 const BarContainer = styled.div`
   display: flex;
   position: relative;
@@ -18,16 +27,17 @@ const BarContainer = styled.div`
 
 const GradationBar = styled.div`
   width: 200%;
-  height: 25px;
-  background: linear-gradient(to right, #000, #eee, #fff, #fff, #fff);
+  height: 20px;
+  background: linear-gradient(to right, #000, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
+  margin-left: 1px;
 `;
 
-const move = keyframes`
+const moveToRight = keyframes`
 0%{
-    left: 0;
+  left: 0;
 }
 100%{
-    left: 200%;
+  left: 200%;
 }
 `;
 
@@ -38,7 +48,33 @@ const BlockBar = styled.div`
   width: 100%;
   height: 27px;
   background: #000;
-  animation: ${move} 1.6s linear forwards;
+  animation: ${moveToRight} 3.5s linear forwards;
 `;
 
-export default AnimatedBar;
+const GradationColBar = styled.div`
+  position: absolute;
+  width: 70px;
+  height: 200%;
+  background: linear-gradient(to bottom, #000, #494949, #fff, #fff, #fff, #fff, #fff, #fff, #fff);
+  transform: translate(-69px, -400px);
+`;
+
+const moveToBottom = keyframes`
+0%{
+  top: 0;
+}
+100%{
+  top: 200%;
+}
+`;
+
+const BlockColBar = styled.div`
+  position: absolute;
+  width: 70px;
+  height: 200%;
+  background: #000;
+  transform: translate(-69px, -400px);
+  animation: ${moveToBottom} 1.6s linear forwards;
+`;
+
+export { AnimatedBar, AnimatedColBar };

@@ -24,7 +24,7 @@ const NavDiv = styled.div`
   width: 100%;
   height: 50px;
   gap: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding-left: 20%;
 `;
 

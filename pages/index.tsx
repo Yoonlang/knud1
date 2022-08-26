@@ -6,8 +6,10 @@ import Rotates from '../components/Rotates';
 const Home: NextPage = () => {
   return (
     <Page>
-      <Menu />
-      <Rotates />
+      <Limit>
+        <Menu />
+        <Rotates />
+      </Limit>
     </Page>
   );
 };
@@ -21,11 +23,13 @@ const Page = styled.div`
   background: #000;
 `;
 
-// const Limit = styled.div`
-//   display: flex;
-//   max-width: 1920px;
-//   max-height: 1000px; // 이건 임시
-//   overflow: hidden;
-// `;
+const Limit = styled.div`
+  display: flex;
+  width: 100%;
+  height: 150%;
+  max-width: 1920px;
+  padding: 290px 0 0 290px;
+  overflow: hidden;
+`;
 
 export default Home;

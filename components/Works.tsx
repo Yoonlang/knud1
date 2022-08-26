@@ -15,7 +15,7 @@ const WorksDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 130%;
-  height: 100%;
+  height: 130%;
   overflow: scroll;
 `;
 
