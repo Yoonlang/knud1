@@ -11,7 +11,8 @@ interface drawLineFunc {
     bold: number,
     time: number,
     startTime: number,
-    now: number
+    now: number,
+    gradient?: CanvasGradient
   ): void;
 }
 
@@ -25,7 +26,11 @@ interface drawGradientFunc {
     colorsAtPoint: {
       point: number;
       color: string;
-    }[]
+    }[],
+    bold: number,
+    time: number,
+    startTime: number,
+    now: number
   ): void;
 }
 
@@ -76,7 +81,7 @@ interface clearRectFunc {
   ): void;
 }
 
-const drawLine: drawLineFunc = (ctx, x1, y1, x2, y2, bold, time, startTime, now) => {
+const drawLine: drawLineFunc = (ctx, x1, y1, x2, y2, bold, time, startTime, now, gradient) => {
   if (!ctx) return;
   time /= 2;
   startTime /= 2;
@@ -89,7 +94,8 @@ const drawLine: drawLineFunc = (ctx, x1, y1, x2, y2, bold, time, startTime, now)
   x2 *= 2;
   y2 *= 2;
   bold = bold * 2;
-  ctx.strokeStyle = '#fff';
+  console.log(gradient);
+  ctx.strokeStyle = gradient ? gradient : '#fff';
   ctx.lineWidth = bold;
   ctx.beginPath();
   ctx.moveTo(
@@ -101,15 +107,6 @@ const drawLine: drawLineFunc = (ctx, x1, y1, x2, y2, bold, time, startTime, now)
     y1 * ((pieces - speed - 1.25) / pieces) + y2 * ((speed + 1.25) / pieces)
   );
   ctx.stroke();
-};
-
-const drawGradientLine: drawGradientFunc = (ctx, x1, y1, x2, y2, colorsAtPoint) => {
-  if (!ctx) return;
-  const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
-  colorsAtPoint.forEach(({ point, color }) => {
-    gradient.addColorStop(point, color);
-  });
-  ctx.strokeStyle = gradient;
 };
 
 const drawCircle: drawCircleFunc = (ctx, x, y, radius, bold, start, end, time, startTime, now, reverse = false) => {
@@ -216,8 +213,6 @@ interface MainIconProps {
 const MainIcon = ({ mobile = false }: MainIconProps) => {
   const canvasOne = useRef<HTMLCanvasElement>(null);
   const canvasUpper = useRef<HTMLCanvasElement>(null);
-  const canvasGradation = useRef<HTMLCanvasElement>(null);
-  const canvasCurtain = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     if (!canvasOne.current) return;
@@ -262,6 +257,12 @@ const MainIcon = ({ mobile = false }: MainIconProps) => {
       drawLine(ctx, 363, 318 - 80, 363, 359 - 80, 20, 200, 1400, now);
       drawLine(ctx, 354, 350 - 80, 408, 350 - 80, 20, 100, 1600, now);
 
+      const gradient = ctx.createLinearGradient(408 * 2, 270 * 2, 508 * 2, 270 * 2);
+      gradient.addColorStop(0, '#fff');
+      gradient.addColorStop(0.5, '#000');
+      gradient.addColorStop(1, '#fff');
+      drawLine(ctx, 408, 270, 505, 270, 20, 300, 1700, now, gradient);
+
       // //6
       drawLine(ctx, 505, 350 - 80, 523, 350 - 80, 20, 100, 2000, now);
       drawCircle(ctx, 523.5, 360.5 - 80, 10, 21, -0.5, 0, 100, 2100, now);
@@ -285,51 +286,9 @@ const MainIcon = ({ mobile = false }: MainIconProps) => {
     update();
   }, []);
 
-  useEffect(() => {
-    if (!canvasCurtain.current) return;
-    const canvas: HTMLCanvasElement = canvasCurtain.current;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    ctx.fillStyle = '#000';
-    ctx.beginPath();
-    ctx.moveTo(408 * 2, 259 * 2);
-    ctx.lineTo(408 * 2, 281 * 2);
-    ctx.lineTo(506 * 2, 281 * 2);
-    ctx.lineTo(506 * 2, 259 * 2);
-    ctx.fill();
-
-    var now = 0;
-    const update = () => {
-      clearRect(ctx, 408, 260, 506, 280, false, 300, 1700, now);
-      const animation = requestAnimationFrame(update);
-      now++;
-      if (now > (2100 / 1000) * 60) cancelAnimationFrame(animation);
-    };
-    update();
-  }, []);
-
-  useEffect(() => {
-    if (!canvasGradation.current) return;
-    const canvas: HTMLCanvasElement = canvasGradation.current;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const gradientOne = ctx.createLinearGradient(408 * 2, 0, 506 * 2, 0);
-    gradientOne.addColorStop(0.1, '#fff');
-    gradientOne.addColorStop(0.4, '#444');
-    gradientOne.addColorStop(0.5, '#000');
-    gradientOne.addColorStop(0.6, '#444');
-    gradientOne.addColorStop(0.9, '#fff');
-    ctx.fillStyle = gradientOne;
-    ctx.fillRect(408 * 2, 260 * 2, 98 * 2, 20 * 2);
-  }, []);
-
   return (
     <>
       <CanvasDiv className={mobile ? 'mobile' : 'PC'}>
-        <Canvas ref={canvasGradation} width="1920" height="1080"></Canvas>
-        <Canvas ref={canvasCurtain} width="1920" height="1080"></Canvas>
         <Canvas ref={canvasUpper} width="1920" height="1080"></Canvas>
       </CanvasDiv>
       <CanvasOneDiv className={mobile ? 'mobile' : 'PC'}>
@@ -378,7 +337,7 @@ const Canvas = styled.canvas`
   top: 0;
   left: 0;
   width: 960px;
-  /* pointer-events: none; */
+  pointer-events: none;
 `;
 
 export default MainIcon;
