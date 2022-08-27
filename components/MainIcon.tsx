@@ -16,24 +16,6 @@ interface drawLineFunc {
   ): void;
 }
 
-interface drawGradientFunc {
-  (
-    ctx: CanvasRenderingContext2D | null,
-    x1: number,
-    y1: number,
-    x2: number,
-    y2: number,
-    colorsAtPoint: {
-      point: number;
-      color: string;
-    }[],
-    bold: number,
-    time: number,
-    startTime: number,
-    now: number
-  ): void;
-}
-
 interface drawCircleFunc {
   (
     ctx: CanvasRenderingContext2D | null,
@@ -94,7 +76,6 @@ const drawLine: drawLineFunc = (ctx, x1, y1, x2, y2, bold, time, startTime, now,
   x2 *= 2;
   y2 *= 2;
   bold = bold * 2;
-  console.log(gradient);
   ctx.strokeStyle = gradient ? gradient : '#fff';
   ctx.lineWidth = bold;
   ctx.beginPath();
@@ -224,9 +205,9 @@ const MainIcon = ({ mobile = false }: MainIconProps) => {
     const update = () => {
       if (!ctx) return;
       //1
-      drawLine(ctx, 278, 0, 278, 103, 70, 200, 0, now);
-      drawCircle(ctx, 243, 104, 35, 70, 0, 0.3, 100, 200, now);
-      drawLine(ctx, 272, 124, 136, 302, 70, 200, 300, now);
+      drawLine(ctx, 278, 0, 278, 103, 70, 400, 0, now);
+      drawCircle(ctx, 243, 104, 35, 70, 0, 0.3, 200, 400, now);
+      drawLine(ctx, 272, 124, 136, 302, 70, 400, 600, now);
       now++;
       const animation = requestAnimationFrame(update);
       if (now >= (600 / 1000) * 60) cancelAnimationFrame(animation);
@@ -254,7 +235,7 @@ const MainIcon = ({ mobile = false }: MainIconProps) => {
       drawLine(ctx, 421, 309 - 80, 374, 309 - 80, 20, 200, 1100, now);
       drawCircle(ctx, 373.5, 319.5 - 80, 10, 21, -0.5, -1, 100, 1300, now, true);
       // drawEllipse(ctx, 228, 169, 9, 7.5, 5, -0.5, -1.1, 100, 1300, now, true);
-      drawLine(ctx, 363, 318 - 80, 363, 359 - 80, 20, 200, 1400, now);
+      drawLine(ctx, 363, 318 - 80, 363, 358 - 80, 20, 200, 1400, now);
       drawLine(ctx, 354, 350 - 80, 408, 350 - 80, 20, 100, 1600, now);
 
       const gradient = ctx.createLinearGradient(408 * 2, 270 * 2, 508 * 2, 270 * 2);
@@ -311,7 +292,12 @@ const CanvasDiv = styled.div`
     width: 500px;
   }
   &.PC {
-    transform: translate(-312px, -295px);
+    @media (max-width: 1599px) {
+      transform: translate(-312px, -365px);
+    }
+    @media (min-width: 1600px) {
+      transform: translate(-312px, -295px);
+    }
   }
 `;
 

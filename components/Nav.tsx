@@ -23,9 +23,14 @@ const NavDiv = styled.div`
   align-items: center;
   width: 100%;
   height: 50px;
-  gap: 50px;
+  gap: 40px;
   margin-bottom: 30px;
-  padding-left: 20%;
+  @media (max-width: 1599px) {
+    padding-left: 5%;
+  }
+  @media (min-width: 1600px) {
+    padding-left: 22%;
+  }
 `;
 
 const MenuLink = styled.a`

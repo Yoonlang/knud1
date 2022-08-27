@@ -19,7 +19,7 @@ const WorksDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 130%;
-  height: 130%;
+  height: 100%;
   overflow: scroll;
   &.mobile {
     width: 100%;
