@@ -1,21 +1,29 @@
 import type { NextPage } from 'next';
 import Menu from '../components/Menu';
 import styled from 'styled-components';
-import Rotates from '../components/Rotates';
 import MainIcon from '../components/MainIcon';
-import { AnimatedColBar } from '../components/AnimatedBar';
+import { AnimatedBar, AnimatedColBar } from '../components/AnimatedBar';
 import Works from '../components/Works';
+import Nav from '../components/Nav';
 
 const Home: NextPage = () => {
   return (
     <Page>
-      <Menu />
-      <MainIcon mobile />
-      <AnimatedColBar mobile />
-      <Works mobile />
-      <Limit>
-        <Rotates />
-      </Limit>
+      <Mobile>
+        <Menu />
+        <MainIcon />
+        <AnimatedColBar mobile />
+        <Works mobile />
+      </Mobile>
+      <PC>
+        <Rotate>
+          <MainIcon />
+          <Nav />
+          <AnimatedBar />
+          <AnimatedColBar />
+          <Works />
+        </Rotate>
+      </PC>
     </Page>
   );
 };
@@ -29,7 +37,25 @@ const Page = styled.div`
   background: #000;
 `;
 
-const Limit = styled.div`
+const Mobile = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+`;
+
+const Rotate = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transform-origin: left top;
+`;
+
+const PC = styled.div`
   display: flex;
   width: 100%;
   height: 200%;
@@ -40,9 +66,15 @@ const Limit = styled.div`
   }
   @media (max-width: 1599px) {
     padding: 210px 0 0 200px;
+    ${Rotate} {
+      transform: rotate(-15deg) scale(0.8);
+    }
   }
   @media (min-width: 1600px) {
     padding: 290px 0 0 290px;
+    ${Rotate} {
+      transform: rotate(-15deg);
+    }
   }
 `;
 

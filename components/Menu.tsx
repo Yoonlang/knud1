@@ -63,9 +63,6 @@ const MenuButton = styled.button`
   width: 30px;
   height: 30px;
   z-index: 1;
-  @media (min-width: 1024px) {
-    display: none;
-  } ;
 `;
 
 interface MenuImageProps {
@@ -102,9 +99,6 @@ const SideBar = styled.div`
     height: calc(100vh + 100px);
     opacity: 0;
   }
-  @media (min-width: 1024px) {
-    display: none;
-  } ;
 `;
 
 interface MenuLinkProps {

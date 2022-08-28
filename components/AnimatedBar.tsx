@@ -1,5 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
+interface AnimatedColBarProps {
+  mobile?: boolean;
+}
+
 const AnimatedBar: React.FC = () => {
   return (
     <BarContainer>
@@ -8,10 +12,6 @@ const AnimatedBar: React.FC = () => {
     </BarContainer>
   );
 };
-
-interface AnimatedColBarProps {
-  mobile?: boolean;
-}
 
 const AnimatedColBar: React.FC<AnimatedColBarProps> = ({ mobile = false }) => {
   return (
