@@ -4,7 +4,7 @@ import Works from '../components/Works';
 import { AnimatedBar, AnimatedColBar } from './AnimatedBar';
 import MainIcon from './MainIcon';
 
-const Rotates = () => {
+const Rotates: React.FC = () => {
   return (
     <Rotate>
       <MainIcon />

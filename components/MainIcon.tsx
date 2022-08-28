@@ -191,7 +191,7 @@ interface MainIconProps {
   mobile?: boolean;
 }
 
-const MainIcon = ({ mobile = false }: MainIconProps) => {
+const MainIcon: React.FC<MainIconProps> = ({ mobile = false }) => {
   const canvasOne = useRef<HTMLCanvasElement>(null);
   const canvasUpper = useRef<HTMLCanvasElement>(null);
 

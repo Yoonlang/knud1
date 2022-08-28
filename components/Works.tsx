@@ -6,7 +6,7 @@ interface WorksProps {
   mobile?: boolean;
 }
 
-const Works = ({ mobile }: WorksProps) => {
+const Works: React.FC<WorksProps> = ({ mobile }) => {
   return (
     <WorksDiv className={mobile ? 'mobile' : ''}>
       <Work src={ice} />

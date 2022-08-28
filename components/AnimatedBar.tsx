@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-const AnimatedBar = () => {
+const AnimatedBar: React.FC = () => {
   return (
     <BarContainer>
       <GradationBar />
@@ -13,7 +13,7 @@ interface AnimatedColBarProps {
   mobile?: boolean;
 }
 
-const AnimatedColBar = ({ mobile = false }: AnimatedColBarProps) => {
+const AnimatedColBar: React.FC<AnimatedColBarProps> = ({ mobile = false }) => {
   return (
     <ColBarContainer className={mobile ? 'mobile' : ''}>
       <GradationColBar className={mobile ? 'mobileGradation' : ''} />

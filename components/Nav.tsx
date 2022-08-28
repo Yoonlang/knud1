@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import styled from 'styled-components';
 import { linkList } from '../others/linkList';
 
-const Nav = () => {
+const Nav: React.FC = () => {
   return (
     <NavDiv>
       {linkList.map(({ href, linkText }, index) => {
