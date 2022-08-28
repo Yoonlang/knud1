@@ -1,8 +1,8 @@
 import Image from 'next/future/image';
 import { useState } from 'react';
-import menuGreen from '../public/menuGreen.png';
-import menuWhite from '../public/menuWhite.png';
-import cancel from '../public/cancel.png';
+import menuGreen from '../../public/menuGreen.png';
+import menuWhite from '../../public/menuWhite.png';
+import cancel from '../../public/cancel.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { linkList } from '../../others/linkList';
