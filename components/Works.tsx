@@ -2,13 +2,9 @@ import Image from 'next/future/image';
 import styled from 'styled-components';
 import ice from '../public/ice.jpeg';
 
-interface WorksProps {
-  mobile?: boolean;
-}
-
-const Works: React.FC<WorksProps> = ({ mobile }) => {
+const Works: React.FC = () => {
   return (
-    <WorksDiv className={mobile ? 'mobile' : ''}>
+    <WorksDiv>
       <Work src={ice} />
       <Work src={ice} />
     </WorksDiv>
@@ -21,17 +17,14 @@ const WorksDiv = styled.div`
   width: 130%;
   height: 100%;
   overflow: scroll;
-  &.mobile {
+  @media (max-width: 1023px) {
     width: 100%;
     height: 100vh;
     background: #000;
     z-index: 0;
-    @media (min-width: 1024px) {
-      display: none;
+    & > img {
+      opacity: 0.5;
     }
-  }
-  &.mobile > img {
-    opacity: 0.5;
   }
 `;
 

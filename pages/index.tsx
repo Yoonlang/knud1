@@ -12,8 +12,8 @@ const Home: NextPage = () => {
       <Mobile>
         <Menu />
         <MainIcon />
-        <AnimatedColBar mobile />
-        <Works mobile />
+        <AnimatedColBar />
+        <Works />
       </Mobile>
       <PC>
         <Rotate>
