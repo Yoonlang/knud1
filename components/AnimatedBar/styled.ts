@@ -1,22 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-const AnimatedBar: React.FC = () => {
-  return (
-    <BarContainer>
-      <GradationBar />
-      <BlockBar />
-    </BarContainer>
-  );
-};
-
-const AnimatedColBar: React.FC = () => {
-  return (
-    <ColBarContainer>
-      <GradationColBar />
-    </ColBarContainer>
-  );
-};
-
 const BarContainer = styled.div`
   display: flex;
   position: relative;
@@ -95,4 +78,4 @@ const GradationColBar = styled.div`
   }
 `;
 
-export { AnimatedBar, AnimatedColBar };
+export { BarContainer, GradationBar, BlockBar, ColBarContainer, GradationColBar };
