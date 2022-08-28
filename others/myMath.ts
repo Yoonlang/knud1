@@ -21,7 +21,7 @@ interface getRightAngleFunc {
   };
 }
 
-// x1,y1 에서 x2,y2까지의 거리
+/** x1,y1 에서 x2,y2까지의 거리 */
 const calcDist = ({ x1, y1, x2, y2 }: twoPoints) => {
   return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 };
@@ -33,11 +33,9 @@ const getQuadraTwoX: quadraFunc = (a, b, c) => {
   };
 };
 
-// x1, y1, x2, y2, bold를 받고, x1,y1 점에 대해 직각이고 bold / 2 거리만큼 떨어진 두 점을 반환
+/** x1, y1, x2, y2, bold를 받고, x1,y1 점에 대해 직각이고 bold / 2 거리만큼 떨어진 두 점을 반환 */
 const getPosOfRightAnglePoints: getRightAngleFunc = (x1, y1, x2, y2, bold) => {
-  // 두 점을 통한 기울기
   const lean = (y2 - y1) / (x2 - x1);
-  // y = ax + b
   const a = -1 * (1 / lean);
   const b = y1 - a * x1;
   const myTwoX = getQuadraTwoX(
@@ -54,54 +52,3 @@ const getPosOfRightAnglePoints: getRightAngleFunc = (x1, y1, x2, y2, bold) => {
 };
 
 export { calcDist, getPosOfRightAnglePoints };
-
-// interface drawSquareProps extends drawLineProps {
-//   bold: number;
-// }
-
-// const drawSquare = ({ x1, y1, x2, y2, bold, time, startTime, now }: drawSquareProps) => {
-//   if (!ctx) return;
-//   const pieces = (time / 1000) * 60;
-//   const speed = now - (startTime / 1000) * 60;
-//   if (now / 60 < startTime / 1000) return;
-//   if (now - (startTime / 1000) * 60 >= pieces) return;
-
-//   ctx.fillStyle = '#000';
-//   const beginPosX = x1 * ((pieces - speed) / pieces) + x2 * (speed / pieces),
-//     beginPosY = y1 * ((pieces - speed) / pieces) + y2 * (speed / pieces),
-//     endPosX = x1 * ((pieces - speed + 1.5) / pieces) + x2 * ((speed - 1.5) / pieces),
-//     endPosY = y1 * ((pieces - speed + 1.5) / pieces) + y2 * ((speed - 1.5) / pieces),
-//     startPoints = getPosOfRightAnglePoints(beginPosX, beginPosY, x2, y2, bold),
-//     endPoints = getPosOfRightAnglePoints(endPosX, endPosY, x2, y2, bold);
-//   ctx.beginPath();
-//   ctx.moveTo(startPoints.x1, startPoints.y1);
-//   ctx.lineTo(startPoints.x2, startPoints.y2);
-//   ctx.lineTo(endPoints.x2, endPoints.y2);
-//   ctx.lineTo(endPoints.x1, endPoints.y1);
-//   ctx.fill();
-// };
-
-// var now = 0;
-// const update = () => {
-//   if (!ctx) return;
-//   drawLineGradation(
-//     ctx,
-//     127,
-//     56,
-//     127,
-//     368,
-//     51,
-//     {
-//       first: 14,
-//       mid: 255,
-//       last: 37,
-//     },
-//     1400,
-//     0,
-//     now
-//   );
-//   const animation = requestAnimationFrame(update);
-//   now++;
-//   // cancelAnimationFrame(animation);
-// };
-// update();
