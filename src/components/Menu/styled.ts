@@ -18,11 +18,11 @@ const MenuButton = styled.button`
 `;
 
 interface MenuImageProps {
-  isOpen: boolean;
+  open: boolean;
 }
 
 const MenuImage = styled(Image)<MenuImageProps>`
-  display: ${(props) => (props.isOpen ? 'none' : 'flex')};
+  display: ${(props) => (props.open ? 'none' : 'flex')};
   min-width: 50px;
   min-height: 50px;
 `;
@@ -34,7 +34,7 @@ const SideBar = styled.div`
   align-items: center;
   position: absolute;
   bottom: 0;
-  left: calc(100vw - 195px);
+  right: 0;
   background: #fff;
   gap: 40px;
   transition: 0.5s;

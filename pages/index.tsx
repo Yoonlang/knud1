@@ -1,10 +1,10 @@
+import { AnimatedColBar, AnimatedBar } from 'components/AnimatedBar';
+import MainIcon from 'components/MainIcon';
+import Menu from 'components/Menu';
+import Nav from 'components/Nav';
+import Works from 'components/Works';
 import type { NextPage } from 'next';
-import Menu from '../components/Menu';
 import styled from 'styled-components';
-import MainIcon from '../components/MainIcon';
-import { AnimatedBar, AnimatedColBar } from '../components/AnimatedBar';
-import Works from '../components/Works';
-import Nav from '../components/Nav';
 
 const Home: NextPage = () => {
   return (
