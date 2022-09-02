@@ -1,12 +1,12 @@
+import { AppPathsArray } from 'constants/AppPaths';
 import Link from 'next/link';
 import { Fragment } from 'react';
 import styled from 'styled-components';
-import { linkList } from '../others/linkList';
 
 const Nav: React.FC = () => {
   return (
     <NavDiv>
-      {linkList.map(({ href, linkText }, index) => {
+      {AppPathsArray.map(({ href, linkText }, index) => {
         if (index === 0) return <Fragment key={index}></Fragment>;
         return (
           <Link href={href} passHref key={index}>

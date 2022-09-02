@@ -1,12 +1,12 @@
 import Image from 'next/future/image';
 import { useState } from 'react';
-import menuGreen from '../../public/menuGreen.png';
-import menuWhite from '../../public/menuWhite.png';
-import cancel from '../../public/cancel.png';
+import menuGreen from '/public/assets/menuGreen.png';
+import menuWhite from '/public/assets/menuWhite.png';
+import cancel from '/public/assets/cancel.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { linkList } from '../../others/linkList';
 import { MenuButton, MenuImage, SideBar, MenuLink } from './styled';
+import { AppPathsArray } from 'constants/AppPaths';
 
 const Menu: React.FC = () => {
   const router = useRouter();
@@ -24,7 +24,7 @@ const Menu: React.FC = () => {
     <>
       <MenuButton onClick={handleOpenMenu}>
         <MenuImage
-          isOpen={isMenuOpen}
+          open={isMenuOpen}
           src={router.asPath === '/' ? menuGreen : menuWhite}
           alt="menu icon for open sidebar"
           width={50}
@@ -32,7 +32,7 @@ const Menu: React.FC = () => {
         />
       </MenuButton>
       <SideBar className={isMenuOpen ? 'open' : 'close'}>
-        {linkList.map(({ linkText, href }, index) => {
+        {AppPathsArray.map(({ linkText, href }, index) => {
           return (
             <Link href={href} passHref key={index}>
               <MenuLink isOpen={isMenuOpen} main={href === router.asPath}>

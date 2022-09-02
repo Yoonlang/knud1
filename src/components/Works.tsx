@@ -1,6 +1,6 @@
 import Image from 'next/future/image';
 import styled from 'styled-components';
-import ice from '../public/ice.jpeg';
+import ice from '/public/assets/ice.jpeg';
 
 const Works: React.FC = () => {
   return (
