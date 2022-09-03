@@ -25,7 +25,7 @@ const teams = Object.freeze<Path>({
 
 const thanksto = Object.freeze<Path>({
   linkText: 'Thanks to',
-  href: '/thanks-to',
+  href: '/thanksto',
 });
 
 const AppPathsArray = [home, identity, archive, teams, thanksto];
