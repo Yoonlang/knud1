@@ -25,10 +25,6 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
     }
   }
 
-  @media (min-width: 1024px) {
-    display: none;
-  }
-
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     & > main {
       padding: 30px;
@@ -37,5 +33,9 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
         font-size: 60px;
       }
     }
+  }
+
+  @media (min-width: 1023px) {
+    display: none;
   }
 `;

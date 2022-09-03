@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Image from 'next/future/image';
-import ice from '/public/assets/ice.jpeg';
-
 import { DefaultLayoutMobileWrapper } from './styled';
 import HeaderMobile from 'components/common/header/HeaderMobile';
 import FooterMobile from 'components/common/footer/FooterMobile';
+import { AppPathsArray } from 'constants/AppPaths';
+import { useRouter } from 'next/router';
 
 interface Props {
   children?: React.ReactElement;
@@ -14,17 +13,15 @@ interface Props {
 const DefaultLayoutMobile: React.FC<Props> = (props) => {
   const { children } = props;
 
+  const router = useRouter();
+
   return (
     <DefaultLayoutMobileWrapper>
       <HeaderMobile />
 
       <main>
-        {/* <p className="title">{AppPathsArray.find((appPaths) => appPaths.href === router.route)?.linkText}</p> */}
-        <p className="title">{'Archive'}</p>
-        <Image src={ice} alt={'ice'} width={600} />
-        <Image src={ice} alt={'ice'} width={600} />
-        <Image src={ice} alt={'ice'} width={600} />
-        <Image src={ice} alt={'ice'} width={600} />
+        <p className="title">{AppPathsArray.find((appPaths) => appPaths.href === router.route)?.linkText}</p>
+
         {children}
       </main>
       <FooterMobile />
