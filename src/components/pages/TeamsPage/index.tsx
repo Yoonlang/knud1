@@ -1,3 +1,4 @@
+import ItemFrame from 'components/common/ItemFrame';
 import { Column, Row } from 'components/common/styled/layout';
 import DefaultLayoutMobile from 'components/templates/DefaultLayoutMobile';
 import DefaultLayoutPC from 'components/templates/DefaultLayoutPC';
@@ -20,8 +21,7 @@ const TeamsPage: React.FC = () => {
             귀한 인연을 만들게 되어 영광스럽고, 이 자리가 모두에게 의미있는 자리가 되길 바랍니다.
           </p>
           {TEAMS_DATA.map((team) => (
-            <div key={team.name} className="team-list">
-              <p className="team-name">{team.name}</p>
+            <ItemFrame title={team.name} key={team.name}>
               <img src={team.imgSrc} alt={'mock'} />
               <Row>
                 <p className="data-title">팀장 </p>
@@ -31,7 +31,7 @@ const TeamsPage: React.FC = () => {
                 <p className="data-title">팀원 </p>
                 <p className="data">{team.members.toString()}</p>
               </Row>
-            </div>
+            </ItemFrame>
           ))}
         </TeamsPageMobileWrapper>
       </DefaultLayoutMobile>
@@ -52,8 +52,7 @@ const TeamsPage: React.FC = () => {
           </Row>
 
           {TEAMS_DATA.map((team) => (
-            <div key={team.name} className="team-list">
-              <p className="team-name">{team.name}</p>
+            <ItemFrame title={team.name} key={team.name}>
               <Row>
                 <img src={team.imgSrc} alt={'mock'} />
                 <Column>
@@ -73,7 +72,7 @@ const TeamsPage: React.FC = () => {
                   </Row>
                 </Column>
               </Row>
-            </div>
+            </ItemFrame>
           ))}
         </TeamsPagePCWrapper>
       </DefaultLayoutPC>

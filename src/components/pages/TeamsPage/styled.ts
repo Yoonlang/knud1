@@ -1,3 +1,4 @@
+import ItemFrame from 'components/common/ItemFrame';
 import { Column, Row } from 'components/common/styled/layout';
 import styled from 'styled-components';
 
@@ -11,7 +12,7 @@ export const TeamsPageMobileWrapper = styled(Column)`
     background-color: white;
   }
 
-  & > div.team-list {
+  & > ${ItemFrame} {
     & > ${Row}:last-child {
       margin-top: 16px;
     }
@@ -19,11 +20,11 @@ export const TeamsPageMobileWrapper = styled(Column)`
     img {
       width: 100%;
 
-      margin: 20px 0;
+      margin-bottom: 20px;
     }
   }
 
-  & > div.team-list + div.team-list {
+  & > ${ItemFrame} + ${ItemFrame} {
     margin-top: 160px;
   }
 
@@ -65,7 +66,7 @@ export const TeamsPageMobileWrapper = styled(Column)`
       margin-bottom: 30px;
     }
 
-    & > div.team-list {
+    & > ${ItemFrame} {
       img {
         width: 100%;
 
@@ -73,7 +74,7 @@ export const TeamsPageMobileWrapper = styled(Column)`
       }
     }
 
-    & > div.team-list + div.team-list {
+    & > ${ItemFrame} + ${ItemFrame} {
       margin-top: 250px;
     }
 
@@ -105,7 +106,7 @@ export const TeamsPagePCWrapper = styled(Column)`
     justify-content: space-between;
   }
 
-  & > div.team-list {
+  & > ${ItemFrame} {
     & > ${Row} {
       align-items: center;
 
@@ -119,7 +120,7 @@ export const TeamsPagePCWrapper = styled(Column)`
     }
   }
 
-  & > div.team-list + div.team-list {
+  & > ${ItemFrame} + ${ItemFrame} {
     margin-top: 500px;
   }
 
