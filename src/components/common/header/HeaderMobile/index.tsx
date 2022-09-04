@@ -12,12 +12,18 @@ import cancel from '/public/assets/cancel.png';
 import menu from '/public/assets/menuWhite.png';
 import cx from 'classnames';
 
-const HeaderMobile: React.FC = () => {
+interface Props {
+  identity?: boolean;
+}
+
+const HeaderMobile: React.FC<Props> = (props) => {
+  const { identity = false } = props;
+
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <HeaderMobileWrapper>
+    <HeaderMobileWrapper className={cx({ identity: identity })}>
       <Row className="header-wrap">
         <div className="logo">126</div>
 

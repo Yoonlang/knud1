@@ -3,6 +3,10 @@ import { Column, Row } from 'components/common/styled/layout';
 import styled from 'styled-components';
 
 export const HeaderMobileWrapper = styled(Row)`
+  &.identity {
+    background-color: #38d430;
+  }
+
   & > ${Row}.header-wrap {
     padding: 18px;
 

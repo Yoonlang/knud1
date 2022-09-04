@@ -14,14 +14,30 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
   & > main {
     padding: 20px;
 
-    & > p.title {
-      padding: 0;
-      margin: 72px 0 48px;
+    & > div.content {
+      & > p.title {
+        padding: 0;
+        margin: 72px 0 48px;
 
-      font-size: 52px;
-      font-weight: bold;
+        font-size: 52px;
+        font-weight: bold;
 
-      color: #38d430;
+        color: #38d430;
+      }
+    }
+  }
+
+  &.identity {
+    background: none;
+    & > main {
+      background-image: linear-gradient(to bottom, #38d430 100vh, black 100vh);
+      & > div.content {
+        & > p.title {
+          color: black;
+        }
+      }
+
+      background-color: black;
     }
   }
 
@@ -29,8 +45,10 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
     & > main {
       padding: 30px;
 
-      & > p.title {
-        font-size: 60px;
+      & > div.content {
+        & > p.title {
+          font-size: 60px;
+        }
       }
     }
   }
