@@ -23,10 +23,12 @@ export const ThanksToPageMobileWrapper = styled(Column)`
           justify-content: flex-end;
 
           p.name {
+            font-family: 'NotoSansKR-Bold';
             font-size: 20px;
             font-weight: 600;
           }
           p.email {
+            font-family: 'Poppins-Light';
             font-size: 14px;
 
             margin-top: 12px;
@@ -56,6 +58,7 @@ export const ThanksToPageMobileWrapper = styled(Column)`
         }
 
         p.name {
+          font-family: 'NotoSansKR-Bold';
           font-size: 20px;
           font-weight: 700;
 
@@ -63,6 +66,7 @@ export const ThanksToPageMobileWrapper = styled(Column)`
         }
 
         .link {
+          font-family: 'NotoSansKR-Light';
           color: white;
           font-size: 12px;
           font-weight: 300;
@@ -77,6 +81,7 @@ export const ThanksToPageMobileWrapper = styled(Column)`
     color: white;
 
     &.description {
+      font-family: 'NotoSansKR-Medium';
       color: #38d430;
       font-size: 16px;
 
@@ -138,10 +143,12 @@ export const ThanksToPagePCWrapper = styled(Column)`
           justify-content: flex-end;
 
           p.name {
+            font-family: 'NotoSansKR-Bold';
             font-size: 30px;
             font-weight: 700;
           }
           p.email {
+            font-family: 'Poppins-Light';
             font-size: 20px;
 
             margin-top: 10px;
@@ -169,6 +176,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
         }
 
         p.name {
+          font-family: 'NotoSansKR-Bold';
           font-size: 30px;
           font-weight: 700;
 
@@ -176,6 +184,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
         }
 
         .link {
+          font-family: 'NotoSansKR-Light';
           color: white;
           font-size: 20px;
           font-weight: 300;
@@ -190,6 +199,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
     color: white;
 
     &.description {
+      font-family: 'NotoSansKR-Medium';
       color: #38d430;
       font-size: 22px;
 

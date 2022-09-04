@@ -43,16 +43,16 @@ export const TeamsPageMobileWrapper = styled(Column)`
       word-break: break-word;
 
       margin-bottom: 100px;
+
+      font-family: 'NotoSansKR-Medium';
     }
 
-    &.team-name {
-      font-size: 24px;
-      font-weight: bold;
-    }
     &.data-title {
+      font-family: 'NotoSansKR-Light';
       font-weight: 300;
     }
     &.data {
+      font-family: 'NotoSansKR-Bold';
       font-weight: 600;
 
       margin-left: 6px;
@@ -134,6 +134,7 @@ export const TeamsPagePCWrapper = styled(Column)`
     &.description {
       width: 48%;
 
+      font-family: 'NotoSansKR-Medium';
       color: #38d430;
       line-height: 1.7;
       white-space: pre-wrap;
@@ -144,17 +145,13 @@ export const TeamsPagePCWrapper = styled(Column)`
       margin-bottom: 200px;
     }
 
-    &.team-name {
-      font-size: 60px;
-      font-weight: bold;
-
-      margin-bottom: 70px;
-    }
     &.data-title {
+      font-family: 'NotoSansKR-Light';
       font-size: 30px;
       font-weight: 300;
     }
     &.data {
+      font-family: 'NotoSansKR-Bold';
       font-size: 30px;
       font-weight: 600;
 

@@ -14,6 +14,7 @@ export const IdentityPageMobileWrapper = styled(Column)`
 
     p {
       color: black;
+      font-family: 'NotoSansKR-Medium';
       font-size: 16px;
       line-height: 1.7;
       white-space: pre-wrap;
@@ -67,6 +68,7 @@ export const IdentityPagePCWrapper = styled(Column)`
     &.description {
       width: 48%;
 
+      font-family: 'NotoSansKR-Medium';
       color: #38d430;
       line-height: 1.7;
       white-space: pre-wrap;

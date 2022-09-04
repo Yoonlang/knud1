@@ -7,6 +7,7 @@ export const ItemFrameWrapper = styled(Column)`
   p.title {
     margin: 0;
 
+    font-family: 'Poppins-Bold';
     font-size: 24px;
     font-weight: bold;
     color: white;

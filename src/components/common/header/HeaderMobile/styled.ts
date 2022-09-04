@@ -48,6 +48,7 @@ export const HeaderMobileWrapper = styled(Row)`
     & > * {
       margin-right: 20px;
 
+      font-family: 'Poppins-Bold';
       font-size: 24px;
       font-weight: bold;
 

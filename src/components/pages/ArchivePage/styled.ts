@@ -22,6 +22,7 @@ export const ArchivePageMobileWrapper = styled.div`
     color: white;
 
     &.title {
+      font-family: 'NotoSansKR-Bold';
       font-size: 20px;
       font-weight: 700;
 
@@ -29,6 +30,7 @@ export const ArchivePageMobileWrapper = styled.div`
     }
 
     &.name {
+      font-family: 'NotoSansKR-Light';
       font-size: 16px;
 
       margin-top: 8px;
@@ -86,13 +88,19 @@ export const ArchivePagePCWrapper = styled.div`
         margin: 0;
 
         &.name {
+          font-family: 'GmarketSansBold';
           font-weight: 700;
 
           margin-right: 24px;
         }
 
         &.title {
+          font-family: 'GmarketSansBold';
           font-weight: 700;
+        }
+
+        &.subtitle {
+          font-family: 'GmarketSansLight';
         }
       }
 

@@ -19,6 +19,7 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
         padding: 0;
         margin: 72px 0 48px;
 
+        font-family: 'Poppins-Bold';
         font-size: 52px;
         font-weight: bold;
 

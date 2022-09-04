@@ -29,6 +29,7 @@ export const FooterPCWrapper = styled.footer`
         padding: 0px;
         margin: 0px;
 
+        font-family: 'NotoSansKR-Medium';
         color: rgba(255, 255, 255, 0.3);
 
         font-size: 8px;

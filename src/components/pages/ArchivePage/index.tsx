@@ -27,7 +27,7 @@ const ArchivePage: React.FC = () => {
                 <p className="name">이예림</p>
                 <Column>
                   <p className="title">오메가메</p>
-                  <p>omegame</p>
+                  <p className="subtitle">omegame</p>
                 </Column>
               </Row>
             </div>
