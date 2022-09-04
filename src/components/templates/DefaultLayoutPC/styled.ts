@@ -18,6 +18,12 @@ export const DefaultLayoutPCWrapper = styled.div`
 
     justify-content: space-between;
 
+    & > img {
+      width: 82px;
+
+      cursor: pointer;
+    }
+
     & > ${Row}.nav-items {
       gap: 36px;
 

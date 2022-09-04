@@ -20,7 +20,7 @@ const DefaultLayoutPC: React.FC<Props> = (props) => {
     <DefaultLayoutPCWrapper>
       <Row className="nav">
         <Link href={AppPaths.home.href} passHref>
-          <a>126</a>
+          <img src="/assets/126_logo.svg" alt="logo" />
         </Link>
 
         <Row className="nav-items">

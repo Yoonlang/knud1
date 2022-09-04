@@ -1,6 +1,5 @@
 import { MenuLink } from 'components/Menu/styled';
-import { AppPathsArray } from 'constants/AppPaths';
-import Image from 'next/future/image';
+import { AppPaths, AppPathsArray } from 'constants/AppPaths';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -8,8 +7,6 @@ import { HeaderMobileWrapper } from './styled';
 
 import { ButtonBase } from 'components/common/styled/elements';
 import { Column, Row } from 'components/common/styled/layout';
-import cancel from '/public/assets/cancel.png';
-import menu from '/public/assets/menuWhite.png';
 import cx from 'classnames';
 
 interface Props {
@@ -25,19 +22,20 @@ const HeaderMobile: React.FC<Props> = (props) => {
   return (
     <HeaderMobileWrapper className={cx({ identity: identity })}>
       <Row className="header-wrap">
-        <div className="logo">126</div>
+        <Link href={AppPaths.home.href} passHref>
+          <img src="/assets/126_logo.svg" alt="logo" />
+        </Link>
 
         {!isMenuOpen && (
           <ButtonBase onClick={() => setIsMenuOpen(true)} className={'menu-button'}>
-            {/* <IC_MENU /> */}
-            <Image src={menu} alt="menu icon for open sidebar" width={32} height={32} />
+            <img src="/assets/menu.svg" alt="menu" />
           </ButtonBase>
         )}
       </Row>
 
       <Column className={cx('side-bar', { open: isMenuOpen, close: !isMenuOpen })}>
         <ButtonBase onClick={() => setIsMenuOpen(false)} className={'close-button'}>
-          <Image src={cancel} alt="cancel icon for close sidebar" width={25} height={25} />
+          <img src="/assets/close.svg" alt="close" />
         </ButtonBase>
         {AppPathsArray.map(({ linkText, href }) => {
           return (

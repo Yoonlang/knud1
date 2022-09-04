@@ -8,6 +8,10 @@ export const FooterMobileWrapper = styled.footer`
 
   background-color: #333333;
 
+  & > img {
+    width: 50px;
+  }
+
   & > p {
     padding: 0px;
     margin: 0px;

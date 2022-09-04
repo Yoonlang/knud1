@@ -16,8 +16,10 @@ export const HeaderMobileWrapper = styled(Row)`
     align-items: center;
     justify-content: space-between;
 
-    & > div.logo {
-      color: white;
+    & > img {
+      width: 51px;
+
+      cursor: pointer;
     }
 
     & > ${ButtonBase}.menu-button {
@@ -54,6 +56,11 @@ export const HeaderMobileWrapper = styled(Row)`
 
     & > ${ButtonBase}.close-button {
       margin-top: 63px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &.open {
@@ -78,13 +85,6 @@ export const HeaderMobileWrapper = styled(Row)`
 
       & > div.logo {
         color: white;
-      }
-
-      & > ${ButtonBase}.menu-button {
-        img {
-          width: 50px;
-          height: 50px;
-        }
       }
     }
 
