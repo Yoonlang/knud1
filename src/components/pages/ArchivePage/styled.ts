@@ -9,6 +9,10 @@ export const ArchivePageMobileWrapper = styled.div`
   row-gap: 90px;
   column-gap: 16px;
 
+  & > div.content {
+    cursor: pointer;
+  }
+
   img {
     width: 100%;
     min-width: 167px;
@@ -63,6 +67,8 @@ export const ArchivePagePCWrapper = styled.div`
 
   & > div.content {
     position: relative;
+
+    cursor: pointer;
 
     & > div.text-wrap {
       visibility: hidden;
