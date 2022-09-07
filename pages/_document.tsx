@@ -30,7 +30,19 @@ class AppDocument extends Document {
   render() {
     return (
       <Html>
-        <Head></Head>
+        <Head>
+          <link rel="prefetch" href="/fonts/Poppins-Light.otf" />
+          <link rel="prefetch" href="/fonts/Poppins-Medium.otf" />
+          <link rel="prefetch" href="/fonts/Poppins-Bold.otf" />
+
+          <link rel="prefetch" href="/fonts/NotoSansKR-Light.otf" />
+          <link rel="prefetch" href="/fonts/NotoSansKR-Medium.otf" />
+          <link rel="prefetch" href="/fonts/NotoSansKR-Bold.otf" />
+
+          <link rel="prefetch" href="/fonts/GmarketSansLight.otf" />
+          <link rel="prefetch" href="/fonts/GmarketSansMedium.otf" />
+          <link rel="prefetch" href="/fonts/GmarketSansBold.otf" />
+        </Head>
         <body>
           <Main />
           <NextScript />

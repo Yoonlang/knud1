@@ -18,6 +18,12 @@ export const DefaultLayoutPCWrapper = styled.div`
 
     justify-content: space-between;
 
+    & > img {
+      width: 82px;
+
+      cursor: pointer;
+    }
+
     & > ${Row}.nav-items {
       gap: 36px;
 
@@ -26,6 +32,7 @@ export const DefaultLayoutPCWrapper = styled.div`
       align-items: center;
 
       & > a {
+        font-family: 'Poppins-Bold';
         font-weight: bold;
 
         color: #38d430;
@@ -67,6 +74,7 @@ export const DefaultLayoutPCWrapper = styled.div`
 
           margin-bottom: 150px;
 
+          font-family: 'Poppins-Bold';
           font-size: 60px;
           font-weight: bold;
 
@@ -74,5 +82,9 @@ export const DefaultLayoutPCWrapper = styled.div`
         }
       }
     }
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 `;

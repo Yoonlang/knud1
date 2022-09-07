@@ -8,12 +8,17 @@ export const FooterMobileWrapper = styled.footer`
 
   background-color: #333333;
 
+  & > img {
+    width: 50px;
+  }
+
   & > p {
     padding: 0px;
     margin: 0px;
 
     color: rgba(255, 255, 255, 0.3);
 
+    font-family: 'NotoSansKR-Medium';
     font-size: 8px;
     letter-spacing: 0px;
     line-height: 1.7;

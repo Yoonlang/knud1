@@ -6,7 +6,8 @@ const FooterPC: React.FC = () => {
   return (
     <FooterPCWrapper>
       <Row>
-        <div>KNU</div>
+        <img src="/assets/knu_logo.svg" alt="knu" />
+
         <Column className="contact">
           <p>vcd.knu.ac.kr</p>
           <p>

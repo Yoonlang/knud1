@@ -3,8 +3,6 @@ import { AppPaths, AppPathsArray } from 'constants/AppPaths';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import Image from 'next/future/image';
-import ice from '/public/assets/ice.jpeg';
 
 import { DefaultLayoutPCWrapper } from './styled';
 import FooterPC from 'components/common/footer/FooterPC';
@@ -22,12 +20,15 @@ const DefaultLayoutPC: React.FC<Props> = (props) => {
     <DefaultLayoutPCWrapper>
       <Row className="nav">
         <Link href={AppPaths.home.href} passHref>
-          <a>126</a>
+          <img src="/assets/126_logo.svg" alt="logo" />
         </Link>
 
         <Row className="nav-items">
           {AppPathsArray.map((appPaths) => {
             const { href, linkText } = appPaths;
+            if (linkText === 'Home') {
+              return null;
+            }
 
             return (
               <Link href={href} passHref key={href}>
@@ -40,13 +41,8 @@ const DefaultLayoutPC: React.FC<Props> = (props) => {
       <div className="frame">
         <Column className="content">
           <main>
-            {/* <p className="title">{AppPathsArray.find((appPaths) => appPaths.href === router.route)?.linkText}</p> */}
-            <p className="title">{'Archive'}</p>
+            <p className="title">{AppPathsArray.find((appPaths) => appPaths.href === router.route)?.linkText}</p>
 
-            <Image src={ice} alt={'ice'} width={1200} />
-            <Image src={ice} alt={'ice'} width={600} />
-            <Image src={ice} alt={'ice'} width={600} />
-            <Image src={ice} alt={'ice'} width={600} />
             {children}
           </main>
           <FooterPC />

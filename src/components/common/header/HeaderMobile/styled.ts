@@ -3,6 +3,10 @@ import { Column, Row } from 'components/common/styled/layout';
 import styled from 'styled-components';
 
 export const HeaderMobileWrapper = styled(Row)`
+  &.identity {
+    background-color: #38d430;
+  }
+
   & > ${Row}.header-wrap {
     padding: 18px;
 
@@ -12,8 +16,10 @@ export const HeaderMobileWrapper = styled(Row)`
     align-items: center;
     justify-content: space-between;
 
-    & > div.logo {
-      color: white;
+    & > img {
+      width: 51px;
+
+      cursor: pointer;
     }
 
     & > ${ButtonBase}.menu-button {
@@ -42,6 +48,7 @@ export const HeaderMobileWrapper = styled(Row)`
     & > * {
       margin-right: 20px;
 
+      font-family: 'Poppins-Bold';
       font-size: 24px;
       font-weight: bold;
 
@@ -50,6 +57,11 @@ export const HeaderMobileWrapper = styled(Row)`
 
     & > ${ButtonBase}.close-button {
       margin-top: 63px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &.open {
@@ -74,13 +86,6 @@ export const HeaderMobileWrapper = styled(Row)`
 
       & > div.logo {
         color: white;
-      }
-
-      & > ${ButtonBase}.menu-button {
-        img {
-          width: 50px;
-          height: 50px;
-        }
       }
     }
 
