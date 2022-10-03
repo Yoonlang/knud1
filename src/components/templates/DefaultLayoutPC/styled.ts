@@ -36,11 +36,30 @@ export const DefaultLayoutPCWrapper = styled.div`
         font-weight: bold;
 
         color: #38d430;
-
-        &.nav-items-target {
-          background-color: #38d430;
-        }
       }
+    }
+
+    & > span.current-nav-wrapper {
+      width: 75px;
+      background-color: #38d430;
+      position: absolute;
+      height: 22px;
+      top: 44px;
+
+      &.identity {
+        right: 400px;
+      }
+      &.archive {
+        right: 300px;
+      }
+      &.teams {
+        right: 220px;
+      }
+      &.thanksto {
+        right: 120px;
+      }
+
+      transition: right 0.5s;
     }
   }
 

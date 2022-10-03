@@ -6,6 +6,7 @@ import React from 'react';
 
 import { DefaultLayoutPCWrapper } from './styled';
 import FooterPC from 'components/common/footer/FooterPC';
+import cx from 'classnames';
 
 interface Props {
   children?: React.ReactElement;
@@ -32,11 +33,19 @@ const DefaultLayoutPC: React.FC<Props> = (props) => {
 
             return (
               <Link href={href} passHref key={href}>
-                <a className={router.pathname === href ? 'nav-items-target' : ''}>{linkText}</a>
+                <a>{linkText}</a>
               </Link>
             );
           })}
         </Row>
+        <span
+          className={cx('current-nav-wrapper', {
+            identity: router.pathname === AppPaths.identity.href,
+            archive: router.pathname === AppPaths.archive.href,
+            teams: router.pathname === AppPaths.teams.href,
+            thanksto: router.pathname === AppPaths.thanksto.href,
+          })}
+        />
       </Row>
       <div className="frame">
         <Column className="content">
