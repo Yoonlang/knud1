@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Column, Row } from '../../common/styled/layout';
 
 export const DefaultLayoutPCWrapper = styled.div`
-  max-width: 1920px;
   height: 100vh;
 
   padding-left: 140px;
