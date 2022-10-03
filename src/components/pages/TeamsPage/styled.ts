@@ -88,6 +88,10 @@ export const TeamsPageMobileWrapper = styled(Column)`
       }
     }
   }
+
+  @media (min-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const TeamsPagePCWrapper = styled(Column)`
@@ -157,5 +161,9 @@ export const TeamsPagePCWrapper = styled(Column)`
 
       margin-left: 6px;
     }
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 `;

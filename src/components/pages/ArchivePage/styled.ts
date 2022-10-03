@@ -57,6 +57,10 @@ export const ArchivePageMobileWrapper = styled.div`
       }
     }
   }
+
+  @media (min-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const ArchivePagePCWrapper = styled.div`
@@ -125,5 +129,9 @@ export const ArchivePagePCWrapper = styled.div`
   img {
     width: 100%;
     min-width: 270px;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 `;

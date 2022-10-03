@@ -17,7 +17,9 @@ const HeaderMobile: React.FC<Props> = (props) => {
   const { identity = false } = props;
 
   const router = useRouter();
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const toggleMenuOpen = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <HeaderMobileWrapper className={cx({ identity: identity })}>
@@ -27,20 +29,20 @@ const HeaderMobile: React.FC<Props> = (props) => {
         </Link>
 
         {!isMenuOpen && (
-          <ButtonBase onClick={() => setIsMenuOpen(true)} className={'menu-button'}>
+          <ButtonBase onClick={toggleMenuOpen} className={'menu-button'}>
             <img src="/assets/menu.svg" alt="menu" />
           </ButtonBase>
         )}
       </Row>
 
       <Column className={cx('side-bar', { open: isMenuOpen, close: !isMenuOpen })}>
-        <ButtonBase onClick={() => setIsMenuOpen(false)} className={'close-button'}>
+        <ButtonBase onClick={toggleMenuOpen} className={'close-button'}>
           <img src="/assets/close.svg" alt="close" />
         </ButtonBase>
         {AppPathsArray.map(({ linkText, href }) => {
           return (
             <Link href={href} passHref key={href}>
-              <MenuLink isOpen={isMenuOpen} main={href === router.asPath}>
+              <MenuLink isOpen={isMenuOpen} main={href === router.asPath} onClick={toggleMenuOpen}>
                 {linkText}
               </MenuLink>
             </Link>

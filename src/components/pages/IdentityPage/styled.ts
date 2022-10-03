@@ -38,6 +38,10 @@ export const IdentityPageMobileWrapper = styled(Column)`
       margin-bottom: 250px;
     }
   }
+
+  @media (min-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const IdentityPagePCWrapper = styled(Column)`
@@ -78,5 +82,9 @@ export const IdentityPagePCWrapper = styled(Column)`
       margin-top: 70px;
       margin-bottom: 200px;
     }
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 `;
