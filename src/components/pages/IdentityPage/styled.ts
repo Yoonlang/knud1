@@ -3,8 +3,12 @@ import { Column, Row } from 'components/common/styled/layout';
 import styled from 'styled-components';
 
 export const IdentityPageMobileWrapper = styled(Column)`
+  & > div {
+    padding: 0 20px;
+  }
+
   & > div.content {
-    height: 100vh;
+    background-color: #38d430;
 
     & > div.mock-img {
       width: 100%;
@@ -20,14 +24,28 @@ export const IdentityPageMobileWrapper = styled(Column)`
       white-space: pre-wrap;
       word-wrap: break-word;
       word-break: break-word;
+
+      &:last-child {
+        margin-bottom: 80px;
+      }
     }
   }
 
-  & > ${ItemFrame} {
-    margin-bottom: 160px;
+  & > div.item-list {
+    & > ${ItemFrame} {
+      margin-top: 160px;
+
+      &:last-child {
+        margin-bottom: 160px;
+      }
+    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
+    & > div {
+      padding: 0 30px;
+    }
+
     & > div.content {
       & > div.mock-img {
         height: 507px;

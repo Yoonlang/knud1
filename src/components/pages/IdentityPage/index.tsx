@@ -22,19 +22,20 @@ const IdentityPage: React.FC = () => {
           </p>
           <p>1의 26제곱은 여전히 1이듯이.</p>
         </div>
-
-        <ItemFrame title="Poster">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
-        <ItemFrame title="Font">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
-        <ItemFrame title="Dorok">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
-        <ItemFrame title="Goods">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
+        <div className="item-list">
+          <ItemFrame title="Poster">
+            <Image src={ice} alt={'mock'} />
+          </ItemFrame>
+          <ItemFrame title="Font">
+            <Image src={ice} alt={'mock'} />
+          </ItemFrame>
+          <ItemFrame title="Dorok">
+            <Image src={ice} alt={'mock'} />
+          </ItemFrame>
+          <ItemFrame title="Goods">
+            <Image src={ice} alt={'mock'} />
+          </ItemFrame>
+        </div>
       </IdentityPageMobileWrapper>
 
       <IdentityPagePCWrapper>
