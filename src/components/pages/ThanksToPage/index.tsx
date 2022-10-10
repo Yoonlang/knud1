@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { PARTNERS_DATA, PROFESSOR_DATA } from './constants';
 import { ThanksToPageMobileWrapper, ThanksToPagePCWrapper } from './styled';
+import Image from 'next/image';
 
 const ThanksToPage: React.FC = () => {
   return (
@@ -18,7 +19,18 @@ const ThanksToPage: React.FC = () => {
           <div className={'professor-list'}>
             {PROFESSOR_DATA.map((professor) => (
               <Row key={professor.name}>
-                <img src={professor.imgSrc} alt={professor.name} />
+                <div className="img-frame">
+                  <Image
+                    src={professor.imgSrc}
+                    alt={professor.name}
+                    width="100%"
+                    height="100%"
+                    layout="responsive"
+                    placeholder="empty"
+                    priority
+                  />
+                </div>
+
                 <Column>
                   <p className="name">
                     {professor.position}. {professor.name}
@@ -33,7 +45,18 @@ const ThanksToPage: React.FC = () => {
           <div>
             {PARTNERS_DATA.map((partner) => (
               <Column key={partner.name}>
-                <img src={partner.imgSrc} alt={partner.name} />
+                <div>
+                  <Image
+                    src={partner.imgSrc}
+                    alt={partner.name}
+                    width="100%"
+                    height="100%"
+                    layout="responsive"
+                    placeholder="empty"
+                    priority
+                  />
+                </div>
+
                 <p className="name">{partner.name}</p>
                 <p className="link">{partner.instagram}</p>
                 <Link href={'https://' + partner.site} passHref>
@@ -64,7 +87,18 @@ const ThanksToPage: React.FC = () => {
           <div className={'professor-list'}>
             {PROFESSOR_DATA.map((professor) => (
               <Row key={professor.name}>
-                <img src={professor.imgSrc} alt={professor.name} />
+                <div className="img-frame">
+                  <Image
+                    src={professor.imgSrc}
+                    alt={professor.name}
+                    width={300}
+                    height={400}
+                    layout="responsive"
+                    placeholder="empty"
+                    priority
+                  />
+                </div>
+
                 <Column>
                   <p className="name">
                     {professor.position}. {professor.name}
@@ -79,7 +113,18 @@ const ThanksToPage: React.FC = () => {
           <div>
             {PARTNERS_DATA.map((partner) => (
               <Column key={partner.name}>
-                <img src={partner.imgSrc} alt={partner.name} />
+                <div className="img-frame">
+                  <Image
+                    src={partner.imgSrc}
+                    alt={partner.name}
+                    width="100%"
+                    height="100%"
+                    layout="responsive"
+                    placeholder="empty"
+                    priority
+                  />
+                </div>
+
                 <p className="name">{partner.name}</p>
                 <p className="link">{partner.instagram}</p>
                 <Link href={'https://' + partner.site} passHref>

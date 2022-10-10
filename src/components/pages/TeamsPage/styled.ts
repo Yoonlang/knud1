@@ -17,7 +17,7 @@ export const TeamsPageMobileWrapper = styled(Column)`
       margin-top: 16px;
     }
 
-    img {
+    & > div.img-frame {
       width: 100%;
 
       margin-bottom: 20px;
@@ -114,13 +114,13 @@ export const TeamsPagePCWrapper = styled(Column)`
     & > ${Row} {
       align-items: center;
 
+      & > div.img-frame {
+        width: 60%;
+      }
+
       & > ${Column} {
         margin-left: 90px;
       }
-    }
-
-    img {
-      width: 60%;
     }
   }
 

@@ -1,6 +1,7 @@
 import { Column, Row } from 'components/common/styled/layout';
 import React from 'react';
 import { ArchivePageMobileWrapper, ArchivePagePCWrapper } from './styled';
+import Image from 'next/image';
 
 const ArchivePage: React.FC = () => {
   return (
@@ -8,7 +9,15 @@ const ArchivePage: React.FC = () => {
       <ArchivePageMobileWrapper>
         {[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((_, index) => (
           <div key={index} className={'content'}>
-            <img src={'/assets/sample.png'} alt={'sample'} />
+            <Image
+              src="/assets/sample.png"
+              alt="sample"
+              width="100%"
+              height="100%"
+              layout="responsive"
+              placeholder="empty"
+              priority
+            />
             <p className="title">Jalza</p>
             <p className="name">정다은</p>
           </div>
@@ -18,7 +27,15 @@ const ArchivePage: React.FC = () => {
       <ArchivePagePCWrapper>
         {[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((_, index) => (
           <div key={index} className={'content'}>
-            <img src={'/assets/ice.jpeg'} alt={'sample'} />
+            <Image
+              src="/assets/sample.png"
+              alt="sample"
+              width="100%"
+              height="100%"
+              layout="responsive"
+              placeholder="empty"
+              priority
+            />
             <Row className="text-wrap">
               <p className="name">이예림</p>
               <Column>

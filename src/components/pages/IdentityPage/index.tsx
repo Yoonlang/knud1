@@ -24,16 +24,16 @@ const IdentityPage: React.FC = () => {
         </div>
         <div className="item-list">
           <ItemFrame title="Poster">
-            <Image src={ice} alt={'mock'} />
+            <Image src={ice} alt={'mock'} placeholder="empty" priority />
           </ItemFrame>
           <ItemFrame title="Font">
-            <Image src={ice} alt={'mock'} />
+            <Image src={ice} alt={'mock'} placeholder="empty" priority />
           </ItemFrame>
           <ItemFrame title="Dorok">
-            <Image src={ice} alt={'mock'} />
+            <Image src={ice} alt={'mock'} placeholder="empty" priority />
           </ItemFrame>
           <ItemFrame title="Goods">
-            <Image src={ice} alt={'mock'} />
+            <Image src={ice} alt={'mock'} placeholder="empty" priority />
           </ItemFrame>
         </div>
       </IdentityPageMobileWrapper>

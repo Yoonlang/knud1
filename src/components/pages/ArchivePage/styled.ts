@@ -126,10 +126,7 @@ export const ArchivePagePCWrapper = styled.div`
     }
   }
 
-  img {
-    width: 100%;
-    min-width: 270px;
-  }
+  padding-bottom: 700px;
 
   @media (max-width: 1023px) {
     display: none;

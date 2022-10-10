@@ -15,19 +15,6 @@ export const HeaderMobileWrapper = styled(Row)`
 
     align-items: center;
     justify-content: space-between;
-
-    & > img {
-      width: 51px;
-
-      cursor: pointer;
-    }
-
-    & > ${ButtonBase}.menu-button {
-      img {
-        width: 50px;
-        height: 50px;
-      }
-    }
   }
 
   & > ${Column}.side-bar {
@@ -58,9 +45,8 @@ export const HeaderMobileWrapper = styled(Row)`
     & > ${ButtonBase}.close-button {
       margin-top: 63px;
 
-      img {
-        width: 50px;
-        height: 50px;
+      & > span {
+        width: 32px !important;
       }
     }
 
@@ -87,6 +73,18 @@ export const HeaderMobileWrapper = styled(Row)`
       & > div.logo {
         color: white;
       }
+
+      & > ${ButtonBase}.menu-button {
+        & > span {
+          width: 40px !important;
+          height: 40px !important;
+        }
+      }
+
+      & > span {
+        width: 60px !important;
+        height: 30px !important;
+      }
     }
 
     & > ${Column}.side-bar {
@@ -100,6 +98,11 @@ export const HeaderMobileWrapper = styled(Row)`
 
       & > ${ButtonBase}.close-button {
         margin-top: 80px;
+
+        & > span {
+          width: 40px !important;
+          height: 40px !important;
+        }
       }
 
       &.open {

@@ -17,9 +17,7 @@ export const DefaultLayoutPCWrapper = styled.div`
 
     justify-content: space-between;
 
-    & > img {
-      width: 82px;
-
+    & > span {
       cursor: pointer;
     }
 
@@ -46,13 +44,13 @@ export const DefaultLayoutPCWrapper = styled.div`
       top: 44px;
 
       &.identity {
-        right: 400px;
+        right: 390px;
       }
       &.archive {
         right: 300px;
       }
       &.teams {
-        right: 220px;
+        right: 210px;
       }
       &.thanksto {
         right: 120px;
