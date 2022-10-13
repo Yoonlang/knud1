@@ -8,7 +8,7 @@ import { HeaderMobileWrapper } from './styled';
 import { ButtonBase } from 'components/common/styled/elements';
 import { Column, Row } from 'components/common/styled/layout';
 import cx from 'classnames';
-import Image from 'next/image';
+import Image from 'next/future/image';
 
 interface Props {
   identity?: boolean;

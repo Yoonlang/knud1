@@ -1,7 +1,8 @@
 import { Column, Row } from 'components/common/styled/layout';
 import React from 'react';
 import { ArchivePageMobileWrapper, ArchivePagePCWrapper } from './styled';
-import Image from 'next/image';
+import Image from 'next/future/image';
+import { nextImageLoader } from 'utils/imageLoader';
 
 const ArchivePage: React.FC = () => {
   return (
@@ -10,11 +11,11 @@ const ArchivePage: React.FC = () => {
         {[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((_, index) => (
           <div key={index} className={'content'}>
             <Image
-              src="/assets/sample.png"
+              loader={nextImageLoader}
+              src="/assets/ice.jpeg"
               alt="sample"
-              width="100%"
-              height="100%"
-              layout="responsive"
+              width={1200}
+              height={800}
               placeholder="empty"
               priority
             />
@@ -28,11 +29,11 @@ const ArchivePage: React.FC = () => {
         {[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((_, index) => (
           <div key={index} className={'content'}>
             <Image
-              src="/assets/sample.png"
+              loader={nextImageLoader}
+              src="/assets/ice.jpeg"
               alt="sample"
-              width="100%"
-              height="100%"
-              layout="responsive"
+              width={1200}
+              height={800}
               placeholder="empty"
               priority
             />

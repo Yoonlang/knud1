@@ -4,7 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 import { PARTNERS_DATA, PROFESSOR_DATA } from './constants';
 import { ThanksToPageMobileWrapper, ThanksToPagePCWrapper } from './styled';
-import Image from 'next/image';
+import Image from 'next/future/image';
+import { nextImageLoader } from 'utils/imageLoader';
 
 const ThanksToPage: React.FC = () => {
   return (
@@ -19,18 +20,15 @@ const ThanksToPage: React.FC = () => {
           <div className={'professor-list'}>
             {PROFESSOR_DATA.map((professor) => (
               <Row key={professor.name}>
-                <div className="img-frame">
-                  <Image
-                    src={professor.imgSrc}
-                    alt={professor.name}
-                    width="100%"
-                    height="100%"
-                    layout="responsive"
-                    placeholder="empty"
-                    priority
-                  />
-                </div>
-
+                <Image
+                  loader={nextImageLoader}
+                  src={professor.imgSrc}
+                  width={430}
+                  height={576}
+                  alt={professor.name}
+                  placeholder="empty"
+                  priority
+                />
                 <Column>
                   <p className="name">
                     {professor.position}. {professor.name}
@@ -45,17 +43,15 @@ const ThanksToPage: React.FC = () => {
           <div>
             {PARTNERS_DATA.map((partner) => (
               <Column key={partner.name}>
-                <div>
-                  <Image
-                    src={partner.imgSrc}
-                    alt={partner.name}
-                    width="100%"
-                    height="100%"
-                    layout="responsive"
-                    placeholder="empty"
-                    priority
-                  />
-                </div>
+                <Image
+                  loader={nextImageLoader}
+                  src={partner.imgSrc}
+                  alt={partner.name}
+                  width={1200}
+                  height={800}
+                  placeholder="empty"
+                  priority
+                />
 
                 <p className="name">{partner.name}</p>
                 <p className="link">{partner.instagram}</p>
@@ -87,17 +83,16 @@ const ThanksToPage: React.FC = () => {
           <div className={'professor-list'}>
             {PROFESSOR_DATA.map((professor) => (
               <Row key={professor.name}>
-                <div className="img-frame">
-                  <Image
-                    src={professor.imgSrc}
-                    alt={professor.name}
-                    width={300}
-                    height={400}
-                    layout="responsive"
-                    placeholder="empty"
-                    priority
-                  />
-                </div>
+                <Image
+                  loader={nextImageLoader}
+                  src={professor.imgSrc}
+                  alt={professor.name}
+                  width={430}
+                  height={576}
+                  sizes="100vw"
+                  placeholder="empty"
+                  priority
+                />
 
                 <Column>
                   <p className="name">
@@ -113,17 +108,15 @@ const ThanksToPage: React.FC = () => {
           <div>
             {PARTNERS_DATA.map((partner) => (
               <Column key={partner.name}>
-                <div className="img-frame">
-                  <Image
-                    src={partner.imgSrc}
-                    alt={partner.name}
-                    width="100%"
-                    height="100%"
-                    layout="responsive"
-                    placeholder="empty"
-                    priority
-                  />
-                </div>
+                <Image
+                  loader={nextImageLoader}
+                  src={partner.imgSrc}
+                  alt={partner.name}
+                  width={1200}
+                  height={800}
+                  placeholder="empty"
+                  priority
+                />
 
                 <p className="name">{partner.name}</p>
                 <p className="link">{partner.instagram}</p>

@@ -1,6 +1,6 @@
+import Image from 'next/future/image';
 import React from 'react';
 import { FooterMobileWrapper } from './styled';
-import Image from 'next/image';
 
 const FooterMobile: React.FC = () => {
   return (

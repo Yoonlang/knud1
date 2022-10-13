@@ -35,6 +35,11 @@ export const IdentityPageMobileWrapper = styled(Column)`
     & > ${ItemFrame} {
       margin-top: 160px;
 
+      img {
+        width: 100%;
+        height: auto;
+      }
+
       &:last-child {
         margin-bottom: 160px;
       }
@@ -76,6 +81,13 @@ export const IdentityPagePCWrapper = styled(Column)`
     width: 100%;
 
     justify-content: space-between;
+  }
+
+  & > ${ItemFrame} {
+    img {
+      width: 80%;
+      height: auto;
+    }
   }
 
   & > ${ItemFrame} + ${ItemFrame} {

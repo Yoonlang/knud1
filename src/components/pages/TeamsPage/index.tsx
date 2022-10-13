@@ -3,7 +3,8 @@ import { Column, Row } from 'components/common/styled/layout';
 import React from 'react';
 import { TEAMS_DATA } from './constants';
 import { TeamsPageMobileWrapper, TeamsPagePCWrapper } from './styled';
-import Image from 'next/image';
+import Image from 'next/future/image';
+import { nextImageLoader } from 'utils/imageLoader';
 
 const TeamsPage: React.FC = () => {
   return (
@@ -20,17 +21,15 @@ const TeamsPage: React.FC = () => {
         </p>
         {TEAMS_DATA.map((team) => (
           <ItemFrame title={team.name} key={team.name}>
-            <div className="img-frame">
-              <Image
-                src={team.imgSrc}
-                alt="mock"
-                width={615}
-                height={404}
-                layout="responsive"
-                placeholder="empty"
-                priority
-              />
-            </div>
+            <Image
+              loader={nextImageLoader}
+              src={team.imgSrc}
+              alt="mock"
+              width={615}
+              height={404}
+              placeholder="empty"
+              priority
+            />
 
             <Row>
               <p className="data-title">팀장 </p>
@@ -62,17 +61,15 @@ const TeamsPage: React.FC = () => {
         {TEAMS_DATA.map((team) => (
           <ItemFrame title={team.name} key={team.name}>
             <Row>
-              <div className="img-frame">
-                <Image
-                  src={team.imgSrc}
-                  alt="mock"
-                  width={615}
-                  height={404}
-                  layout="responsive"
-                  placeholder="empty"
-                  priority
-                />
-              </div>
+              <Image
+                loader={nextImageLoader}
+                src={team.imgSrc}
+                alt="mock"
+                width={615}
+                height={404}
+                placeholder="empty"
+                priority
+              />
 
               <Column>
                 <Row>

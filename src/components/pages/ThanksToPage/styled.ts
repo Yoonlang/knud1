@@ -13,10 +13,10 @@ export const ThanksToPageMobileWrapper = styled(Column)`
 
     & > div.professor-list {
       & > ${Row} {
-        & > div.img-frame {
-          width: 50%;
-
+        img {
           margin-right: 16px;
+          width: 50%;
+          height: auto;
         }
 
         & > ${Column} {
@@ -55,6 +55,7 @@ export const ThanksToPageMobileWrapper = styled(Column)`
       & > ${Column} {
         img {
           width: 100%;
+          height: auto;
         }
 
         p.name {
@@ -139,8 +140,9 @@ export const ThanksToPagePCWrapper = styled(Column)`
       & > ${Row} {
         width: 100%;
 
-        & > div.img-frame {
+        img {
           width: 50%;
+          height: auto;
 
           margin-right: 30px;
         }
@@ -177,8 +179,9 @@ export const ThanksToPagePCWrapper = styled(Column)`
       column-gap: 162px;
 
       & > ${Column} {
-        & > div.img-frame {
+        img {
           width: 100%;
+          height: auto;
         }
 
         p.name {

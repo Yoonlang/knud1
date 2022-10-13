@@ -7,7 +7,7 @@ import React from 'react';
 import { DefaultLayoutPCWrapper } from './styled';
 import FooterPC from 'components/common/footer/FooterPC';
 import cx from 'classnames';
-import Image from 'next/image';
+import Image from 'next/future/image';
 
 interface Props {
   children?: React.ReactElement;

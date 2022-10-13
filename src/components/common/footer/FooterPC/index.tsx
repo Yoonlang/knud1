@@ -1,7 +1,7 @@
 import { Row, Column } from 'components/common/styled/layout';
 import React from 'react';
 import { FooterPCWrapper } from './styled';
-import Image from 'next/image';
+import Image from 'next/future/image';
 
 const FooterPC: React.FC = () => {
   return (
