@@ -19,6 +19,7 @@ export const TeamsPageMobileWrapper = styled(Column)`
 
     img {
       width: 100%;
+      height: auto;
 
       margin-bottom: 20px;
     }
@@ -88,6 +89,10 @@ export const TeamsPageMobileWrapper = styled(Column)`
       }
     }
   }
+
+  @media (min-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const TeamsPagePCWrapper = styled(Column)`
@@ -110,13 +115,14 @@ export const TeamsPagePCWrapper = styled(Column)`
     & > ${Row} {
       align-items: center;
 
+      img {
+        width: 60%;
+        height: auto;
+      }
+
       & > ${Column} {
         margin-left: 90px;
       }
-    }
-
-    img {
-      width: 60%;
     }
   }
 
@@ -157,5 +163,9 @@ export const TeamsPagePCWrapper = styled(Column)`
 
       margin-left: 6px;
     }
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 `;

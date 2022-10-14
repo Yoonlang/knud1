@@ -14,9 +14,9 @@ export const ThanksToPageMobileWrapper = styled(Column)`
     & > div.professor-list {
       & > ${Row} {
         img {
-          width: 50%;
-
           margin-right: 16px;
+          width: 50%;
+          height: auto;
         }
 
         & > ${Column} {
@@ -55,6 +55,7 @@ export const ThanksToPageMobileWrapper = styled(Column)`
       & > ${Column} {
         img {
           width: 100%;
+          height: auto;
         }
 
         p.name {
@@ -105,6 +106,10 @@ export const ThanksToPageMobileWrapper = styled(Column)`
       margin: 250px 0;
     }
   }
+
+  @media (min-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const ThanksToPagePCWrapper = styled(Column)`
@@ -133,8 +138,11 @@ export const ThanksToPagePCWrapper = styled(Column)`
       column-gap: 16px;
 
       & > ${Row} {
+        width: 100%;
+
         img {
           width: 50%;
+          height: auto;
 
           margin-right: 30px;
         }
@@ -173,6 +181,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
       & > ${Column} {
         img {
           width: 100%;
+          height: auto;
         }
 
         p.name {
@@ -207,5 +216,9 @@ export const ThanksToPagePCWrapper = styled(Column)`
 
       line-height: 1.7;
     }
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
   }
 `;

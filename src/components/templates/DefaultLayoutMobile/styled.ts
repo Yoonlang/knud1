@@ -31,9 +31,11 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
   &.identity {
     background: none;
     & > main {
-      background-image: linear-gradient(to bottom, #38d430 100vh, black 100vh);
+      padding: 0;
+      background-image: linear-gradient(to bottom, #38d430 10%, black 10%);
       & > div.content {
         & > p.title {
+          margin-left: 20px;
           color: black;
         }
       }
@@ -50,6 +52,20 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
         & > p.title {
           font-size: 60px;
         }
+      }
+    }
+
+    &.identity {
+      & > main {
+        padding: 0;
+        & > div.content {
+          & > p.title {
+            margin-left: 30px;
+            color: black;
+          }
+        }
+
+        background-color: black;
       }
     }
   }

@@ -3,7 +3,7 @@ import MainIcon from 'components/MainIcon';
 import Menu from 'components/Menu';
 import Nav from 'components/Nav';
 import Works from 'components/Works';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import styled from 'styled-components';
 
 const Home: NextPage = () => {
@@ -77,5 +77,13 @@ const PC = styled.div`
     }
   }
 `;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      home: true,
+    },
+  };
+};
 
 export default Home;

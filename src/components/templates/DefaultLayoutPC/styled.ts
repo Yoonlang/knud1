@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Column, Row } from '../../common/styled/layout';
 
 export const DefaultLayoutPCWrapper = styled.div`
-  max-width: 1920px;
   height: 100vh;
 
   padding-left: 140px;
@@ -18,9 +17,7 @@ export const DefaultLayoutPCWrapper = styled.div`
 
     justify-content: space-between;
 
-    & > img {
-      width: 82px;
-
+    & > span {
       cursor: pointer;
     }
 
@@ -36,11 +33,30 @@ export const DefaultLayoutPCWrapper = styled.div`
         font-weight: bold;
 
         color: #38d430;
-
-        &.nav-items-target {
-          background-color: #38d430;
-        }
       }
+    }
+
+    & > span.current-nav-wrapper {
+      width: 75px;
+      background-color: #38d430;
+      position: absolute;
+      height: 22px;
+      top: 44px;
+
+      &.identity {
+        right: 390px;
+      }
+      &.archive {
+        right: 300px;
+      }
+      &.teams {
+        right: 210px;
+      }
+      &.thanksto {
+        right: 120px;
+      }
+
+      transition: right 0.5s;
     }
   }
 
