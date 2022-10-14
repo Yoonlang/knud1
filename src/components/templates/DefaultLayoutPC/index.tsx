@@ -7,6 +7,7 @@ import React from 'react';
 import { DefaultLayoutPCWrapper } from './styled';
 import FooterPC from 'components/common/footer/FooterPC';
 import cx from 'classnames';
+import Image from 'next/future/image';
 
 interface Props {
   children?: React.ReactElement;
@@ -21,7 +22,9 @@ const DefaultLayoutPC: React.FC<Props> = (props) => {
     <DefaultLayoutPCWrapper>
       <Row className="nav">
         <Link href={AppPaths.home.href} passHref>
-          <img src="/assets/126_logo.svg" alt="logo" />
+          <a>
+            <Image src="/assets/126_logo.svg" alt="126-logo" width={81.5} height={41} placeholder="empty" priority />
+          </a>
         </Link>
 
         <Row className="nav-items">

@@ -15,6 +15,7 @@ export const ArchivePageMobileWrapper = styled.div`
 
   img {
     width: 100%;
+    height: auto;
     min-width: 167px;
   }
 
@@ -76,6 +77,11 @@ export const ArchivePagePCWrapper = styled.div`
 
     cursor: pointer;
 
+    img {
+      width: 100%;
+      height: auto;
+    }
+
     & > div.text-wrap {
       visibility: hidden;
 
@@ -126,10 +132,7 @@ export const ArchivePagePCWrapper = styled.div`
     }
   }
 
-  img {
-    width: 100%;
-    min-width: 270px;
-  }
+  padding-bottom: 700px;
 
   @media (max-width: 1023px) {
     display: none;

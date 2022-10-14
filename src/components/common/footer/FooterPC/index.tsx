@@ -1,12 +1,13 @@
 import { Row, Column } from 'components/common/styled/layout';
 import React from 'react';
 import { FooterPCWrapper } from './styled';
+import Image from 'next/future/image';
 
 const FooterPC: React.FC = () => {
   return (
     <FooterPCWrapper>
       <Row>
-        <img src="/assets/knu_logo.svg" alt="knu" />
+        <Image src="/assets/knu_logo.svg" alt="knu-logo" width={123} height={38.5} placeholder="empty" priority />
 
         <Column className="contact">
           <p>vcd.knu.ac.kr</p>

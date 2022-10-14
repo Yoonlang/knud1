@@ -1,7 +1,8 @@
 import ItemFrame from 'components/common/ItemFrame';
 import { Row } from 'components/common/styled/layout';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import React from 'react';
+import { nextImageLoader } from 'utils/imageLoader';
 import { IdentityPageMobileWrapper, IdentityPagePCWrapper } from './styled';
 import ice from '/public/assets/ice.jpeg';
 
@@ -22,19 +23,20 @@ const IdentityPage: React.FC = () => {
           </p>
           <p>1의 26제곱은 여전히 1이듯이.</p>
         </div>
-
-        <ItemFrame title="Poster">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
-        <ItemFrame title="Font">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
-        <ItemFrame title="Dorok">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
-        <ItemFrame title="Goods">
-          <Image src={ice} alt={'mock'} />
-        </ItemFrame>
+        <div className="item-list">
+          <ItemFrame title="Poster">
+            <Image loader={nextImageLoader} src={ice} alt={'mock'} placeholder="empty" priority />
+          </ItemFrame>
+          <ItemFrame title="Font">
+            <Image loader={nextImageLoader} src={ice} alt={'mock'} placeholder="empty" priority />
+          </ItemFrame>
+          <ItemFrame title="Dorok">
+            <Image loader={nextImageLoader} src={ice} alt={'mock'} placeholder="empty" priority />
+          </ItemFrame>
+          <ItemFrame title="Goods">
+            <Image loader={nextImageLoader} src={ice} alt={'mock'} placeholder="empty" priority />
+          </ItemFrame>
+        </div>
       </IdentityPageMobileWrapper>
 
       <IdentityPagePCWrapper>
@@ -56,16 +58,16 @@ const IdentityPage: React.FC = () => {
         </Row>
 
         <ItemFrame title="Poster">
-          <Image src={ice} alt={'mock'} />
+          <Image loader={nextImageLoader} src={ice} alt={'mock'} />
         </ItemFrame>
         <ItemFrame title="Font">
-          <Image src={ice} alt={'mock'} />
+          <Image loader={nextImageLoader} src={ice} alt={'mock'} />
         </ItemFrame>
         <ItemFrame title="Dorok">
-          <Image src={ice} alt={'mock'} />
+          <Image loader={nextImageLoader} src={ice} alt={'mock'} />
         </ItemFrame>
         <ItemFrame title="Goods">
-          <Image src={ice} alt={'mock'} />
+          <Image loader={nextImageLoader} src={ice} alt={'mock'} />
         </ItemFrame>
       </IdentityPagePCWrapper>
     </>

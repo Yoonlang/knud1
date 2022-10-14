@@ -17,11 +17,6 @@ export const FooterPCWrapper = styled.footer`
   & > ${Row} {
     padding-left: 54px;
 
-    & > img {
-      width: 100%;
-      max-width: 123px;
-    }
-
     & > ${Column}.contact {
       margin-left: 48px;
 
