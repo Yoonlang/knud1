@@ -1,3 +1,4 @@
+import Image from 'next/future/image';
 import styled from 'styled-components';
 
 export const ButtonBase = styled.button`
@@ -8,4 +9,10 @@ export const ButtonBase = styled.button`
   padding: 0;
   overflow: visible;
   cursor: pointer;
+`;
+
+export const StyledImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;

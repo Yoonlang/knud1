@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
 
-      {pageProps?.home ? (
+      {pageProps?.home || pageProps?.portfolio ? (
         <Component {...pageProps} />
       ) : (
         <>
