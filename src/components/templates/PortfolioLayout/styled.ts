@@ -58,14 +58,14 @@ export const StyledPortfolioLayout = styled.div`
     padding: 0 50px;
     & h2 {
       margin: 0;
-
+      font-weight: 100;
       font-size: 100px;
       font-family: 'GmarketSansBold';
       color: #fff;
     }
     & h3 {
       margin: 34px 0;
-
+      font-weight: 100;
       font-size: 36px;
       font-family: 'GmarketSansBold';
       color: #fff;
@@ -74,7 +74,7 @@ export const StyledPortfolioLayout = styled.div`
       margin: 0;
       margin-bottom: 120px;
       font-size: 20px;
-      font-family: 'NotoSans';
+      font-family: 'NotoSansKR-Medium';
       color: #fff;
     }
     & > div {
@@ -84,7 +84,7 @@ export const StyledPortfolioLayout = styled.div`
     & h4 {
       margin: 0;
       font-size: 25px;
-      font-family: 'NotoSans';
+      font-family: 'NotoSansKR-Medium';
       color: #38d430;
     }
   }
@@ -102,7 +102,7 @@ export const StyledPortfolioLayout = styled.div`
     position: absolute;
     bottom: 300px;
     font-weight: bold;
-    font-family: 'NotoSans';
+    font-family: 'NotoSansKR-Medium';
     color: #38d430;
     text-decoration: underline;
     z-index: 2;
