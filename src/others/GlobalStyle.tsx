@@ -17,52 +17,52 @@ const GlobalStyle = createGlobalStyle`
     }
     @font-face {
         font-family: 'Poppins-Light';
-        src: url('/fonts/Poppins-Light.otf') format('otf');
+        src: url('/fonts/Poppins-Light.otf') format('opentype');
         font-style: normal;
     }
     @font-face {
         font-family: 'Poppins-Medium';
-        src: url('/fonts/Poppins-Medium.otf') format('otf');
+        src: url('/fonts/Poppins-Medium.otf') format('opentype');
         font-style: normal;
     }
     @font-face {
         font-family: 'Poppins-Bold';
-        src: url('/fonts/Poppins-Bold.otf') format('otf');
+        src: url('/fonts/Poppins-Bold.otf') format('opentype');
         font-style: normal;
         
     }
     @font-face {
         font-family: 'NotoSansKR-Light';
-        src: url('/fonts/NotoSansKR-Light.otf') format('otf');
+        src: url('/fonts/NotoSansKR-Light.otf') format('opentype');
         font-style: normal;
         
     }
     @font-face {
         font-family: 'NotoSansKR-Medium';
-        src: url('/fonts/NotoSansKR-Medium.otf') format('otf');
+        src: url('/fonts/NotoSansKR-Medium.otf') format('opentype');
         font-style: normal;
         
     }
     @font-face {
         font-family: 'NotoSansKR-Bold';
-        src: url('/fonts/NotoSansKR-Bold.otf') format('otf');
+        src: url('/fonts/NotoSansKR-Bold.otf') format('opentype');
         font-style: normal;
     }
     @font-face {
         font-family: 'GmarketSansLight';
-        src: url('/fonts/GmarketSansLight.otf') format('otf');
+        src: url('/fonts/GmarketSansLight.otf') format('opentype');
         font-style: normal;
         
     }
     @font-face {
         font-family: 'GmarketSansMedium';
-        src: url('/fonts/GmarketSansMedium.otf') format('otf');
+        src: url('/fonts/GmarketSansMedium.otf') format('opentype');
         font-style: normal;
         
     }
     @font-face {
         font-family: 'GmarketSansBold';
-        src: url('/fonts/GmarketSansBold.otf') format('otf');
+        src: url('/fonts/GmarketSansBold.otf') format('opentype');
         font-style: normal;
     }
 `;
