@@ -37,20 +37,20 @@ export const DefaultLayoutPCWrapper = styled.div`
     }
 
     & > span.current-nav-wrapper {
-      width: 75px;
+      width: 85px;
       background-color: #38d430;
       position: absolute;
       height: 22px;
       top: 44px;
 
       &.identity {
-        right: 390px;
+        right: 420px;
       }
       &.archive {
-        right: 300px;
+        right: 320px;
       }
       &.teams {
-        right: 210px;
+        right: 220px;
       }
       &.thanksto {
         right: 120px;
