@@ -11,7 +11,6 @@ export const StyledProfile = styled.div<StyledProfileProps>`
   & .profileImg {
     width: 270px;
     height: 360px;
-    background: #aaa;
     margin-bottom: 20px;
   }
 
@@ -25,14 +24,8 @@ export const StyledProfile = styled.div<StyledProfileProps>`
   & .contact {
     display: flex;
     width: 100%;
-    gap: 15px;
     margin-bottom: 12px;
     align-items: center;
-    & > div {
-      width: 30px;
-      height: 30px;
-      background: #000;
-    }
     & > p {
       font-size: 18px;
       font-family: 'GmarketSansBold';
@@ -43,9 +36,26 @@ export const StyledProfile = styled.div<StyledProfileProps>`
 
   @media (min-width: 1024px) {
     display: ${(props) => (props.main ? 'none' : '')};
+
+    & .contact {
+      gap: 15px;
+      & > div {
+        width: 28px;
+        height: 28px;
+      }
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
+    & .contact {
+      gap: 8px;
+      & > div {
+        width: 20px;
+        height: 20px;
+        filter: invert(1);
+      }
+    }
+
     & .profileImg {
       width: 150px;
       height: 200px;
@@ -57,6 +67,14 @@ export const StyledProfile = styled.div<StyledProfileProps>`
     }
   }
   @media (max-width: 767px) {
+    & .contact {
+      gap: 8px;
+      & > div {
+        width: 20px;
+        height: 20px;
+        filter: invert(1);
+      }
+    }
     & .profileImg {
       width: 98px;
       height: 130px;
