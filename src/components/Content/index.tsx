@@ -1,4 +1,3 @@
-import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
 import { MyImage, StyledAdd1, StyledArrange, StyledSlide, Title } from './styled';
 
@@ -78,8 +77,8 @@ const Content: React.FC<Props> = (props) => {
       </StyledArrange>
     );
   }
-  if (type === 'add3') {
-  }
+  // if (type === 'add3') {
+  // }
   return <></>;
 };
 

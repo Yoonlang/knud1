@@ -11,9 +11,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
       {
         params: { id: 'ojh' },
       },
-      {
-        params: { id: '1' },
-      },
     ],
     fallback: false,
   };
