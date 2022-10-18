@@ -22,7 +22,7 @@ export const HeaderMobileWrapper = styled(Row)`
 
     position: absolute;
 
-    bottom: 0;
+    top: 0;
     right: 0;
 
     background: white;
@@ -42,19 +42,12 @@ export const HeaderMobileWrapper = styled(Row)`
       white-space: pre;
     }
 
-    & > ${ButtonBase}.close-button {
-      margin-top: 63px;
-
-      & > span {
-        width: 32px !important;
-      }
-    }
-
     &.open {
       visibility: visible;
       width: 195px;
       height: 100vh;
       opacity: 1;
+      padding-top: 63px;
     }
     &.close {
       visibility: hidden;
@@ -73,18 +66,6 @@ export const HeaderMobileWrapper = styled(Row)`
       & > div.logo {
         color: white;
       }
-
-      & > ${ButtonBase}.menu-button {
-        & > span {
-          width: 40px !important;
-          height: 40px !important;
-        }
-      }
-
-      & > span {
-        width: 60px !important;
-        height: 30px !important;
-      }
     }
 
     & > ${Column}.side-bar {
@@ -98,11 +79,6 @@ export const HeaderMobileWrapper = styled(Row)`
 
       & > ${ButtonBase}.close-button {
         margin-top: 80px;
-
-        & > span {
-          width: 40px !important;
-          height: 40px !important;
-        }
       }
 
       &.open {
