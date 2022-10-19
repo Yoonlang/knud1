@@ -1,6 +1,6 @@
 import { AnimatedColBar, AnimatedBar } from 'components/AnimatedBar';
+import SideBar from 'components/common/SideBar';
 import MainIcon from 'components/MainIcon';
-import Menu from 'components/Menu';
 import Nav from 'components/Nav';
 import Works from 'components/Works';
 import type { GetStaticProps, NextPage } from 'next';
@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <Page>
       <Mobile>
-        <Menu />
+        <SideBar home />
         <MainIcon />
         <AnimatedColBar />
         <Works />
