@@ -8,6 +8,9 @@ export const HeaderMobileWrapper = styled(Row)`
 
   & > ${Row}.header-wrap {
     padding: 20px;
+
+    width: 100%;
+    position: relative;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
