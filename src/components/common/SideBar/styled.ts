@@ -50,7 +50,7 @@ export const SideBarWrapper = styled(Column)`
     width: 195px;
     height: 100vh;
     opacity: 1;
-    padding-top: 63px;
+    padding-top: 17px;
   }
   &.close {
     visibility: hidden;
@@ -69,12 +69,9 @@ export const SideBarWrapper = styled(Column)`
       font-size: 30px;
     }
 
-    & > ${ButtonBase}.close-button {
-      margin-top: 80px;
-    }
-
     &.open {
       width: 417px;
+      padding-top: 40px;
     }
     &.close {
       width: 245px;
