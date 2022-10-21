@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100%;
         box-sizing: border-box;
         overflow: hidden;
+        background-color: black;
     }
     
     a {

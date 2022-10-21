@@ -59,7 +59,6 @@ interface MenuLinkProps {
 }
 
 const MenuLink = styled.a<MenuLinkProps>`
-  width: 131px;
   height: 36px;
   text-align: right;
   color: ${(props) => (props.main ? '#38d430' : 'rgba(56, 212, 48, 0.3)')};
