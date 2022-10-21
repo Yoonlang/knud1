@@ -13,12 +13,11 @@ interface Props {
 }
 
 const Content: React.FC<Props> = (props) => {
-  const { content } = props;
-  const { type, title, detail, imgs, img, video } = content;
+  const { type, title, detail, imgs, img, video } = props.content;
   if (type === 'slide') {
     return (
       <StyledSlide>
-        {imgs && (
+        {imgs && imgs[0] && (
           <MyImage
             loader={nextImageLoader}
             src={imgs[0]}
@@ -60,20 +59,19 @@ const Content: React.FC<Props> = (props) => {
     return (
       <StyledArrange>
         <Title>{title}</Title>
-        {imgs &&
-          imgs.map((img, index) => {
-            return (
-              <MyImage
-                loader={nextImageLoader}
-                src={img}
-                width={1610}
-                height={906}
-                maxwidth={'1610px'}
-                maxheight={'906px'}
-                key={index}
-              />
-            );
-          })}
+        {imgs?.map((img, index) => {
+          return (
+            <MyImage
+              loader={nextImageLoader}
+              src={img}
+              width={1610}
+              height={906}
+              maxwidth={'1610px'}
+              maxheight={'906px'}
+              key={index}
+            />
+          );
+        })}
       </StyledArrange>
     );
   }

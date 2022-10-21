@@ -30,7 +30,7 @@ interface Info {
   };
 }
 
-interface Content {
+interface PortfolioContent {
   type: string;
   title?: string | null;
   detail?: string | null;
@@ -39,13 +39,11 @@ interface Content {
   video?: string;
 }
 
-interface Contents extends Array<Content> {}
-
 const PortfolioLayout: React.FC<Props> = (props) => {
   const { uri } = props;
   const titles: Titles = portfolioData[uri].titles;
   const info: Info = portfolioData[uri].info;
-  const contents: Contents = portfolioData[uri].contents;
+  const contents: PortfolioContent[] = portfolioData[uri].contents;
 
   return (
     <>

@@ -19,8 +19,6 @@ export const StyledPortfolioLayout = styled.div`
     display: flex;
     position: relative;
     width: 100%;
-    /* height: 100%; */
-    /* overflow: hidden; */
     & .sidebar {
       display: flex;
       justify-content: center;
@@ -38,7 +36,6 @@ export const StyledPortfolioLayout = styled.div`
       flex-direction: column;
       width: 100%;
       z-index: 1;
-      /* overflow: auto; */
       & .tag {
         width: 68px;
         height: 25px;
@@ -230,7 +227,6 @@ export const StyledPortfolioLayout = styled.div`
 export const ContentLayout = styled.div`
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
 
   @media (min-width: 1024px) {
     & > div {
