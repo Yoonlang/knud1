@@ -11,7 +11,9 @@ const GlobalStyle = createGlobalStyle`
         overflow: hidden;
         background-color: black;
     }
-    
+    * {
+        box-sizing: border-box;
+    }
     a {
         color: inherit;
         text-decoration: none;
