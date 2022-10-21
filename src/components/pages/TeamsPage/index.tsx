@@ -10,7 +10,16 @@ const TeamsPage: React.FC = () => {
   return (
     <>
       <TeamsPageMobileWrapper>
-        <div className="mock-img"></div>
+        <Image
+          className="all-teams"
+          loader={nextImageLoader}
+          src={'/assets/teams/all_teams.png'}
+          alt="all-teams"
+          width={3000}
+          height={1500}
+          placeholder="empty"
+          priority
+        />
         <p className="description">
           안녕하세요 가을의 끝자락, 겨울에 초입에 서서 인사드립니다. 수많은 계절들 속에서 유독 마음이 설레는 계절이
           있다면 졸업 전시회가 있는 이맘때를 떠올립니다. 작은 걸음들이 모이고 모여 만들어진 오솔길은 산길에서 길 잃은
@@ -44,7 +53,16 @@ const TeamsPage: React.FC = () => {
       </TeamsPageMobileWrapper>
 
       <TeamsPagePCWrapper>
-        <div className="mock-img"></div>
+        <Image
+          className="all-teams"
+          loader={nextImageLoader}
+          src={'/assets/teams/all_teams.png'}
+          alt="all-teams"
+          width={3000}
+          height={1500}
+          placeholder="empty"
+          priority
+        />
         <Row className="description-wrapper">
           <p className="description">
             안녕하세요 가을의 끝자락, 겨울에 초입에 서서 인사드립니다. 수많은 계절들 속에서 유독 마음이 설레는 계절이
@@ -64,7 +82,7 @@ const TeamsPage: React.FC = () => {
               <Image
                 loader={nextImageLoader}
                 src={team.imgSrc}
-                alt="mock"
+                alt={team.name}
                 width={615}
                 height={404}
                 placeholder="empty"

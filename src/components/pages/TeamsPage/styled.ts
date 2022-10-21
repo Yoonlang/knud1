@@ -5,11 +5,9 @@ import styled from 'styled-components';
 export const TeamsPageMobileWrapper = styled(Column)`
   padding-bottom: 200px;
 
-  & > div.mock-img {
+  img.all-teams {
     width: 100%;
-    height: 230px;
-
-    background-color: white;
+    height: auto;
   }
 
   & > ${ItemFrame} {
@@ -98,11 +96,9 @@ export const TeamsPageMobileWrapper = styled(Column)`
 export const TeamsPagePCWrapper = styled(Column)`
   padding-bottom: 200px;
 
-  & > div.mock-img {
+  img.all-teams {
     width: 100%;
-    height: 230px;
-
-    background-color: white;
+    height: auto;
   }
 
   & > ${Row}.description-wrapper {
