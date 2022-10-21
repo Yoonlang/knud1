@@ -5,6 +5,7 @@ import { TEAMS_DATA } from './constants';
 import { TeamsPageMobileWrapper, TeamsPagePCWrapper } from './styled';
 import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
+import allTeams from '../../../../public/assets/teams/all_teams.png';
 
 const TeamsPage: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const TeamsPage: React.FC = () => {
         <Image
           className="all-teams"
           loader={nextImageLoader}
-          src={'/assets/teams/all_teams.png'}
+          src={allTeams}
           alt="all-teams"
           width={3000}
           height={1500}
@@ -56,7 +57,7 @@ const TeamsPage: React.FC = () => {
         <Image
           className="all-teams"
           loader={nextImageLoader}
-          src={'/assets/teams/all_teams.png'}
+          src={allTeams}
           alt="all-teams"
           width={3000}
           height={1500}

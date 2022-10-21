@@ -6,6 +6,7 @@ import { PARTNERS_DATA, PROFESSOR_DATA } from './constants';
 import { ThanksToPageMobileWrapper, ThanksToPagePCWrapper } from './styled';
 import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
+import allProf from '../../../../public/assets/partners/all-prof_img.png';
 
 const ThanksToPage: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const ThanksToPage: React.FC = () => {
           <Image
             className="all-prof"
             loader={nextImageLoader}
-            src={'/assets/partners/all-prof_img.png'}
+            src={allProf}
             alt={'all-prof_img'}
             width={1190}
             height={670}
@@ -86,7 +87,7 @@ const ThanksToPage: React.FC = () => {
           <Row>
             <Image
               loader={nextImageLoader}
-              src={'/assets/partners/all-prof_img.png'}
+              src={allProf}
               alt={'all-prof_img'}
               width={1190}
               height={670}
