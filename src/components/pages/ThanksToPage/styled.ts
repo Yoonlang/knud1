@@ -4,11 +4,9 @@ import styled from 'styled-components';
 
 export const ThanksToPageMobileWrapper = styled(Column)`
   & > ${ItemFrame}.professor {
-    div.mock-img {
+    img.all-prof {
       width: 100%;
-      height: 230px;
-
-      background-color: white;
+      height: auto;
     }
 
     & > div.professor-list {
@@ -115,11 +113,9 @@ export const ThanksToPageMobileWrapper = styled(Column)`
 export const ThanksToPagePCWrapper = styled(Column)`
   & > ${ItemFrame}.professor {
     & > ${Row} {
-      div.mock-img {
-        width: 100%;
-        height: 670px;
-
-        background-color: white;
+      img {
+        width: 80%;
+        height: 80%;
 
         margin-right: 50px;
       }
@@ -128,7 +124,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
     & > div.professor-list {
       margin-top: 200px;
 
-      width: 80%;
+      width: 95%;
 
       display: grid;
 
@@ -148,6 +144,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
         }
 
         & > ${Column} {
+          min-width: 180px;
           justify-content: flex-end;
 
           p.name {
