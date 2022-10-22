@@ -81,7 +81,7 @@ export const DefaultLayoutPCWrapper = styled.div`
       overflow-y: auto;
 
       & > main {
-        width: calc(100% - 110px);
+        width: 100%;
 
         padding: 0 80px 0 30px;
         & > p.title {

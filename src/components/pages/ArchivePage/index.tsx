@@ -3,45 +3,57 @@ import React from 'react';
 import { ArchivePageMobileWrapper, ArchivePagePCWrapper } from './styled';
 import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
+import { ARCHIVE_DATA } from './constants';
+import { useRouter } from 'next/router';
 
 const ArchivePage: React.FC = () => {
+  const router = useRouter();
+
+  const linkToPortfolio = React.useCallback(
+    (producerInitial: string): void => {
+      router.push(`/portfolio/${producerInitial}`);
+    },
+    [router]
+  );
+
   return (
     <>
       <ArchivePageMobileWrapper>
-        {[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((_, index) => (
-          <div key={index} className={'content'}>
+        {ARCHIVE_DATA.map((archive, index) => (
+          <div key={archive.title} className={'content'}>
             <Image
               loader={nextImageLoader}
-              src="/assets/ice.jpeg"
-              alt="sample"
-              width={1200}
-              height={800}
+              src={`/assets/archive/mobile/mobile_archive_${index + 1}.png`}
+              alt={archive.title}
+              width={478}
+              height={611}
               placeholder="empty"
               priority
+              onClick={() => linkToPortfolio(archive.producerInitial)}
             />
-            <p className="title">Jalza</p>
-            <p className="name">정다은</p>
+            <p className="title">{archive.title}</p>
+            <p className="producer">{archive.producer}</p>
           </div>
         ))}
       </ArchivePageMobileWrapper>
 
       <ArchivePagePCWrapper>
-        {[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2].map((_, index) => (
-          <div key={index} className={'content'}>
+        {ARCHIVE_DATA.map((archive, index) => (
+          <div key={index} className={'content'} onClick={() => linkToPortfolio(archive.producerInitial)}>
             <Image
               loader={nextImageLoader}
-              src="/assets/ice.jpeg"
-              alt="sample"
-              width={1200}
-              height={800}
+              src={`/assets/archive/pc/pc_archive_${index + 1}.png`}
+              alt={archive.title}
+              width={1151}
+              height={818}
               placeholder="empty"
               priority
             />
             <Row className="text-wrap">
-              <p className="name">이예림</p>
+              <p className="producer">{archive.producer}</p>
               <Column>
-                <p className="title">오메가메</p>
-                <p className="subtitle">omegame</p>
+                <p className="title">{archive.title}</p>
+                {archive.subTitle && <p className="subtitle">{archive.subTitle}</p>}
               </Column>
             </Row>
           </div>
