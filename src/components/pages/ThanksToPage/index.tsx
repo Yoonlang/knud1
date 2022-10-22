@@ -144,12 +144,14 @@ const ThanksToPage: React.FC = () => {
                 />
 
                 <p className="name">{partner.name}</p>
-                <p className="link">{partner.instagram}</p>
-                <Link href={'https://' + partner.site} passHref>
-                  <a target="_blank" rel="noopener noreferrer" className="link">
-                    {partner.site}
-                  </a>
-                </Link>
+                {partner.instagram && <p className="link">{partner.instagram}</p>}
+                {partner.site && (
+                  <Link href={'https://' + partner.site} passHref>
+                    <a target="_blank" rel="noopener noreferrer" className="link">
+                      {partner.site}
+                    </a>
+                  </Link>
+                )}
               </Column>
             ))}
           </div>

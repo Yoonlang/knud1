@@ -35,8 +35,8 @@ export const PROFESSOR_DATA: ProfessorDataInterface[] = [
 interface PartnersDataInterface {
   imgSrc: string;
   name: string;
-  instagram: string;
-  site: string;
+  instagram?: string;
+  site?: string;
 }
 
 export const PARTNERS_DATA: PartnersDataInterface[] = [
@@ -49,7 +49,5 @@ export const PARTNERS_DATA: PartnersDataInterface[] = [
   {
     imgSrc: '/assets/partners/partners_raum.png',
     name: '라움',
-    instagram: '@ moorim_gallery',
-    site: 'linktr.ee/moorim_gallery',
   },
 ];
