@@ -47,7 +47,7 @@ const TeamsPage: React.FC = () => {
             </Row>
             <Row>
               <p className="data-title">팀원 </p>
-              <p className="data">{team.members.toString()}</p>
+              <p className="data">{team.members.join(', ')}</p>
             </Row>
           </ItemFrame>
         ))}
