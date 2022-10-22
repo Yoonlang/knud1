@@ -71,9 +71,9 @@ export const DefaultLayoutPCWrapper = styled.div`
     padding: 12px 0 0 15px;
 
     & > ${Column}.content {
-      height: calc(100% - 105px);
+      height: calc(100% - 88px);
 
-      border-top-left-radius: 48px;
+      border-top-left-radius: 36px;
 
       background-color: black;
 
