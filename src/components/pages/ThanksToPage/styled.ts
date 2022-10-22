@@ -69,6 +69,10 @@ export const ThanksToPageMobileWrapper = styled(Column)`
           color: white;
           font-size: 12px;
           font-weight: 300;
+
+          &:last-child {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -194,6 +198,10 @@ export const ThanksToPagePCWrapper = styled(Column)`
           color: white;
           font-size: 20px;
           font-weight: 300;
+
+          &:last-child {
+            text-decoration: underline;
+          }
         }
       }
     }
