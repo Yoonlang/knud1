@@ -12,7 +12,6 @@ export const IdentityPageMobileWrapper = styled(Column)`
 
     video {
       width: 100%;
-      object-fit: contain;
     }
 
     p {
@@ -95,7 +94,6 @@ export const IdentityPageMobileWrapper = styled(Column)`
 export const IdentityPagePCWrapper = styled(Column)`
   video {
     width: 100%;
-    object-fit: contain;
   }
 
   & > ${Row}.description-wrapper {
