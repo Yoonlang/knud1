@@ -39,7 +39,6 @@ export const StyledPortfolioLayout = styled.div`
       & .tag {
         width: 68px;
         height: 25px;
-        background: #fff;
       }
       & > div:nth-child(3) {
         padding: 30px;
@@ -132,8 +131,10 @@ export const StyledPortfolioLayout = styled.div`
         font-size: 36px;
       }
       & > p {
-        margin-bottom: 120px;
         font-size: 20px;
+      }
+      & :nth-last-child(2) {
+        margin-bottom: 120px;
       }
       & h4 {
         font-size: 25px;
@@ -171,8 +172,10 @@ export const StyledPortfolioLayout = styled.div`
         font-size: 24px;
       }
       & > p {
-        margin-bottom: 30px;
         font-size: 14px;
+      }
+      & :nth-last-child(2) {
+        margin-bottom: 30px;
       }
       & > div {
         display: none;

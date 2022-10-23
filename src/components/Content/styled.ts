@@ -13,7 +13,6 @@ export const StyledSlide = styled.div`
     margin: 0;
     width: 100%;
     max-width: 1100px;
-
     color: #38d430;
     font-family: 'NotoSansKR-Medium';
     font-size: 22px;
@@ -27,8 +26,10 @@ export const StyledSlide = styled.div`
     }
   }
   @media (max-width: 1023px) and (min-width: 768px) {
+    & .detail {
+      padding-top: 30px;
+    }
     & p {
-      margin-top: 30px;
       font-size: 16px;
     }
   }
@@ -62,8 +63,10 @@ export const StyledAdd1 = styled.div`
         width: 60%;
         min-width: 910px;
       }
-      & p {
+      & div {
         width: 40%;
+      }
+      & p {
         max-width: 590px;
         font-size: 22px;
       }
