@@ -19,26 +19,39 @@ const Content: React.FC<Props> = (props) => {
 
   const slide = useRef<HTMLDivElement>(null);
   const dot = useRef<HTMLDivElement>(null);
+  const left = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    if (!slide.current || !dot.current) return;
+  if (type === 'slide') {
+    useEffect(() => {
+      if (!slide.current || !dot.current || !left.current) return;
+      left.current.style.display = 'none';
+      slide.current.addEventListener('scroll', (e) => {
+        if (!dot.current) return;
+        if (!e.target) return;
+        const pos =
+          Math.abs(((e.target as HTMLDivElement).children[0] as HTMLImageElement).x) /
+          (e.target as HTMLDivElement).offsetWidth /
+          2;
+        if (left.current)
+          if (pos >= 0.5) left.current.style.display = 'flex';
+          else left.current.style.display = 'none';
+        dot.current.style.left = `${pos * 20}px`;
+      });
+    }, [slide]);
+  }
 
-    setTimeout(() => {
-      console.log('hi');
-      if (slide.current) slide.current.scrollLeft = 0;
-      console.log('bye');
-    }, 1000);
+  const goLeft = () => {
+    if (!slide.current) return;
+    const { scrollLeft, scrollWidth, offsetWidth } = slide.current;
+    if ((scrollLeft - offsetWidth) % scrollWidth <= 0) slide.current.scrollLeft = 0;
+    else slide.current.scrollLeft = (scrollLeft - offsetWidth) % scrollWidth;
+  };
 
-    slide.current.addEventListener('scroll', (e) => {
-      if (!dot.current) return;
-      if (!e.target) return;
-      const pos =
-        Math.abs(((e.target as HTMLDivElement).children[0] as HTMLImageElement).x) /
-        (e.target as HTMLDivElement).offsetWidth /
-        2;
-      dot.current.style.left = `${pos * 20}px`;
-    });
-  }, [slide]);
+  const goRight = () => {
+    if (!slide.current) return;
+    const { scrollLeft, scrollWidth, offsetWidth } = slide.current;
+    slide.current.scrollLeft = (scrollLeft + offsetWidth) % scrollWidth;
+  };
 
   if (type === 'slide') {
     return (
@@ -55,12 +68,19 @@ const Content: React.FC<Props> = (props) => {
                   height={906}
                   maxwidth={'1610px'}
                   maxheight={'906px'}
+                  priority
                 />
               );
             })}
           </div>
           {imgs && imgs.length >= 2 && (
             <div className={'support'}>
+              <button className={'left'} onClick={goLeft} ref={left}>
+                <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
+              </button>
+              <button className={'right'} onClick={goRight}>
+                <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
+              </button>
               <div className={'dots'}>
                 {imgs?.map((img, index) => {
                   img;

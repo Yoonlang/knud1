@@ -14,10 +14,12 @@ export const StyledSlide = styled.div`
     display: flex;
     position: relative;
     overflow: scroll;
-    white-space: nowrap;
     scroll-snap-type: x mandatory;
+    transition: 0.5s;
+    z-index: 2;
     & > img {
       scroll-snap-align: center;
+      min-width: 100%;
     }
   }
   & .support {
@@ -28,13 +30,38 @@ export const StyledSlide = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    z-index: 1;
+    & .left,
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: calc(50% - 15px);
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      z-index: 3;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+    & .left {
+      left: 50px;
+      transform: rotate(180deg);
+    }
+    & .right {
+      right: 50px;
+    }
     & .dots {
       display: flex;
       position: relative;
       top: calc(100% - 40px);
       gap: 10px;
+      z-index: 3;
+      pointer-events: none;
       & .here {
         position: absolute;
         left: 0;

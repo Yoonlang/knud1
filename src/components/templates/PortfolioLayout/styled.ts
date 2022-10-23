@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledPortfolioLayout = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background: #000;
@@ -91,11 +92,16 @@ export const StyledPortfolioLayout = styled.div`
       display: flex;
       gap: 40px;
     }
-    & h4 {
-      margin: 0;
-      font-size: 25px;
-      font-family: 'NotoSansKR-Medium';
-      color: #38d430;
+    & .hashtag {
+      flex-wrap: wrap;
+      & h4 {
+        margin: 0;
+        font-size: 25px;
+        height: 10px;
+        font-family: 'NotoSansKR-Medium';
+        color: #38d430;
+        white-space: nowrap;
+      }
     }
   }
 

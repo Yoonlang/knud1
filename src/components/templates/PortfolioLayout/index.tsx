@@ -71,7 +71,7 @@ const PortfolioLayout: React.FC<Props> = (props) => {
                 {titles.detail.split('//').map((paragraph, index) => {
                   return <p key={index}>{paragraph}</p>;
                 })}
-                <div>
+                <div className={'hashtag'}>
                   {titles.hashtag.map((hashtag, index) => {
                     return <h4 key={index}># {hashtag}</h4>;
                   })}
