@@ -41,7 +41,7 @@ export const ThanksToPageMobileWrapper = styled(Column)`
   }
 
   & > ${ItemFrame}.partners {
-    margin: 160px 0;
+    margin-top: 160px;
 
     & > div {
       display: grid;
@@ -105,7 +105,11 @@ export const ThanksToPageMobileWrapper = styled(Column)`
     }
 
     & > ${ItemFrame}.partners {
-      margin: 250px 0;
+      margin-top: 250px;
+    }
+
+    p.description {
+      margin: 30px 0 250px;
     }
   }
 
@@ -168,7 +172,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
   }
 
   & > ${ItemFrame}.partners {
-    margin: 500px 0;
+    margin-top: 500px;
 
     & > div {
       width: 70%;

@@ -83,7 +83,7 @@ export const DefaultLayoutPCWrapper = styled.div`
       & > main {
         width: 100%;
 
-        padding: 0 80px 0 30px;
+        padding: 0 80px 736px 30px;
         & > p.title {
           padding: 0;
           margin: 0;

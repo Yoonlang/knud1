@@ -136,8 +136,6 @@ export const ArchivePagePCWrapper = styled.div`
     }
   }
 
-  padding-bottom: 700px;
-
   @media (min-width: 1500px) and (max-width: 1800px) {
     & > div.content {
       & > div.text-wrap {

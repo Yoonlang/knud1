@@ -3,8 +3,6 @@ import { Column, Row } from 'components/common/styled/layout';
 import styled from 'styled-components';
 
 export const TeamsPageMobileWrapper = styled(Column)`
-  padding-bottom: 200px;
-
   img.all-teams {
     width: 100%;
     height: auto;
@@ -41,7 +39,7 @@ export const TeamsPageMobileWrapper = styled(Column)`
       word-wrap: break-word;
       word-break: break-word;
 
-      margin-bottom: 100px;
+      margin: 20px 0 100px;
 
       font-family: 'NotoSansKR-Medium';
     }
@@ -59,12 +57,6 @@ export const TeamsPageMobileWrapper = styled(Column)`
   }
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    & > div.mock-img {
-      height: 507px;
-
-      margin-bottom: 30px;
-    }
-
     & > ${ItemFrame} {
       img {
         width: 100%;
@@ -79,7 +71,7 @@ export const TeamsPageMobileWrapper = styled(Column)`
 
     p {
       &.description {
-        margin-bottom: 250px;
+        margin: 30px 0 250px;
       }
 
       &.team-name {
@@ -94,8 +86,6 @@ export const TeamsPageMobileWrapper = styled(Column)`
 `;
 
 export const TeamsPagePCWrapper = styled(Column)`
-  padding-bottom: 200px;
-
   img.all-teams {
     width: 100%;
     height: auto;

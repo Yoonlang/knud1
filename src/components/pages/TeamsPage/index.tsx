@@ -34,7 +34,7 @@ const TeamsPage: React.FC = () => {
             <Image
               loader={nextImageLoader}
               src={team.imgSrc}
-              alt="mock"
+              alt={team.name}
               width={615}
               height={404}
               placeholder="empty"

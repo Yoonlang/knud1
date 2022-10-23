@@ -20,7 +20,6 @@ const ThanksToPage: React.FC = () => {
             alt={'all-prof_img'}
             width={1190}
             height={670}
-            sizes="100vw"
             placeholder="empty"
             priority
           />
@@ -98,7 +97,6 @@ const ThanksToPage: React.FC = () => {
               alt={'all-prof_img'}
               width={1190}
               height={670}
-              sizes="100vw"
               placeholder="empty"
               priority
             />
@@ -121,7 +119,6 @@ const ThanksToPage: React.FC = () => {
                   alt={professor.name}
                   width={300}
                   height={400}
-                  sizes="100vw"
                   placeholder="empty"
                   priority
                 />
