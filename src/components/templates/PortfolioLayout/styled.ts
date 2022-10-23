@@ -88,16 +88,17 @@ export const StyledPortfolioLayout = styled.div`
       font-family: 'NotoSansKR-Medium';
       color: #fff;
     }
-    & > div {
-      display: flex;
-      gap: 40px;
+    & .paragraphs {
+      width: 100%;
+      min-height: 230px;
     }
     & .hashtag {
       flex-wrap: wrap;
+      gap: 40px;
       & h4 {
         margin: 0;
         font-size: 25px;
-        height: 10px;
+        height: 0px;
         font-family: 'NotoSansKR-Medium';
         color: #38d430;
         white-space: nowrap;
@@ -140,11 +141,6 @@ export const StyledPortfolioLayout = styled.div`
   @media (min-width: 1024px) {
     & .tag {
       margin: 60px 0 130px 60px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    & .tag {
       & > img {
         height: 110px;
       }
@@ -159,15 +155,15 @@ export const StyledPortfolioLayout = styled.div`
         margin: 34px 0;
         font-size: 36px;
       }
-      & > p {
+      & p {
         font-size: 20px;
-      }
-      & :nth-last-child(2) {
-        margin-bottom: 120px;
       }
       & h4 {
         font-size: 25px;
       }
+    }
+    & .hashtag {
+      display: flex;
     }
     & .titlesForMob {
       display: none;
@@ -203,11 +199,8 @@ export const StyledPortfolioLayout = styled.div`
         margin: 18px 0;
         font-size: 24px;
       }
-      & > p {
+      & p {
         font-size: 14px;
-      }
-      & :nth-last-child(2) {
-        margin-bottom: 30px;
       }
       & > div {
         display: none;
@@ -220,6 +213,9 @@ export const StyledPortfolioLayout = styled.div`
       height: 277px;
     }
     & .onlyPC {
+      display: none;
+    }
+    & .hashtag {
       display: none;
     }
     & .link {

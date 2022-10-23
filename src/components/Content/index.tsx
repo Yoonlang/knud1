@@ -25,6 +25,9 @@ const Content: React.FC<Props> = (props) => {
     if (type !== 'slide') return;
     if (!slide.current || !dot.current || !left.current) return;
     left.current.style.display = 'none';
+    setTimeout(() => {
+      if (slide.current) slide.current.scrollLeft = 0;
+    }, 1000);
     slide.current.addEventListener('scroll', (e) => {
       if (!dot.current) return;
       if (!e.target) return;
@@ -65,6 +68,7 @@ const Content: React.FC<Props> = (props) => {
                   height={906}
                   maxwidth={'1610px'}
                   maxheight={'906px'}
+                  placeholder="empty"
                   priority
                 />
               );
