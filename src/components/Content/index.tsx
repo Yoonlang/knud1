@@ -42,15 +42,6 @@ const Content: React.FC<Props> = (props) => {
     });
   }, [slide]);
 
-  // useEffect(() => {
-  //   // const mine = document.getElementsByClassName('slideImg')[0].complete;
-  //   // console.log(mine);
-  //   if (!slide.current) return;
-  //   slide.current.addEventListener('load', (e) => {
-  //     console.log(e);
-  //   });
-  // }, []);
-
   const goLeft = () => {
     if (!slide.current) return;
     const { scrollLeft, scrollWidth, offsetWidth } = slide.current;

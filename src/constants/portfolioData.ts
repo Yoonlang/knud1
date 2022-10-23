@@ -30,7 +30,7 @@ export const portfolioData: Obj<any> = {
       {
         type: 'add1',
         title: 'GRAPHIC',
-        img: './assets/곽나영/추가1.gif',
+        img: './assets/곽나영/추가1.GIF',
         detail:
           '우리가 칵테일을 마시면서 느꼈던 미각의 경험을 공감각적으로 해석해 그래픽에 정보를 담았으며, 각 요소의 조합은 해당 칵테일을 마실 때 짓는 표정으로 나타내 맛 유추를 더욱 쉽게합니다.',
       },
