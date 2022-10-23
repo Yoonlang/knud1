@@ -1,42 +1,9 @@
 import { Obj } from 'utils/Obj';
 
-const defaultObj = {
-  hyd: {
-    titles: {
-      title: '그루터기',
-      slogan: '나무에 남겨진 나이테',
-      detail: `그루터기를 재해석하여 의자를 디자인하였고 인간의 삶과 시간을 담았습니다.`,
-      hashtag: ['가구', '나이테', '삶'],
-    },
-    info: {
-      uri: 'hyd',
-      icon: './assets/홍이도/personal_unit.png',
-      profile: {
-        img: './assets/홍이도/홍이도.jpg',
-        name: '홍이도',
-        mail: 'ghdduddnr@naver.com',
-        insta: '',
-        call: '01075910602',
-      },
-    },
-    contents: [
-      {
-        type: 'slide',
-        imgs: ['./assets/홍이도/slide_1.png', './assets/홍이도/slide_2.png', './assets/홍이도/slide_3.png'],
-        detail: ``,
-      },
-      {
-        type: 'portfolio',
-        title: '그루터기',
-        imgs: ['./assets/홍이도/pf_1.png', './assets/홍이도/pf_2.png', './assets/홍이도/pf_3.png'],
-      },
-    ],
-  },
-};
-
 export const portfolioData: Obj<any> = {
   gny: {
     titles: {
+      thumbnail: './assets/곽나영/thumbnail.png',
       title: '곽테일',
       slogan: '홈텐딩을 위한 칵테일 브랜드',
       detail:
@@ -82,6 +49,7 @@ export const portfolioData: Obj<any> = {
 
   knh: {
     titles: {
+      thumbnail: './assets/김나현/thumbnail.png',
       title: 'KESSLER',
       slogan: 'from PIECE to PEACE!',
       detail:
@@ -120,6 +88,7 @@ export const portfolioData: Obj<any> = {
 
   kmh: {
     titles: {
+      thumbnail: './assets/김미현/thumbnail.png',
       title: 'FLOVE',
       slogan: '우리 가족은 대화가 필요해!',
       detail:
@@ -165,6 +134,7 @@ export const portfolioData: Obj<any> = {
   },
   kej: {
     titles: {
+      thumbnail: './assets/김의정/thumbnail.png',
       title: '여우 영이의 첫외출',
       slogan: '서로를 이해하는 방법을 찾기 위한 여행',
       detail:
@@ -198,6 +168,7 @@ export const portfolioData: Obj<any> = {
 
   khj: {
     titles: {
+      thumbnail: './assets/김현주/thumbnail.png',
       title: 'òsso',
       slogan: '다 함께, Bone Bone 하게~',
       detail:
@@ -232,6 +203,7 @@ export const portfolioData: Obj<any> = {
 
   nsb: {
     titles: {
+      thumbnail: './assets/남시본/thumbnail.png',
       title: '공감각 악보',
       slogan: '광야, 디자인을 만나다.',
       detail:
@@ -270,6 +242,7 @@ export const portfolioData: Obj<any> = {
   },
   bsj: {
     titles: {
+      thumbnail: './assets/배상진/thumbnail.png',
       title: '_amily',
       slogan: '‘f’ather is one of us',
       detail:
@@ -314,6 +287,7 @@ export const portfolioData: Obj<any> = {
   },
   sde: {
     titles: {
+      thumbnail: './assets/서다은/thumbnail.png',
       title: 'MAKESURE',
       slogan: '1인 가구를 위한 건강 키트 브랜딩',
       detail:
@@ -351,6 +325,7 @@ export const portfolioData: Obj<any> = {
   },
   syb: {
     titles: {
+      thumbnail: './assets/송예빈/thumbnail.png',
       title: 'DOT',
       slogan: 'Dot makes life',
       detail:
@@ -396,6 +371,7 @@ export const portfolioData: Obj<any> = {
   },
   shj: {
     titles: {
+      thumbnail: './assets/송희주/thumbnail.png',
       title: 'miol',
       slogan: 'At that time, in your time',
       detail:
@@ -434,6 +410,7 @@ export const portfolioData: Obj<any> = {
   },
   yjy: {
     titles: {
+      thumbnail: './assets/양준녕/thumbnail.png',
       title: 'Divenamic',
       slogan: '다이나믹 스쿠버 브랜드',
       detail: `만약 해수면이 상승해 지구가 물에 잠긴다면 인류에겐 재앙이나 다름없을 것입니다. 하지만 스킨스쿠버 업계는 전례 없는 호황을 맞지 않을까요? 여기 해수면 상승으로 물에 잠긴 부산을 탐험하는 스킨스쿠버 브랜드 Divenamic이 있습니다.`,
@@ -465,6 +442,7 @@ export const portfolioData: Obj<any> = {
   },
   ojh: {
     titles: {
+      thumbnail: './assets/오지현/thumbnail.png',
       title: '오메가메',
       slogan: '오며 가며 즐기는 귀촌 라이프!',
       detail: `도시살이에 지친 젊은 이들 중 시골에 가서 살고 싶다는 막연한 꿈을 가진 사람들이 많을 것입니다. 하지만 평생을 도시에서 살아온 젊은이들이 당장 도시 생활의 편리함을 버리고 귀촌을 결정 하는 것은 쉽지 않습니다. 이러한 문제점을 해결하기 위해 귀촌에 대한 사전 지식 함양 및 적응을 전반적으로 도와주는 프로그램을 제안합니다. 오메가메는 이름 그대로 도시와 시골을 자유롭게 오가며 부담 없이 즐기는 스테이 프로그램입니다. 시기별, 지역별 즐길 수 있는 컨텐츠를 제공하여 자연스럽게 시골의 삶에 적응할 수 있도록 합니다.`,
@@ -507,6 +485,7 @@ export const portfolioData: Obj<any> = {
   },
   yjh: {
     titles: {
+      thumbnail: './assets/윤지현/thumbnail.png',
       title: 'Comma',
       slogan: '나만의 휴식, 나만의 공간',
       detail: `쉼표는 휴식을 가장 직관적이고 단순하게 의미합니다. 쉼표를 모티브로 한 comma는 쳇바퀴같은 현대사회에서 숨 쉴 틈을 주기 위해 심플하고 편안한 기운을 전달하고자 합니다. 현대인들을 위한 휴식 권유 메세지를 담은 comma와 함께 치열하고 바쁜 일상 속에서 나만의 휴식, 나만의 공간을 만들어 나가길 바랍니다.`,
@@ -544,6 +523,7 @@ export const portfolioData: Obj<any> = {
   },
   lar: {
     titles: {
+      thumbnail: './assets/이아림/thumbnail.png',
       title: 'Ahoy',
       slogan: 'It comes in waves',
       detail: `Ahoy매거진은 매달 특정 기념일을 상기시키고, 하루를 더 특별하게 보낼 수 있도록 그 날에 꼭 맞는 노래를 소개해 주는 웹 매거진입니다.`,
@@ -575,6 +555,7 @@ export const portfolioData: Obj<any> = {
   },
   lyj: {
     titles: {
+      thumbnail: './assets/이연주/thumbnail.png',
       title: 'US BEE',
       slogan: 'No bees, No humans',
       detail: `올해 2022년 봄, 국내에서 약 60억 마리의 꿀벌이 실종되었습니다. 이 사건의 원인은 이상기후와 해충의 영향이 복합적으로 작용한 것으로 보인다는 것이 전문가들의 의견입니다.//생태계에서 중요한 역할을 하고 있는 꿀벌이 사라진다면 어떻게 될까요?`,
@@ -617,6 +598,7 @@ export const portfolioData: Obj<any> = {
   },
   lyr: {
     titles: {
+      thumbnail: './assets/이예림/thumbnail.png',
       title: '차차',
       slogan: 'Drinking tea, enjoying tea',
       detail: `‘차차’는 현대인들이 살아가면서 느끼는 피로감, 스트레스 같은 공통적인 건강 문제를 가볍게 다루면서 매일매일 다른 종류의 7가지 차를 꾸준히 마실 수 있게 하고, 또한 차를 마시는 행위가 차차 습관이 될 수 있게 도와줍니다.`,
@@ -659,6 +641,7 @@ export const portfolioData: Obj<any> = {
   },
   lwj: {
     titles: {
+      thumbnail: './assets/이원준/thumbnail.png',
       title: '쓰담쓰담',
       slogan: '펫로스 증후군 극복 프로젝트',
       detail: `‘쓰담쓰담’은 반려동물을 키우는 반려인들을 위한 서비스로서, 반려동물을 떠나보낸 반려인에게서 빈번하게 발생하는 ‘펫로스 증후군’을 이겨내고 ‘애완’이 아닌 ‘반려’라는 단어에 걸맞는 새로운 문화와 인식을 확립하고 정의하는 서비스 입니다.`,
@@ -701,6 +684,7 @@ export const portfolioData: Obj<any> = {
   },
   lja: {
     titles: {
+      thumbnail: './assets/이지안/thumbnail.png',
       title: 'aqua 26°C',
       slogan: '반려어(魚) 케어 브랜드',
       detail: `반려어(魚) 케어 브랜드 아쿠아 26도는 일반 소비자에게 접근성을 높히기 위한 반려어 케어에 대한 지식과 질병관리를 위한 플랫폼을 제시하며, 관상어의 반려시장 확대를 도모합니다.`,
@@ -749,6 +733,7 @@ export const portfolioData: Obj<any> = {
   },
   jsh: {
     titles: {
+      thumbnail: './assets/장수현/thumbnail.png',
       title: 'MONTRER',
       slogan: '나를 위한 맞춤 니치 향수',
       detail: `자신의 개성과 취향을 드러내는 소비에 대한 관심이 급격하게 커지면서 니치 향수에 대한 관심도 꾸준히 상승하는 추세입니다.그러나 시향없이는 잘 알 수 없는 향에 대한 설명과 향수에 대한 여러 용어들로 인해 진입 장벽을 느껴 향수에 입문하기 어려움을 느끼는 이들이 많습니다. 그리하여 감성 형용사를 사용하여 향에 대한 진입 장벽을 낮추고 선택을 통해 스스로 고유의 개성을 담은 향을 만드는 경험을 고객에게 제공합니다.`,
@@ -786,6 +771,7 @@ export const portfolioData: Obj<any> = {
   },
   jys: {
     titles: {
+      thumbnail: './assets/전유석/thumbnail.png',
       title: 'dolittle',
       slogan: '실천의 시각화, 자기계발 서비스 두리틀',
       detail: `나태한 사람, 게으름뱅이라는 의미를 가진 두리틀은 자기계발에 어려움을 겪고 있는 사람들을 위하여 만다라트를 기반으로 자신을 성장시키는 것에 흥미를 가지게 하고 사용자가 효율적으로 자신을 업그레이드할 수 있도록 도움을 주는 자기계발 서비스 브랜드입니다.`,
@@ -822,6 +808,7 @@ export const portfolioData: Obj<any> = {
   },
   jde: {
     titles: {
+      thumbnail: './assets/정다은/thumbnail.png',
       title: 'Jalza',
       slogan: '“Good night, Sweet dreams”',
       detail: `일상생활에서 많이 지친 우리, 잠자리에서 만큼은 걱정 없이 가벼운 마음으로 잠에 들어 보아요.//Jalza의 몽환적인 상상과 함께 포근하고 편안한 수면을 즐겨본다면 어떨까요?`,
@@ -864,6 +851,7 @@ export const portfolioData: Obj<any> = {
   },
   jyn: {
     titles: {
+      thumbnail: './assets/정유나/thumbnail.png',
       title: '어디둥지',
       slogan: '누구둥지 언제둥지 어디둥지',
       detail: `새들은 둥지를 지을 때 많은 재료들을 가지고 자신만의 둥지를 만듭니다. 새들마다 사용하는 재료들도 서로 다르고 다양합니다. 그렇게 다르고 다양한 재료들로 저마다 자신만의 안락한 둥지를 만듭니다. 사람도 마찬가지 입니다. 사람들도 저마다 다른 재료들을 가지고 있습니다. 어디둥지에서는 사용자의 취향, 선택을 바탕으로 그에 맞는 장소를 추천해줌으로써 사용자가 원하는 분위기, 힐링요소를 빠르게 알려줍니다.`,
@@ -901,6 +889,7 @@ export const portfolioData: Obj<any> = {
   },
   jej: {
     titles: {
+      thumbnail: './assets/조은지/thumbnail.png',
       title: '6060',
       slogan: '당신의 청력은 안전한가요?',
       detail: `시·청각 미디어 시장의 발달로 인해 콘텐츠를 손쉽게 시청, 청취할 수 있는 환경입니다. 이러한 환경들이 사람들에게 소음성 난청에 노출될 확률이 높아지게 됩니다. 소음성 난청을 예방하고자 세계 보건기구에서 '최대 음량의 60% 이하, 하루 60분 미만'을 듣도록 권고해왔습니다. 이것을 6060 법칙이라고 부릅니다. 당신의 청력을 보호하기 위한 6060 법칙,//6060 법칙을 삶에 스며들게 하기 위한 헤드폰을 소개합니다.`,
@@ -948,6 +937,7 @@ export const portfolioData: Obj<any> = {
   },
   jsb: {
     titles: {
+      thumbnail: './assets/진수별/thumbnail.png',
       title: '休_휴',
       slogan: 'Closed your eyes and see',
       detail: `오늘날 현대인들은 다양한 문화를 즐기며 사회를 살아가고 있지만 그와 동시에 스트레스와 피로 속에서 생활하고 있어 육체적 안정과 심리적인 위안을 찾는 데에 관심이 더욱 높아지고 있습니다. 이런 현대인들에게는 지친 일상 속에서 잠시 눈을 감고 모든 것을 내려놓을 수 있는 휴식시간이 절실하게 필요합니다.`,
@@ -990,6 +980,7 @@ export const portfolioData: Obj<any> = {
   },
   hyr: {
     titles: {
+      thumbnail: './assets/한예리/thumbnail.png',
       title: 'Colorado bitches',
       slogan: '10일간의 로드트립, 우리들은 Colorado bitches.',
       detail: `로드트립은 차로 이동하는 장거리의 여행을 의미합니다. 미국에서의 교환학생 생활 중 가장 기억에 남는 10일간의 로드트립을 그래픽으로 작업하였습니다.`,
@@ -1021,6 +1012,7 @@ export const portfolioData: Obj<any> = {
   },
   hyd: {
     titles: {
+      thumbnail: './assets/홍이도/thumbnail.png',
       title: '그루터기',
       slogan: '나무에 남겨진 나이테',
       detail: `그루터기를 재해석하여 의자를 디자인하였고 인간의 삶과 시간을 담았습니다.`,
