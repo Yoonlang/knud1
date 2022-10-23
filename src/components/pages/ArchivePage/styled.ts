@@ -12,20 +12,20 @@ export const ArchivePageMobileWrapper = styled.div`
   img {
     width: 100%;
     height: auto;
-    min-width: 167px;
 
     cursor: pointer;
   }
 
   p {
     color: white;
+    word-break: keep-all;
 
     &.title {
       font-family: 'NotoSansKR-Bold';
       font-size: 20px;
       font-weight: 700;
 
-      margin-top: 8px;
+      margin: 8px 0 0;
     }
 
     &.producer {
@@ -114,6 +114,7 @@ export const ArchivePagePCWrapper = styled.div`
 
         &.subtitle {
           font-family: 'GmarketSansLight';
+          margin-top: 8px;
         }
       }
 

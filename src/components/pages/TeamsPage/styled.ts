@@ -45,12 +45,14 @@ export const TeamsPageMobileWrapper = styled(Column)`
     }
 
     &.data-title {
+      min-width: 28px;
       font-family: 'NotoSansKR-Light';
       font-weight: 300;
     }
     &.data {
       font-family: 'NotoSansKR-Bold';
       font-weight: 600;
+      word-break: keep-all;
 
       margin-left: 6px;
     }
@@ -146,8 +148,6 @@ export const TeamsPagePCWrapper = styled(Column)`
       font-family: 'NotoSansKR-Bold';
       font-size: 30px;
       font-weight: 600;
-
-      margin-left: 6px;
     }
   }
 

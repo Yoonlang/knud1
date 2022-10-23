@@ -10,10 +10,8 @@ export const IdentityPageMobileWrapper = styled(Column)`
   & > div.content {
     background-color: #38d430;
 
-    & > div.mock-img {
+    video {
       width: 100%;
-      background-color: white;
-      height: 230px;
     }
 
     p {
@@ -25,8 +23,12 @@ export const IdentityPageMobileWrapper = styled(Column)`
       word-wrap: break-word;
       word-break: break-word;
 
+      &:first-of-type {
+        margin-top: 20px;
+      }
+
       &:last-child {
-        margin-bottom: 80px;
+        margin-bottom: 30px;
       }
     }
   }
@@ -38,10 +40,17 @@ export const IdentityPageMobileWrapper = styled(Column)`
       img {
         width: 100%;
         height: auto;
+
+        &.poster {
+          width: 45%;
+          &:last-child {
+            margin-left: 30px;
+          }
+        }
       }
 
-      &:last-child {
-        margin-bottom: 160px;
+      &:first-of-type {
+        margin-top: 100px;
       }
     }
   }
@@ -49,16 +58,31 @@ export const IdentityPageMobileWrapper = styled(Column)`
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     & > div {
       padding: 0 30px;
-    }
 
-    & > div.content {
-      & > div.mock-img {
-        height: 507px;
+      &.content {
+        P {
+          &:first-of-type {
+            margin-top: 30px;
+          }
+          &:last-child {
+            margin-bottom: 250px;
+          }
+        }
       }
     }
 
-    & > ${ItemFrame} {
-      margin-bottom: 250px;
+    & > div.item-list {
+      & > ${ItemFrame} {
+        margin-top: 250px;
+
+        img.poster:last-child {
+          margin-left: 46px;
+        }
+
+        &:first-of-type {
+          margin-top: 120px;
+        }
+      }
     }
   }
 
@@ -68,25 +92,34 @@ export const IdentityPageMobileWrapper = styled(Column)`
 `;
 
 export const IdentityPagePCWrapper = styled(Column)`
-  padding-bottom: 200px;
-
-  & > div.mock-img {
+  video {
     width: 100%;
-    height: 800px;
-
-    background-color: white;
   }
 
   & > ${Row}.description-wrapper {
-    width: 100%;
+    width: 80%;
 
     justify-content: space-between;
+    align-self: center;
   }
 
   & > ${ItemFrame} {
+    & > img {
+      align-self: center;
+    }
+
     img {
       width: 80%;
       height: auto;
+
+      &.poster {
+        width: 35%;
+        height: auto;
+
+        &:not(:first-of-type) {
+          margin-left: 10px;
+        }
+      }
     }
   }
 
