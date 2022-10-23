@@ -42,17 +42,19 @@ const Content: React.FC<Props> = (props) => {
       <StyledAdd1>
         <Title>{title}</Title>
         <div>
-          {img && (
-            <MyImage
-              loader={nextImageLoader}
-              src={img}
-              width={910}
-              height={910}
-              maxwidth={'910px'}
-              maxheight={'910px'}
-            />
-          )}
-          <div>
+          <div className={'img'}>
+            {img && (
+              <MyImage
+                loader={nextImageLoader}
+                src={img}
+                width={910}
+                height={910}
+                maxwidth={'910px'}
+                maxheight={'910px'}
+              />
+            )}
+          </div>
+          <div className={'details'}>
             {detail?.split('//').map((paragraph, index) => {
               return <p key={index}>{paragraph}</p>;
             })}

@@ -56,42 +56,50 @@ export const StyledAdd1 = styled.div`
       font-family: 'NotoSansKR-Medium';
     }
   }
+
   @media (min-width: 1024px) {
     & > div {
       gap: 50px;
-      & > img {
+      & .img {
         width: 60%;
-        min-width: 910px;
       }
-      & div {
+      & .details {
         width: 40%;
-      }
-      & p {
-        max-width: 590px;
-        font-size: 22px;
+        & p {
+          max-width: 590px;
+          font-size: 22px;
+        }
       }
     }
   }
   @media (max-width: 1023px) and (min-width: 768px) {
     & > div {
       gap: 30px;
-      & > img {
-        min-width: 440px;
-        max-height: 440px;
+      & .img {
+        width: 60%;
+        position: relative;
       }
-      & p {
-        font-size: 16px;
+      & .img:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+      & .details {
+        width: 40%;
+        & p {
+          font-size: 16px;
+        }
       }
     }
   }
+
   @media (max-width: 767px) {
     & > div {
       flex-direction: column;
       gap: 20px;
       padding: 0 20px;
-      & > img {
-        min-width: 288px;
-        max-width: 288px;
+      & .img {
+        width: 90%;
       }
       & p {
         font-size: 16px;

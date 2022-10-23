@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledPortfolioLayout = styled.div`
   display: flex;
-  justify-content: center;
   width: 100%;
   height: 100%;
   background: #000;
@@ -12,7 +11,8 @@ export const StyledPortfolioLayout = styled.div`
     width: 100%;
     max-width: 1920px;
     height: 100%;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   & .bgImg {
@@ -32,6 +32,13 @@ export const StyledPortfolioLayout = styled.div`
       min-width: 500px;
       height: 100%;
       background: linear-gradient(#fff, #000);
+      @media (max-width: 1200px) {
+        min-width: 300px;
+        padding-top: 250px;
+        & > div {
+          transform: scale(0.8);
+        }
+      }
       @media (max-width: 1023px) {
         display: none;
       }
