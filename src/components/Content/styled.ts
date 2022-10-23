@@ -6,17 +6,53 @@ export const StyledSlide = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
+  & .slideContainer {
+    display: flex;
+    position: relative;
+  }
+  & .slide {
+    display: flex;
+    position: relative;
+    overflow: scroll;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    & > img {
+      scroll-snap-align: center;
+    }
+  }
+  & .support {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    & .dots {
+      display: flex;
+      position: relative;
+      top: calc(100% - 40px);
+      gap: 10px;
+      & .here {
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
   & .detail {
     width: 100%;
-  }
-  & p {
-    margin: 0;
-    width: 100%;
-    max-width: 1100px;
-    color: #38d430;
-    font-family: 'NotoSansKR-Medium';
-    font-size: 22px;
-    line-height: 1.7em;
+    & p {
+      margin: 0;
+      width: 100%;
+      max-width: 1100px;
+      color: #38d430;
+      font-family: 'NotoSansKR-Medium';
+      font-size: 22px;
+      line-height: 1.7em;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -28,17 +64,17 @@ export const StyledSlide = styled.div`
   @media (max-width: 1023px) and (min-width: 768px) {
     & .detail {
       padding-top: 30px;
-    }
-    & p {
-      font-size: 16px;
+      & p {
+        font-size: 16px;
+      }
     }
   }
   @media (max-width: 767px) {
     & .detail {
       padding: 20px 20px 0 20px;
-    }
-    & p {
-      font-size: 16px;
+      & p {
+        font-size: 16px;
+      }
     }
   }
 `;
