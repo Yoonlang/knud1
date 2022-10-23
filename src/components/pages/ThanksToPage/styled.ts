@@ -119,14 +119,16 @@ export const ThanksToPageMobileWrapper = styled(Column)`
 `;
 
 export const ThanksToPagePCWrapper = styled(Column)`
-  & > ${ItemFrame}.professor {
-    & > ${Row} {
-      img {
-        width: 80%;
-        height: 80%;
+  img.all-profs {
+    width: 90%;
+    height: auto;
+  }
 
-        margin-right: 50px;
-      }
+  & > ${ItemFrame}.professor {
+    & > ${Row}.description-wrapper {
+      width: 90%;
+
+      justify-content: space-between;
     }
 
     & > div.professor-list {
@@ -220,10 +222,16 @@ export const ThanksToPagePCWrapper = styled(Column)`
       font-family: 'NotoSansKR-Medium';
       color: #38d430;
       font-size: 22px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-word;
 
-      width: 360px;
+      width: 48%;
 
       line-height: 1.7;
+
+      margin-top: 70px;
+      margin-bottom: 200px;
     }
   }
 
