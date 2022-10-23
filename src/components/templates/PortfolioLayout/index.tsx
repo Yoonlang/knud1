@@ -58,11 +58,11 @@ const PortfolioLayout: React.FC<Props> = (props) => {
             </div>
             <div className={'main'}>
               <div className={'bgImg'}>
-                <StyledImage loader={nextImageLoader} src={titles.thumbnail} width={1800} height={1100} />
+                <StyledImage loader={nextImageLoader} src={titles.thumbnail} width={1800} height={1100} priority />
               </div>
 
               <div className={'tag'}>
-                <Image loader={nextImageLoader} src={info.icon} width={150} height={60} />
+                <Image loader={nextImageLoader} src={info.icon} width={150} height={60} priority />
               </div>
               <Profile main data={info.profile} />
               <div className={'titles'}>
