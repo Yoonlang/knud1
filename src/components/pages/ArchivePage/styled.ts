@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const ArchivePageMobileWrapper = styled.div`
   display: grid;
-  width: 100%;
 
   grid-template-columns: repeat(2, 1fr);
 
@@ -13,13 +12,13 @@ export const ArchivePageMobileWrapper = styled.div`
   img {
     width: 100%;
     height: auto;
-    min-width: 167px;
 
     cursor: pointer;
   }
 
   p {
     color: white;
+    word-break: keep-all;
 
     &.title {
       font-family: 'NotoSansKR-Bold';
