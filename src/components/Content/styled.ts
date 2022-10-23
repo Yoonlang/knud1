@@ -77,6 +77,7 @@ export const StyledAdd1 = styled.div`
       gap: 30px;
       & > img {
         min-width: 440px;
+        max-height: 440px;
       }
       & p {
         font-size: 16px;
