@@ -3,6 +3,7 @@ import Profile from 'components/Profile';
 import { ContentLayout, StyledPortfolioLayout } from './styled';
 import { nextImageLoader } from 'utils/imageLoader';
 import { StyledImage } from 'components/common/styled/elements';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import FooterMobile from 'components/common/footer/FooterMobile';
 import Content from 'components/Content';
@@ -17,6 +18,7 @@ interface Titles {
   slogan: string;
   detail: string;
   hashtag: string[];
+  thumbnail: string;
 }
 
 interface Info {
@@ -27,6 +29,7 @@ interface Info {
     name: string;
     mail: string;
     insta: string;
+    call: string;
   };
 }
 
@@ -55,18 +58,22 @@ const PortfolioLayout: React.FC<Props> = (props) => {
             </div>
             <div className={'main'}>
               <div className={'bgImg'}>
-                <StyledImage loader={nextImageLoader} src={'./assets/sample.png'} width={1800} height={1100} />
+                <StyledImage loader={nextImageLoader} src={titles.thumbnail} width={1800} height={1100} />
               </div>
 
               <div className={'tag'}>
-                <StyledImage loader={nextImageLoader} src={info.icon} width={150} height={60} />
+                <Image loader={nextImageLoader} src={info.icon} width={150} height={60} />
               </div>
               <Profile main data={info.profile} />
               <div className={'titles'}>
                 <h2>{titles.title}</h2>
                 <h3>{titles.slogan}</h3>
-                <p>{titles.detail}</p>
-                <div>
+                <div className={'paragraphs'}>
+                  {titles.detail.split('//').map((paragraph, index) => {
+                    return <p key={index}>{paragraph}</p>;
+                  })}
+                </div>
+                <div className={'hashtag'}>
                   {titles.hashtag.map((hashtag, index) => {
                     return <h4 key={index}># {hashtag}</h4>;
                   })}

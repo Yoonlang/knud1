@@ -6,18 +6,82 @@ export const StyledSlide = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
+  & .slideContainer {
+    display: flex;
+    position: relative;
+  }
+  & .slide {
+    display: flex;
+    position: relative;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    transition: 0.5s;
+    z-index: 2;
+    & > img {
+      scroll-snap-align: center;
+      min-width: 100%;
+    }
+  }
+  & .support {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    & .slideButtons {
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+    & .left,
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: calc(50% - 15px);
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      z-index: 3;
+    }
+    & .left {
+      left: 50px;
+      transform: rotate(180deg);
+    }
+    & .right {
+      right: 50px;
+    }
+    & .dots {
+      display: flex;
+      position: relative;
+      top: calc(100% - 40px);
+      gap: 10px;
+      z-index: 3;
+      pointer-events: none;
+      & .here {
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
   & .detail {
     width: 100%;
-  }
-  & p {
-    margin: 0;
-    width: 100%;
-    max-width: 1100px;
-
-    color: #38d430;
-    font-family: 'NotoSansKR-Medium';
-    font-size: 22px;
-    line-height: 1.7em;
+    & p {
+      margin: 0;
+      width: 100%;
+      max-width: 1100px;
+      color: #38d430;
+      font-family: 'NotoSansKR-Medium';
+      font-size: 22px;
+      line-height: 1.7em;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -27,17 +91,19 @@ export const StyledSlide = styled.div`
     }
   }
   @media (max-width: 1023px) and (min-width: 768px) {
-    & p {
-      margin-top: 30px;
-      font-size: 16px;
+    & .detail {
+      padding-top: 30px;
+      & p {
+        font-size: 16px;
+      }
     }
   }
   @media (max-width: 767px) {
     & .detail {
       padding: 20px 20px 0 20px;
-    }
-    & p {
-      font-size: 16px;
+      & p {
+        font-size: 16px;
+      }
     }
   }
 `;
@@ -55,39 +121,50 @@ export const StyledAdd1 = styled.div`
       font-family: 'NotoSansKR-Medium';
     }
   }
+
   @media (min-width: 1024px) {
     & > div {
       gap: 50px;
-      & > img {
+      & .img {
         width: 60%;
-        min-width: 910px;
       }
-      & p {
+      & .details {
         width: 40%;
-        max-width: 590px;
-        font-size: 22px;
+        & p {
+          max-width: 590px;
+          font-size: 22px;
+        }
       }
     }
   }
   @media (max-width: 1023px) and (min-width: 768px) {
     & > div {
       gap: 30px;
-      & > img {
-        min-width: 440px;
+      & .img {
+        width: 60%;
+        position: relative;
       }
-      & p {
-        font-size: 16px;
+      & .img:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+      & .details {
+        width: 40%;
+        & p {
+          font-size: 16px;
+        }
       }
     }
   }
+
   @media (max-width: 767px) {
     & > div {
       flex-direction: column;
       gap: 20px;
       padding: 0 20px;
-      & > img {
-        min-width: 288px;
-        max-width: 288px;
+      & .img {
+        width: 90%;
       }
       & p {
         font-size: 16px;
