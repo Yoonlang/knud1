@@ -27,6 +27,7 @@ interface Info {
     name: string;
     mail: string;
     insta: string;
+    call: string;
   };
 }
 
@@ -65,7 +66,9 @@ const PortfolioLayout: React.FC<Props> = (props) => {
               <div className={'titles'}>
                 <h2>{titles.title}</h2>
                 <h3>{titles.slogan}</h3>
-                <p>{titles.detail}</p>
+                {titles.detail.split('//').map((paragraph, index) => {
+                  return <p key={index}>{paragraph}</p>;
+                })}
                 <div>
                   {titles.hashtag.map((hashtag, index) => {
                     return <h4 key={index}># {hashtag}</h4>;

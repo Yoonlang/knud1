@@ -29,7 +29,9 @@ const Content: React.FC<Props> = (props) => {
         )}
         {detail && (
           <div className={'detail'}>
-            <p>{detail}</p>
+            {detail.split('//').map((paragraph, index) => {
+              return <p key={index}>{paragraph}</p>;
+            })}
           </div>
         )}
       </StyledSlide>
@@ -50,7 +52,11 @@ const Content: React.FC<Props> = (props) => {
               maxheight={'910px'}
             />
           )}
-          <p>{detail}</p>
+          <div>
+            {detail?.split('//').map((paragraph, index) => {
+              return <p key={index}>{paragraph}</p>;
+            })}
+          </div>
         </div>
       </StyledAdd1>
     );
