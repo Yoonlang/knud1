@@ -17,7 +17,7 @@ const Video: React.FC<Props> = ({ src }) => {
   useMount(cancelVideoMute);
 
   return (
-    <video ref={videoRef} autoPlay muted loop preload="metadata" controls>
+    <video ref={videoRef} autoPlay muted loop preload="metadata" controls playsInline>
       <source src={src} type="video/mp4" />
     </video>
   );
