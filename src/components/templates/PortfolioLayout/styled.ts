@@ -15,6 +15,12 @@ export const StyledPortfolioLayout = styled.div`
     overflow: auto;
   }
 
+  & .bgImg {
+    & > img {
+      opacity: 0.3;
+    }
+  }
+
   & .wrapper {
     display: flex;
     position: relative;
@@ -37,8 +43,10 @@ export const StyledPortfolioLayout = styled.div`
       width: 100%;
       z-index: 1;
       & .tag {
-        width: 68px;
-        height: 25px;
+        width: 100%;
+        & > img {
+          width: auto;
+        }
       }
       & > div:nth-child(3) {
         padding: 30px;
@@ -118,7 +126,10 @@ export const StyledPortfolioLayout = styled.div`
 
   @media (min-width: 1024px) {
     & .tag {
-      margin: 60px 0 200px 30px;
+      margin: 60px 0 200px 60px;
+      & > img {
+        height: 110px;
+      }
     }
     & .titles {
       margin-bottom: 550px;
@@ -160,6 +171,9 @@ export const StyledPortfolioLayout = styled.div`
   @media (max-width: 1023px) and (min-width: 768px) {
     & .tag {
       margin: 20px 0 60px 30px;
+      & > img {
+        height: 60px;
+      }
     }
     & .titles {
       margin: 130px 0 0 0;
@@ -204,6 +218,9 @@ export const StyledPortfolioLayout = styled.div`
   @media (max-width: 767px) {
     & .tag {
       margin: 20px 0 60px 30px;
+      & > img {
+        height: 45px;
+      }
     }
     & .titles {
       display: none;

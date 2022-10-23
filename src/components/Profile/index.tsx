@@ -25,7 +25,7 @@ const Profile: React.FC<Props> = (props) => {
       {mail && (
         <div className={'contact'}>
           <div>
-            <StyledImage loader={nextImageLoader} src={'./assets/mail.png'} width={20} height={20} />
+            <StyledImage loader={nextImageLoader} src={'./assets/icon_mail.svg'} width={20} height={20} />
           </div>
           <p>{mail}</p>
         </div>
@@ -33,7 +33,7 @@ const Profile: React.FC<Props> = (props) => {
       {insta && (
         <div className={'contact'}>
           <div>
-            <StyledImage loader={nextImageLoader} src={'./assets/insta.png'} width={20} height={20} />
+            <StyledImage loader={nextImageLoader} src={'./assets/icon_insta.svg'} width={20} height={20} />
           </div>
           <p>{insta}</p>
         </div>
@@ -41,7 +41,7 @@ const Profile: React.FC<Props> = (props) => {
       {call && (
         <div className={'contact'}>
           <div>
-            <StyledImage loader={nextImageLoader} src={'./assets/ice.jpeg'} width={20} height={20} />
+            <StyledImage loader={nextImageLoader} src={'./assets/icon_mobile.svg'} width={20} height={20} />
           </div>
           <p>{call}</p>
         </div>

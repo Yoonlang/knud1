@@ -3,6 +3,7 @@ import Profile from 'components/Profile';
 import { ContentLayout, StyledPortfolioLayout } from './styled';
 import { nextImageLoader } from 'utils/imageLoader';
 import { StyledImage } from 'components/common/styled/elements';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import FooterMobile from 'components/common/footer/FooterMobile';
 import Content from 'components/Content';
@@ -61,7 +62,7 @@ const PortfolioLayout: React.FC<Props> = (props) => {
               </div>
 
               <div className={'tag'}>
-                <StyledImage loader={nextImageLoader} src={info.icon} width={150} height={60} />
+                <Image loader={nextImageLoader} src={info.icon} width={150} height={60} />
               </div>
               <Profile main data={info.profile} />
               <div className={'titles'}>
