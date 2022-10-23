@@ -71,9 +71,9 @@ export const DefaultLayoutPCWrapper = styled.div`
     padding: 12px 0 0 15px;
 
     & > ${Column}.content {
-      height: calc(100% - 105px);
+      height: calc(100% - 88px);
 
-      border-top-left-radius: 48px;
+      border-top-left-radius: 36px;
 
       background-color: black;
 
@@ -81,9 +81,9 @@ export const DefaultLayoutPCWrapper = styled.div`
       overflow-y: auto;
 
       & > main {
-        width: calc(100% - 110px);
+        width: 100%;
 
-        padding: 0 80px 0 30px;
+        padding: 0 80px 736px 30px;
         & > p.title {
           padding: 0;
           margin: 0;

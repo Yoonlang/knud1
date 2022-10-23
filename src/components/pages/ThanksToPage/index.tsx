@@ -6,130 +6,176 @@ import { PARTNERS_DATA, PROFESSOR_DATA } from './constants';
 import { ThanksToPageMobileWrapper, ThanksToPagePCWrapper } from './styled';
 import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
+import allProf from '../../../../public/assets/partners/all-prof_img.png';
+import useMobileDetect from 'utils/useMobileDetect';
 
 const ThanksToPage: React.FC = () => {
+  const isMobile = useMobileDetect();
+
   return (
     <>
-      <ThanksToPageMobileWrapper>
-        <ItemFrame title={'professor'} className="professor">
-          <div className="mock-img"></div>
-          <p className="description">
-            촌의 표면적인 이미지만 보고 귀촌,귀농을 했다가 다시 도시로 돌아가는 경우가 10명 중 1명 꼴로 빈번히 일어난다.
-          </p>
-
-          <div className={'professor-list'}>
-            {PROFESSOR_DATA.map((professor) => (
-              <Row key={professor.name}>
-                <Image
-                  loader={nextImageLoader}
-                  src={professor.imgSrc}
-                  width={430}
-                  height={576}
-                  alt={professor.name}
-                  placeholder="empty"
-                  priority
-                />
-                <Column>
-                  <p className="name">
-                    {professor.position}. {professor.name}
-                  </p>
-                  <p className="email">{professor.email}</p>
-                </Column>
-              </Row>
-            ))}
-          </div>
-        </ItemFrame>
-        <ItemFrame title={'partners'} className="partners">
-          <div>
-            {PARTNERS_DATA.map((partner) => (
-              <Column key={partner.name}>
-                <Image
-                  loader={nextImageLoader}
-                  src={partner.imgSrc}
-                  alt={partner.name}
-                  width={1200}
-                  height={800}
-                  placeholder="empty"
-                  priority
-                />
-
-                <p className="name">{partner.name}</p>
-                <p className="link">{partner.instagram}</p>
-                <Link href={'https://' + partner.site} passHref>
-                  <a target="_blank" rel="noopener noreferrer" className="link">
-                    {partner.site}
-                  </a>
-                </Link>
-              </Column>
-            ))}
-          </div>
-        </ItemFrame>
-      </ThanksToPageMobileWrapper>
-
-      <ThanksToPagePCWrapper>
-        <ItemFrame title={'professor'} className="professor">
-          <Row>
-            <div className="mock-img"></div>
+      {isMobile && (
+        <ThanksToPageMobileWrapper>
+          <ItemFrame title={'professor'} className="professor">
+            <Image
+              className="all-prof"
+              loader={nextImageLoader}
+              src={allProf}
+              alt={'all-prof_img'}
+              width={1190}
+              height={670}
+              placeholder="empty"
+              priority
+            />
             <p className="description">
-              안녕하세요 가을의 끝자락, 겨울에 초입에 서서 인사드립니다. 수많은 계절들 속에서 유독 마음이 설레는 계절이
-              있다면 언제나 졸업 전시회가 있는 이맘때를 떠올립니다.
-              <br /> 경북대학교 디자인학과는 어느덧 39번째 졸업생들을 마주하고 있습니다. 예로부터 졸업 전시회는 그간의
-              배움으로 스스로를 다듬어 내보이는 자리였습니다.
-              <br /> ‘자신은 보여주는 것’은 두려우면서도 타인과 연결될 수 있는 최초의 행보라고 할 수 있습니다. 이러한
-              걸음을 졸업생 곁에서, 앞에서, 혹은 뒤에서 함께 해 주신 모든 분들께 감사를 드립니다.
+              지난 4년간, 우리 디자인학과 학생들은 각자의 고정된 시각에서 벗어나 세상을 새롭고 다르게 보는 법을
+              배웠으며, 논리와 감성을 조화롭게 사용함으로써 문제를 파악하고 해결 방법을 제시하는 역량을 함양했습니다.
+              <br /> 디자인이 세상을 만들어간다는 말이 있듯이 디자인학과의 제각기 다른 가치를 가지는 26명이 4년 동안
+              갈고 닦은 교육실습과 창작 활동의 결과물로 앞으로 이 세상에 의미 있는 변화를 가져다주기를 기대하며
+              디자인학과 졸업전시회 &apos;일의 이십육 제곱은 일&apos;을 각기 다른 모습으로 채워 준 4학년 여러분 모두에게
+              감사와 축하의 인사를 전합니다.
             </p>
-          </Row>
 
-          <div className={'professor-list'}>
-            {PROFESSOR_DATA.map((professor) => (
-              <Row key={professor.name}>
-                <Image
-                  loader={nextImageLoader}
-                  src={professor.imgSrc}
-                  alt={professor.name}
-                  width={430}
-                  height={576}
-                  sizes="100vw"
-                  placeholder="empty"
-                  priority
-                />
+            <div className={'professor-list'}>
+              {PROFESSOR_DATA.map((professor) => (
+                <Row key={professor.name}>
+                  <Image
+                    loader={nextImageLoader}
+                    src={professor.imgSrc}
+                    width={300}
+                    height={400}
+                    alt={professor.name}
+                    placeholder="empty"
+                    priority
+                  />
+                  <Column>
+                    <p className="name">
+                      {professor.position}. {professor.name}
+                    </p>
+                    <p className="email">{professor.email}</p>
+                  </Column>
+                </Row>
+              ))}
+            </div>
+          </ItemFrame>
+          <ItemFrame title={'partners'} className="partners">
+            <div>
+              {PARTNERS_DATA.map((partner) => (
+                <Column key={partner.name}>
+                  <Image
+                    loader={nextImageLoader}
+                    src={partner.imgSrc}
+                    alt={partner.name}
+                    width={1200}
+                    height={800}
+                    placeholder="empty"
+                    priority
+                  />
 
-                <Column>
-                  <p className="name">
-                    {professor.position}. {professor.name}
-                  </p>
-                  <p className="email">{professor.email}</p>
+                  <p className="name">{partner.name}</p>
+                  <p className="link">{partner.contact}</p>
+                  {partner.site && (
+                    <Link href={'https://' + partner.site} passHref>
+                      <a target="_blank" rel="noopener noreferrer" className="link">
+                        {partner.site}
+                      </a>
+                    </Link>
+                  )}
+                  {partner.email && (
+                    <a href={`mailto:${partner.email}`} className="link">
+                      {partner.email}
+                    </a>
+                  )}
                 </Column>
-              </Row>
-            ))}
-          </div>
-        </ItemFrame>
-        <ItemFrame title={'partners'} className="partners">
-          <div>
-            {PARTNERS_DATA.map((partner) => (
-              <Column key={partner.name}>
-                <Image
-                  loader={nextImageLoader}
-                  src={partner.imgSrc}
-                  alt={partner.name}
-                  width={1200}
-                  height={800}
-                  placeholder="empty"
-                  priority
-                />
+              ))}
+            </div>
+          </ItemFrame>
+        </ThanksToPageMobileWrapper>
+      )}
 
-                <p className="name">{partner.name}</p>
-                <p className="link">{partner.instagram}</p>
-                <Link href={'https://' + partner.site} passHref>
-                  <a target="_blank" rel="noopener noreferrer" className="link">
-                    {partner.site}
-                  </a>
-                </Link>
-              </Column>
-            ))}
-          </div>
-        </ItemFrame>
-      </ThanksToPagePCWrapper>
+      {!isMobile && (
+        <ThanksToPagePCWrapper>
+          <ItemFrame title={'professor'} className="professor">
+            <Image
+              loader={nextImageLoader}
+              src={allProf}
+              alt={'all-profs'}
+              className="all-profs"
+              width={1190}
+              height={670}
+              placeholder="empty"
+              priority
+            />
+            <Row className="description-wrapper">
+              <p className="description">
+                지난 4년간, 우리 디자인학과 학생들은 각자의 고정된 시각에서 벗어나 세상을 새롭고 다르게 보는 법을
+                배웠으며, 논리와 감성을 조화롭게 사용함으로써 문제를 파악하고 해결 방법을 제시하는 역량을 함양했습니다.
+                디자인이 세상을 만들어간다는 말이 있듯이 디자인학과의 제각기 다른 가치를 가지는 26명이 4년 동안 갈고
+              </p>
+              <p className="description">
+                닦은 교육실습과 창작 활동의 결과물로 앞으로 이 세상에 의미 있는 변화를 가져다주기를 기대하며 디자인학과
+                졸업전시회 &apos;일의 이십육 제곱은 일&apos;을 각기 다른 모습으로 채워 준 4학년 여러분 모두에게 감사와
+                축하의 인사를 전합니다.
+              </p>
+            </Row>
+
+            <div className={'professor-list'}>
+              {PROFESSOR_DATA.map((professor) => (
+                <Row key={professor.name}>
+                  <Image
+                    loader={nextImageLoader}
+                    src={professor.imgSrc}
+                    alt={professor.name}
+                    width={300}
+                    height={400}
+                    placeholder="empty"
+                    priority
+                  />
+
+                  <Column>
+                    <p className="name">
+                      {professor.position}. {professor.name}
+                    </p>
+                    <p className="email">{professor.email}</p>
+                  </Column>
+                </Row>
+              ))}
+            </div>
+          </ItemFrame>
+          <ItemFrame title={'partners'} className="partners">
+            <div>
+              {PARTNERS_DATA.map((partner) => (
+                <Column key={partner.name}>
+                  <Image
+                    loader={nextImageLoader}
+                    src={partner.imgSrc}
+                    alt={partner.name}
+                    width={1200}
+                    height={800}
+                    placeholder="empty"
+                    priority
+                  />
+
+                  <p className="name">{partner.name}</p>
+                  <p className="link">{partner.contact}</p>
+                  {partner.site && (
+                    <Link href={'https://' + partner.site} passHref>
+                      <a target="_blank" rel="noopener noreferrer" className="link">
+                        {partner.site}
+                      </a>
+                    </Link>
+                  )}
+                  {partner.email && (
+                    <a href={`mailto:${partner.email}`} className="link">
+                      {partner.email}
+                    </a>
+                  )}
+                </Column>
+              ))}
+            </div>
+          </ItemFrame>
+        </ThanksToPagePCWrapper>
+      )}
     </>
   );
 };

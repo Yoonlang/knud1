@@ -12,11 +12,13 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
   background-color: black;
 
   & > main {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
 
     & > div.content {
+      padding-bottom: 160px;
       & > p.title {
         padding: 0;
+
         margin: 72px 0 48px;
 
         font-family: 'Poppins-Bold';
@@ -32,6 +34,7 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
     background: none;
     & > main {
       padding: 0;
+
       background-image: linear-gradient(to bottom, #38d430 10%, black 10%);
       & > div.content {
         & > p.title {
@@ -46,9 +49,10 @@ export const DefaultLayoutMobileWrapper = styled(Column)`
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     & > main {
-      padding: 30px;
+      padding: 30px 30px 0 30px;
 
       & > div.content {
+        padding-bottom: 250px;
         & > p.title {
           font-size: 60px;
         }

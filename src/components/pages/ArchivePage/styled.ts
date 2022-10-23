@@ -9,14 +9,12 @@ export const ArchivePageMobileWrapper = styled.div`
   row-gap: 90px;
   column-gap: 16px;
 
-  & > div.content {
-    cursor: pointer;
-  }
-
   img {
     width: 100%;
     height: auto;
     min-width: 167px;
+
+    cursor: pointer;
   }
 
   p {
@@ -30,7 +28,7 @@ export const ArchivePageMobileWrapper = styled.div`
       margin-top: 8px;
     }
 
-    &.name {
+    &.producer {
       font-family: 'NotoSansKR-Light';
       font-size: 16px;
 
@@ -51,7 +49,7 @@ export const ArchivePageMobileWrapper = styled.div`
         margin-top: 20px;
       }
 
-      &.name {
+      &.producer {
         font-size: 20px;
 
         margin-top: 10px;
@@ -85,6 +83,8 @@ export const ArchivePagePCWrapper = styled.div`
     & > div.text-wrap {
       visibility: hidden;
 
+      align-items: baseline;
+
       position: absolute;
       top: 40px;
       left: 40px;
@@ -97,10 +97,13 @@ export const ArchivePagePCWrapper = styled.div`
 
         margin: 0;
 
-        &.name {
+        word-break: keep-all;
+
+        &.producer {
           font-family: 'GmarketSansBold';
           font-weight: 700;
 
+          min-width: 100px;
           margin-right: 24px;
         }
 
@@ -116,6 +119,7 @@ export const ArchivePagePCWrapper = styled.div`
 
       & > ${Column} {
         padding-left: 24px;
+        align-self: baseline;
 
         border-left: 1px solid white;
       }
@@ -132,7 +136,45 @@ export const ArchivePagePCWrapper = styled.div`
     }
   }
 
-  padding-bottom: 700px;
+  @media (min-width: 1500px) and (max-width: 1800px) {
+    & > div.content {
+      & > div.text-wrap {
+        top: 30px;
+        left: 30px;
+        p {
+          font-size: 24px;
+
+          &.producer {
+            min-width: 60px;
+            margin-right: 12px;
+          }
+        }
+        & > ${Column} {
+          padding-left: 12px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1500px) {
+    & > div.content {
+      & > div.text-wrap {
+        top: 20px;
+        left: 20px;
+        p {
+          font-size: 18px;
+
+          &.producer {
+            min-width: 60px;
+            margin-right: 6px;
+          }
+        }
+        & > ${Column} {
+          padding-left: 6px;
+        }
+      }
+    }
+  }
 
   @media (max-width: 1023px) {
     display: none;

@@ -4,11 +4,9 @@ import styled from 'styled-components';
 
 export const ThanksToPageMobileWrapper = styled(Column)`
   & > ${ItemFrame}.professor {
-    div.mock-img {
+    img.all-prof {
       width: 100%;
-      height: 230px;
-
-      background-color: white;
+      height: auto;
     }
 
     & > div.professor-list {
@@ -43,7 +41,7 @@ export const ThanksToPageMobileWrapper = styled(Column)`
   }
 
   & > ${ItemFrame}.partners {
-    margin: 160px 0;
+    margin-top: 160px;
 
     & > div {
       display: grid;
@@ -71,6 +69,10 @@ export const ThanksToPageMobileWrapper = styled(Column)`
           color: white;
           font-size: 12px;
           font-weight: 300;
+
+          &:last-child {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -103,7 +105,11 @@ export const ThanksToPageMobileWrapper = styled(Column)`
     }
 
     & > ${ItemFrame}.partners {
-      margin: 250px 0;
+      margin-top: 250px;
+    }
+
+    p.description {
+      margin: 30px 0 250px;
     }
   }
 
@@ -113,22 +119,22 @@ export const ThanksToPageMobileWrapper = styled(Column)`
 `;
 
 export const ThanksToPagePCWrapper = styled(Column)`
+  img.all-profs {
+    width: 90%;
+    height: auto;
+  }
+
   & > ${ItemFrame}.professor {
-    & > ${Row} {
-      div.mock-img {
-        width: 100%;
-        height: 670px;
+    & > ${Row}.description-wrapper {
+      width: 90%;
 
-        background-color: white;
-
-        margin-right: 50px;
-      }
+      justify-content: space-between;
     }
 
     & > div.professor-list {
       margin-top: 200px;
 
-      width: 80%;
+      width: 95%;
 
       display: grid;
 
@@ -148,6 +154,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
         }
 
         & > ${Column} {
+          min-width: 180px;
           justify-content: flex-end;
 
           p.name {
@@ -167,7 +174,7 @@ export const ThanksToPagePCWrapper = styled(Column)`
   }
 
   & > ${ItemFrame}.partners {
-    margin: 500px 0;
+    margin-top: 500px;
 
     & > div {
       width: 70%;
@@ -197,6 +204,10 @@ export const ThanksToPagePCWrapper = styled(Column)`
           color: white;
           font-size: 20px;
           font-weight: 300;
+
+          &:last-child {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -211,10 +222,16 @@ export const ThanksToPagePCWrapper = styled(Column)`
       font-family: 'NotoSansKR-Medium';
       color: #38d430;
       font-size: 22px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-word;
 
-      width: 360px;
+      width: 48%;
 
       line-height: 1.7;
+
+      margin-top: 70px;
+      margin-bottom: 200px;
     }
   }
 
