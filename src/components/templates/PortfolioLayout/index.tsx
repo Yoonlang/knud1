@@ -17,6 +17,7 @@ interface Titles {
   slogan: string;
   detail: string;
   hashtag: string[];
+  thumbnail: string;
 }
 
 interface Info {
@@ -56,7 +57,7 @@ const PortfolioLayout: React.FC<Props> = (props) => {
             </div>
             <div className={'main'}>
               <div className={'bgImg'}>
-                <StyledImage loader={nextImageLoader} src={'./assets/sample.png'} width={1800} height={1100} />
+                <StyledImage loader={nextImageLoader} src={titles.thumbnail} width={1800} height={1100} />
               </div>
 
               <div className={'tag'}>
