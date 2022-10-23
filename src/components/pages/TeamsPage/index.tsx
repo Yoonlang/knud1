@@ -98,11 +98,11 @@ const TeamsPage: React.FC = () => {
 
                 <Column>
                   <Row>
-                    <p className="data-title">팀장 </p>
+                    <p className="data-title">팀장</p>
                     <p className="data">{team.leader}</p>
                   </Row>
                   <Row>
-                    <p className="data-title">팀원 </p>
+                    <p className="data-title">팀원</p>
                     <Column>
                       {team.members.map((member) => (
                         <p key={team + member} className="data">
