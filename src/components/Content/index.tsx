@@ -80,6 +80,7 @@ const Content: React.FC<Props> = (props) => {
                   height={906}
                   maxwidth={'1610px'}
                   maxheight={'906px'}
+                  priority
                 />
               );
             })}
@@ -134,6 +135,7 @@ const Content: React.FC<Props> = (props) => {
                 height={910}
                 maxwidth={'910px'}
                 maxheight={'910px'}
+                priority
               />
             )}
           </div>
@@ -160,6 +162,7 @@ const Content: React.FC<Props> = (props) => {
               maxwidth={'1610px'}
               maxheight={'906px'}
               key={index}
+              priority
             />
           );
         })}
