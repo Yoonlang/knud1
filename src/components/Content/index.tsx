@@ -21,22 +21,21 @@ const Content: React.FC<Props> = (props) => {
   const dot = useRef<HTMLDivElement>(null);
   const left = useRef<HTMLButtonElement>(null);
 
-  if (type === 'slide') {
-    useEffect(() => {
-      if (!slide.current || !dot.current || !left.current) return;
-      left.current.style.display = 'none';
-      slide.current.addEventListener('scroll', (e) => {
-        if (!dot.current) return;
-        if (!e.target) return;
-        const eTarget = e.target as HTMLDivElement;
-        const pos = eTarget.scrollLeft / eTarget.offsetWidth;
-        if (left.current)
-          if (pos >= 0.5) left.current.style.display = 'flex';
-          else left.current.style.display = 'none';
-        dot.current.style.left = `${pos * 20}px`;
-      });
-    }, [slide]);
-  }
+  useEffect(() => {
+    if (type !== 'slide') return;
+    if (!slide.current || !dot.current || !left.current) return;
+    left.current.style.display = 'none';
+    slide.current.addEventListener('scroll', (e) => {
+      if (!dot.current) return;
+      if (!e.target) return;
+      const eTarget = e.target as HTMLDivElement;
+      const pos = eTarget.scrollLeft / eTarget.offsetWidth;
+      if (left.current)
+        if (pos >= 0.5) left.current.style.display = 'flex';
+        else left.current.style.display = 'none';
+      dot.current.style.left = `${pos * 20}px`;
+    });
+  }, [slide]);
 
   const goLeft = () => {
     if (!slide.current) return;

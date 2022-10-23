@@ -139,7 +139,12 @@ export const StyledPortfolioLayout = styled.div`
 
   @media (min-width: 1024px) {
     & .tag {
-      margin: 60px 0 200px 60px;
+      margin: 60px 0 130px 60px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    & .tag {
       & > img {
         height: 110px;
       }
