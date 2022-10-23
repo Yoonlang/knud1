@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const ArchivePageMobileWrapper = styled.div`
   display: grid;
+  width: 100%;
 
   grid-template-columns: repeat(2, 1fr);
 
@@ -25,7 +26,7 @@ export const ArchivePageMobileWrapper = styled.div`
       font-size: 20px;
       font-weight: 700;
 
-      margin-top: 8px;
+      margin: 8px 0 0;
     }
 
     &.producer {
@@ -114,6 +115,7 @@ export const ArchivePagePCWrapper = styled.div`
 
         &.subtitle {
           font-family: 'GmarketSansLight';
+          margin-top: 8px;
         }
       }
 
