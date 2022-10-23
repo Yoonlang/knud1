@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useMount } from 'utils/useMount';
 
 interface Props {
@@ -17,10 +18,16 @@ const Video: React.FC<Props> = ({ src }) => {
   useMount(cancelVideoMute);
 
   return (
-    <video ref={videoRef} autoPlay muted loop preload="metadata" controls>
+    <VideoWrapper ref={videoRef} autoPlay muted loop preload="metadata" controls playsInline>
       <source src={src} type="video/mp4" />
-    </video>
+    </VideoWrapper>
   );
 };
 
 export default Video;
+
+const VideoWrapper = styled.video`
+  object-fit: contain;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+`;

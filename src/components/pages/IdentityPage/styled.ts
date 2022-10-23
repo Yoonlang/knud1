@@ -92,10 +92,15 @@ export const IdentityPageMobileWrapper = styled(Column)`
 `;
 
 export const IdentityPagePCWrapper = styled(Column)`
-  & > ${Row}.description-wrapper {
+  video {
     width: 100%;
+  }
+
+  & > ${Row}.description-wrapper {
+    width: 80%;
 
     justify-content: space-between;
+    align-self: center;
   }
 
   & > ${ItemFrame} {
