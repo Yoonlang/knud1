@@ -13,14 +13,18 @@ export const StyledSlide = styled.div`
   & .slide {
     display: flex;
     position: relative;
-    overflow: scroll;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
     transition: 0.5s;
     z-index: 2;
     & > img {
       scroll-snap-align: center;
       min-width: 100%;
     }
+  }
+  & .slide::-webkit-scrollbar {
+    display: none;
   }
   & .support {
     display: flex;
