@@ -16,7 +16,6 @@ interface Props {
 
 const Content: React.FC<Props> = (props) => {
   const { type, title, detail, imgs, img, video } = props.content;
-
   const slide = useRef<HTMLDivElement>(null);
   const dot = useRef<HTMLDivElement>(null);
   const left = useRef<HTMLButtonElement>(null);
@@ -25,9 +24,12 @@ const Content: React.FC<Props> = (props) => {
     if (type !== 'slide') return;
     if (!slide.current || !dot.current || !left.current) return;
     left.current.style.display = 'none';
-    setTimeout(() => {
-      if (slide.current) slide.current.scrollLeft = 0;
-    }, 1000);
+    slide.current.childNodes.forEach((child) => {
+      child.addEventListener('load', (e) => {
+        if (slide.current) slide.current.scrollLeft = 0;
+      });
+    });
+
     slide.current.addEventListener('scroll', (e) => {
       if (!dot.current) return;
       if (!e.target) return;
@@ -39,6 +41,15 @@ const Content: React.FC<Props> = (props) => {
       dot.current.style.left = `${pos * 20}px`;
     });
   }, [slide]);
+
+  // useEffect(() => {
+  //   // const mine = document.getElementsByClassName('slideImg')[0].complete;
+  //   // console.log(mine);
+  //   if (!slide.current) return;
+  //   slide.current.addEventListener('load', (e) => {
+  //     console.log(e);
+  //   });
+  // }, []);
 
   const goLeft = () => {
     if (!slide.current) return;
@@ -61,6 +72,7 @@ const Content: React.FC<Props> = (props) => {
             {imgs?.map((img, index) => {
               return (
                 <MyImage
+                  className={'slideImg'}
                   key={index}
                   loader={nextImageLoader}
                   src={img}
@@ -68,8 +80,6 @@ const Content: React.FC<Props> = (props) => {
                   height={906}
                   maxwidth={'1610px'}
                   maxheight={'906px'}
-                  placeholder="empty"
-                  priority
                 />
               );
             })}

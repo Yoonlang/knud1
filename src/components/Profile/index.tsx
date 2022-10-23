@@ -19,7 +19,7 @@ const Profile: React.FC<Props> = (props) => {
   return (
     <StyledProfile main={main}>
       <div className={'profileImg'}>
-        <StyledImage loader={nextImageLoader} src={img} width={98} height={130} />
+        <StyledImage loader={nextImageLoader} src={img} width={98} height={130} priority />
       </div>
       <h3>{name}</h3>
       {mail && (
