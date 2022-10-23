@@ -30,6 +30,11 @@ export const StyledSlide = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    & .slideButtons {
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
     & .left,
     .right {
       display: flex;
@@ -44,9 +49,6 @@ export const StyledSlide = styled.div`
       outline: none;
       background: none;
       z-index: 3;
-      @media (max-width: 1023px) {
-        display: none;
-      }
     }
     & .left {
       left: 50px;

@@ -28,10 +28,8 @@ const Content: React.FC<Props> = (props) => {
       slide.current.addEventListener('scroll', (e) => {
         if (!dot.current) return;
         if (!e.target) return;
-        const pos =
-          Math.abs(((e.target as HTMLDivElement).children[0] as HTMLImageElement).x) /
-          (e.target as HTMLDivElement).offsetWidth /
-          2;
+        const eTarget = e.target as HTMLDivElement;
+        const pos = eTarget.scrollLeft / eTarget.offsetWidth;
         if (left.current)
           if (pos >= 0.5) left.current.style.display = 'flex';
           else left.current.style.display = 'none';
@@ -50,7 +48,7 @@ const Content: React.FC<Props> = (props) => {
   const goRight = () => {
     if (!slide.current) return;
     const { scrollLeft, scrollWidth, offsetWidth } = slide.current;
-    slide.current.scrollLeft = (scrollLeft + offsetWidth) % scrollWidth;
+    slide.current.scrollLeft = (scrollLeft + offsetWidth + 1) % scrollWidth;
   };
 
   if (type === 'slide') {
@@ -75,12 +73,14 @@ const Content: React.FC<Props> = (props) => {
           </div>
           {imgs && imgs.length >= 2 && (
             <div className={'support'}>
-              <button className={'left'} onClick={goLeft} ref={left}>
-                <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
-              </button>
-              <button className={'right'} onClick={goRight}>
-                <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
-              </button>
+              <div className={'slideButtons'}>
+                <button className={'left'} onClick={goLeft} ref={left}>
+                  <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
+                </button>
+                <button className={'right'} onClick={goRight}>
+                  <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
+                </button>
+              </div>
               <div className={'dots'}>
                 {imgs?.map((img, index) => {
                   img;
