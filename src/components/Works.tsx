@@ -27,7 +27,7 @@ const WorksDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: 1950px;
+
   height: 100%;
   overflow: scroll;
   & > div {
@@ -37,10 +37,19 @@ const WorksDiv = styled.div`
       opacity: 0.5;
     }
   }
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     gap: 100px;
+    min-width: 1950px;
   }
   @media (max-width: 1023px) {
+    gap: 400px;
+    & > div {
+      margin-top: -50px;
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      transform: rotate(-15deg);
+    }
     width: 100%;
     height: 100vh;
     background: #000;
@@ -49,10 +58,11 @@ const WorksDiv = styled.div`
 `;
 
 const Work = styled(Image)`
-  width: 1800px;
+  @media (min-width: 1024px) {
+    width: 1800px;
+  }
   @media (max-width: 1023px) {
-    width: 100%;
-    height: 100%;
+    height: 115%;
   }
 `;
 

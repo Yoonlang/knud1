@@ -24,7 +24,11 @@ export const portfolioData: Obj<any> = {
     contents: [
       {
         type: 'slide',
-        imgs: ['./assets/곽나영/slide_1.gif', './assets/곽나영/slide_2.png', './assets/곽나영/slide_3.png'],
+        imgs: [
+          'https://github.com/Yoonlang/knud1/blob/main/public/assets/%EA%B3%BD%EB%82%98%EC%98%81/slide_1.gif?raw=true',
+          './assets/곽나영/slide_2.png',
+          './assets/곽나영/slide_3.png',
+        ],
         detail: '',
       },
       {
