@@ -1,4 +1,5 @@
 import React from 'react';
+import { isDesktop, isIOS, isSafari } from 'react-device-detect';
 import styled from 'styled-components';
 import { useMount } from 'utils/useMount';
 
@@ -10,6 +11,10 @@ const Video: React.FC<Props> = ({ src }) => {
   const videoRef = React.useRef<HTMLVideoElement>(null);
 
   const cancelVideoMute = React.useCallback(() => {
+    if (isSafari || (!isDesktop && isIOS)) {
+      return;
+    }
+
     if (videoRef.current?.muted === true) {
       videoRef.current.muted = false;
     }
