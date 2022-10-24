@@ -22,7 +22,7 @@ export const DefaultLayoutPCWrapper = styled.div`
     }
 
     & > ${Row}.nav-items {
-      gap: 36px;
+      gap: 18px;
 
       height: 60px;
 
@@ -31,26 +31,29 @@ export const DefaultLayoutPCWrapper = styled.div`
       & > a {
         font-family: 'Poppins-Bold';
         font-weight: bold;
+        width: 90px;
+
+        text-align: center;
 
         color: #38d430;
       }
     }
 
     & > span.current-nav-wrapper {
-      width: 85px;
+      width: 90px;
       background-color: #38d430;
       position: absolute;
       height: 22px;
       top: 44px;
 
       &.identity {
-        right: 420px;
+        right: 444px;
       }
       &.archive {
-        right: 320px;
+        right: 336px;
       }
       &.teams {
-        right: 220px;
+        right: 228px;
       }
       &.thanksto {
         right: 120px;
@@ -103,4 +106,14 @@ export const DefaultLayoutPCWrapper = styled.div`
   @media (max-width: 1023px) {
     display: none;
   }
+`;
+
+export const CurrentNav = styled.span<{ rightPosition: number }>`
+  width: 90px;
+  background-color: #38d430;
+  position: absolute;
+  height: 22px;
+  top: 44px;
+  transition: right 0.5s;
+  right: ${(props) => props.rightPosition}px;
 `;
