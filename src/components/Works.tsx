@@ -1,11 +1,40 @@
 import Image from 'next/future/image';
+import { RefObject, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { nextImageLoader } from 'utils/imageLoader';
 import { ARCHIVE_DATA } from './pages/ArchivePage/constants';
 
-const Works: React.FC = () => {
+interface Props {
+  unit: RefObject<HTMLDivElement>;
+}
+
+const Works: React.FC<Props> = (props) => {
+  const { unit } = props;
+  const works = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!unit.current && !works.current) return;
+
+    works.current?.addEventListener('scroll', (e) => {
+      const eTarget = e.target as HTMLDivElement;
+      const unitCurrent = unit.current as HTMLDivElement;
+      const where = eTarget.scrollTop / (eTarget.scrollHeight / 26);
+      unitCurrent.scrollTop = where * unitCurrent.offsetHeight;
+    });
+
+    window.addEventListener('resize', () => {
+      const worksCurrent = works.current as HTMLDivElement;
+      const unitCurrent = unit.current as HTMLDivElement;
+      if (worksCurrent.scrollHeight === 0) return;
+      const where = worksCurrent.scrollTop / (worksCurrent.scrollHeight / 26);
+      unitCurrent.scrollTop = where * unitCurrent.offsetHeight;
+    });
+
+    works.current?.addEventListener;
+  }, []);
+
   return (
-    <WorksDiv>
+    <WorksDiv ref={works}>
       {ARCHIVE_DATA.map((data, index) => {
         return (
           <div key={index}>

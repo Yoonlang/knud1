@@ -7,6 +7,7 @@ export const FixedTypo = styled.h2`
   line-height: 1.2em;
   font-family: 'GmarketSansBold';
   margin: 0;
+  pointer-events: none;
   z-index: 2;
   @media (min-width: 1024px) {
     top: 130px;
@@ -32,6 +33,48 @@ export const Page = styled.div`
   justify-content: center;
   overflow: hidden;
   background: #000;
+
+  & .unit {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    pointer-events: none;
+    z-index: 3;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 100%;
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (min-width: 1024px) {
+      width: 440px;
+      height: 201px;
+      bottom: 90px;
+      right: 100px;
+    }
+    @media (max-width: 1023px) and (min-width: 768px) {
+      width: 480px;
+      height: 260px;
+      bottom: 180px;
+      left: 140px;
+    }
+    @media (max-width: 767px) {
+      width: 280px;
+      height: 150px;
+      bottom: 90px;
+      left: 120px;
+    }
+  }
+  & .unit::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Mobile = styled.div`
