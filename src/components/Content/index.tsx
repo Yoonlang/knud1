@@ -1,6 +1,6 @@
 import Image from 'next/future/image';
 import { useEffect, useRef } from 'react';
-import { nextImageLoader, testNextImageLoader } from 'utils/imageLoader';
+import { nextImageLoader } from 'utils/imageLoader';
 import { MyImage, StyledAdd1, StyledArrange, StyledSlide, Title } from './styled';
 
 interface Props {
@@ -61,21 +61,6 @@ const Content: React.FC<Props> = (props) => {
         <div className={'slideContainer'}>
           <div className={'slide'} ref={slide}>
             {imgs?.map((img, index) => {
-              if (index === 0) {
-                return (
-                  <MyImage
-                    className={'slideImg'}
-                    key={index}
-                    loader={testNextImageLoader}
-                    src={img}
-                    width={1610}
-                    height={906}
-                    maxwidth={'1610px'}
-                    maxheight={'906px'}
-                    priority
-                  />
-                );
-              }
               return (
                 <MyImage
                   className={'slideImg'}
