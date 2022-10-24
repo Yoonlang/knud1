@@ -1,5 +1,30 @@
 import styled from 'styled-components';
 
+export const FixedTypo = styled.h2`
+  position: fixed;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-family: 'GmarketSansBold';
+  margin: 0;
+  z-index: 2;
+  @media (min-width: 1024px) {
+    top: 130px;
+    left: 50px;
+  }
+  @media (max-width: 1023px) and (min-width: 768px) {
+    top: 290px;
+    left: -70px;
+    transform: rotate(90deg);
+  }
+  @media (max-width: 767px) {
+    top: 235px;
+    left: -10px;
+    font-size: 20px;
+    transform: rotate(90deg);
+  }
+`;
+
 export const Page = styled.div`
   display: flex;
   width: 100%;
