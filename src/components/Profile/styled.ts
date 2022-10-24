@@ -37,7 +37,6 @@ export const StyledProfile = styled.div<StyledProfileProps>`
   @media (min-width: 1024px) {
     display: ${(props) => (props.main ? 'none' : '')};
     height: 500px;
-    /* background: #000; */
 
     & .contact {
       gap: 15px;

@@ -65,7 +65,7 @@ const GradationColBar = styled.div`
       top: 0;
       height: 100%;
       width: 100%;
-      background: linear-gradient(to bottom, #000, transparent, #fff, #fff, #fff, #fff);
+      background: linear-gradient(to bottom, rgba(99, 99, 99, 0), rgba(99, 99, 99, 0.5), rgba(150, 150, 150, 0.8), #ddd, #eee, #fff, #fff, #fff, #fff);
       animation: ${() => moveToBottom('-100%')} 1s linear forwards;
     }
   }
