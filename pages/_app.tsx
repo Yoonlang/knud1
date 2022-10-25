@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <Head>
         <link rel="shortcut icon" href="./assets/126_logo.svg" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <GlobalStyle />
 
