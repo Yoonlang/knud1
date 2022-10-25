@@ -62,7 +62,7 @@ export const Page = styled.div`
     @media (max-width: 1023px) and (min-width: 768px) {
       width: 480px;
       height: 260px;
-      bottom: 180px;
+      top: 600px;
       left: 140px;
     }
     @media (max-width: 767px) {
