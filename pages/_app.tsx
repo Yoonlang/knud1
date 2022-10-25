@@ -21,8 +21,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           title: '2022 경북대학교 디자인학과 졸업전시',
           images: [
             {
-              url: 'https://knud1.com/assets/126_logo.svg',
-              alt: '126_logo',
+              url: 'https://knud1.com/assets/126.png',
+              alt: '126',
+              type: 'image/png',
+              width: 549,
+              height: 423,
             },
           ],
         }}
