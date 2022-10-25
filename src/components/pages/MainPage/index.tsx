@@ -20,18 +20,30 @@ const MainPage: React.FC = () => {
   return (
     <Page>
       <div className={'unit'} ref={unit}>
-        {startImageLoading &&
-          ARCHIVE_DATA.map((data, index) => (
-            <div key={index}>
+        {startImageLoading && (
+          <>
+            {ARCHIVE_DATA.map((data, index) => (
+              <div key={index}>
+                <Image
+                  loader={nextImageLoader}
+                  src={`./assets/${data.producer}/personal_unit.png`}
+                  width={880}
+                  height={270}
+                  priority
+                />
+              </div>
+            ))}
+            <div>
               <Image
                 loader={nextImageLoader}
-                src={`./assets/${data.producer}/personal_unit.png`}
+                src={`./assets/곽나영/personal_unit.png`}
                 width={880}
                 height={270}
                 priority
               />
             </div>
-          ))}
+          </>
+        )}
       </div>
       <Mobile>
         <SideBar home />

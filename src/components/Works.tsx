@@ -20,7 +20,7 @@ const Works: React.FC<Props> = (props) => {
       const worksCurrent = works.current as HTMLDivElement;
       const unitCurrent = unit.current as HTMLDivElement;
       if (worksCurrent?.scrollHeight === 0) return;
-      const where = worksCurrent.scrollTop / (worksCurrent.scrollHeight / 26);
+      const where = worksCurrent.scrollTop / (worksCurrent.scrollHeight / 27);
       unitCurrent.scrollTop = where * unitCurrent.offsetHeight;
     };
 
@@ -54,6 +54,15 @@ const Works: React.FC<Props> = (props) => {
             </div>
           );
         })}
+      <div>
+        <Work
+          loader={nextImageLoader}
+          alt={'곽테일'}
+          src={`./assets/곽나영/thumbnail.png`}
+          width={1800}
+          height={1100}
+        />
+      </div>
     </WorksDiv>
   );
 };
@@ -62,7 +71,6 @@ const WorksDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
