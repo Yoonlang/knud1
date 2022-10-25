@@ -1,5 +1,5 @@
 import Image from 'next/future/image';
-import { RefObject, useEffect, useRef } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { nextImageLoader } from 'utils/imageLoader';
 import { ARCHIVE_DATA } from './pages/ArchivePage/constants';
@@ -11,6 +11,7 @@ interface Props {
 const Works: React.FC<Props> = (props) => {
   const { unit } = props;
   const works = useRef<HTMLDivElement>(null);
+  const [startImageLoading, setStartImageLoading] = useState(false);
 
   useEffect(() => {
     if (!unit.current && !works.current) return;
@@ -32,22 +33,27 @@ const Works: React.FC<Props> = (props) => {
     });
   }, []);
 
+  useEffect(() => {
+    setStartImageLoading(true);
+  }, []);
+
   return (
     <WorksDiv ref={works}>
-      {ARCHIVE_DATA.map((data, index) => {
-        return (
-          <div key={index}>
-            <Work
-              loader={nextImageLoader}
-              alt={data.title}
-              src={`./assets/${data.producer}/thumbnail.png`}
-              width={1800}
-              height={1100}
-              priority
-            />
-          </div>
-        );
-      })}
+      {startImageLoading &&
+        ARCHIVE_DATA.map((data, index) => {
+          return (
+            <div key={index}>
+              <Work
+                loader={nextImageLoader}
+                alt={data.title}
+                src={`./assets/${data.producer}/thumbnail.png`}
+                width={1800}
+                height={1100}
+                priority
+              />
+            </div>
+          );
+        })}
     </WorksDiv>
   );
 };
