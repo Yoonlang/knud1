@@ -33,7 +33,6 @@ export const Page = styled.div`
   justify-content: center;
   overflow: hidden;
   background: #000;
-
   & .unit {
     display: flex;
     flex-direction: column;
@@ -53,7 +52,13 @@ export const Page = styled.div`
         height: auto;
       }
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1921px) {
+      width: 440px;
+      height: 201px;
+      bottom: 90px;
+      right: calc(((100% - 1920px) / 2) + 100px);
+    }
+    @media (min-width: 1024px) and (max-width: 1920px) {
       width: 440px;
       height: 201px;
       bottom: 90px;
