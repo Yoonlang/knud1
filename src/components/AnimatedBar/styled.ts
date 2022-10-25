@@ -52,6 +52,7 @@ const moveToBottom = (startPoint: string) => keyframes`
 
 const GradationColBar = styled.div`
   position: absolute;
+  pointer-events: none;
   @media (max-width: 1023px) {
     width: 36px;
     height: 100%;

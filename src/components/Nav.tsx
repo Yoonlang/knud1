@@ -45,6 +45,7 @@ const MenuLink = styled.a`
   line-height: 1.2;
   white-space: nowrap;
   transition: 0.3s;
+  font-family: 'Poppins-Bold';
   &:hover {
     transform: scale(1.2);
   }
