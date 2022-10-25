@@ -16,21 +16,21 @@ const Works: React.FC<Props> = (props) => {
   useEffect(() => {
     if (!unit.current && !works.current) return;
 
-    works.current?.addEventListener('scroll', (e) => {
-      const eTarget = e.target as HTMLDivElement;
-      const unitCurrent = unit.current as HTMLDivElement;
-      const where = eTarget.scrollTop / (eTarget.scrollHeight / 26);
-      unitCurrent.scrollTop = where * unitCurrent.offsetHeight;
-    });
-
-    window.addEventListener('resize', () => {
+    const callback = () => {
       const worksCurrent = works.current as HTMLDivElement;
       const unitCurrent = unit.current as HTMLDivElement;
-      if (!worksCurrent || !unitCurrent) return;
-      if (worksCurrent.scrollHeight === 0) return;
+      if (worksCurrent?.scrollHeight === 0) return;
       const where = worksCurrent.scrollTop / (worksCurrent.scrollHeight / 26);
       unitCurrent.scrollTop = where * unitCurrent.offsetHeight;
-    });
+    };
+
+    works.current?.addEventListener('scroll', callback);
+    window.addEventListener('resize', callback);
+
+    return () => {
+      works.current?.removeEventListener('scroll', callback);
+      window.removeEventListener('resize', callback);
+    };
   }, []);
 
   useEffect(() => {
