@@ -25,7 +25,7 @@ const MainPage: React.FC = () => {
             <div key={index}>
               <Image
                 loader={nextImageLoader}
-                src={`./assets/${data.producer}/personal_unit.png`}
+                src={`/assets/${data.producer}/personal_unit.png`}
                 width={880}
                 height={270}
                 priority
