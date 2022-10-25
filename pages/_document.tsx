@@ -31,6 +31,7 @@ class AppDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="prefetch" href="/fonts/Poppins-Light.woff" />
           <link rel="prefetch" href="/fonts/Poppins-Medium.woff" />
           <link rel="prefetch" href="/fonts/Poppins-Bold.woff" />
