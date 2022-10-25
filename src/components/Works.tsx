@@ -43,6 +43,7 @@ const Works: React.FC<Props> = (props) => {
               src={`./assets/${data.producer}/thumbnail.png`}
               width={1800}
               height={1100}
+              priority
             />
           </div>
         );

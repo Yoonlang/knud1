@@ -22,6 +22,7 @@ const MainPage: React.FC = () => {
               src={`./assets/${data.producer}/personal_unit.png`}
               width={880}
               height={270}
+              priority
             />
           </div>
         ))}
