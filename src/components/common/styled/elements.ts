@@ -16,3 +16,19 @@ export const StyledImage = styled(Image)`
   height: 100%;
   object-fit: cover;
 `;
+
+interface MenuLinkProps {
+  main?: boolean;
+  isOpen: boolean;
+}
+
+export const MenuLink = styled.a<MenuLinkProps>`
+  height: 36px;
+  text-align: right;
+  color: ${(props) => (props.main ? '#38d430' : 'rgba(56, 212, 48, 0.3)')};
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 1.8;
+  transform: ${(props) => (props.isOpen ? 'scale(1)' : 'scale(1.2)')};
+  transition: 0.5s;
+`;

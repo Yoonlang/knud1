@@ -1,10 +1,9 @@
-import { MenuLink } from 'components/Menu/styled';
 import { AppPathsArray } from 'constants/AppPaths';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import useOutAreaClick from 'utils/useOutAreaClick';
-import { ButtonBase } from '../styled/elements';
+import { ButtonBase, MenuLink } from '../styled/elements';
 import Image from 'next/future/image';
 import cx from 'classnames';
 import { SideBarOpenButton, SideBarWrapper } from './styled';

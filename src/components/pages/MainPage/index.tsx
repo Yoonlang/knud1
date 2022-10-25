@@ -27,6 +27,7 @@ const MainPage: React.FC = () => {
                 <Image
                   loader={nextImageLoader}
                   src={`./assets/${data.producer}/personal_unit.png`}
+                  alt="personal_unit"
                   width={880}
                   height={270}
                   priority
@@ -37,6 +38,7 @@ const MainPage: React.FC = () => {
               <Image
                 loader={nextImageLoader}
                 src={`./assets/곽나영/personal_unit.png`}
+                alt="personal_unit"
                 width={880}
                 height={270}
                 priority

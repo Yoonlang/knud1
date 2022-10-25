@@ -15,7 +15,7 @@ interface Props {
 }
 
 const Content: React.FC<Props> = (props) => {
-  const { type, title, detail, imgs, img, video } = props.content;
+  const { type, title, detail, imgs, img } = props.content;
   const slide = useRef<HTMLDivElement>(null);
   const dot = useRef<HTMLDivElement>(null);
   const left = useRef<HTMLButtonElement>(null);
@@ -25,7 +25,7 @@ const Content: React.FC<Props> = (props) => {
     if (!slide.current || !dot.current || !left.current) return;
     left.current.style.display = 'none';
     slide.current.childNodes.forEach((child) => {
-      child.addEventListener('load', (e) => {
+      child.addEventListener('load', () => {
         if (slide.current) slide.current.scrollLeft = 0;
       });
     });
@@ -40,7 +40,7 @@ const Content: React.FC<Props> = (props) => {
         else left.current.style.display = 'none';
       dot.current.style.left = `${pos * 20}px`;
     });
-  }, [slide]);
+  }, [slide, type]);
 
   const goLeft = () => {
     if (!slide.current) return;
@@ -80,10 +80,22 @@ const Content: React.FC<Props> = (props) => {
             <div className={'support'}>
               <div className={'slideButtons'}>
                 <button className={'left'} onClick={goLeft} ref={left}>
-                  <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
+                  <Image
+                    loader={nextImageLoader}
+                    alt="icon_arrow"
+                    src={'./assets/icon_arrow.svg'}
+                    width={30}
+                    height={30}
+                  />
                 </button>
                 <button className={'right'} onClick={goRight}>
-                  <Image loader={nextImageLoader} src={'./assets/icon_arrow.svg'} width={30} height={30} />
+                  <Image
+                    loader={nextImageLoader}
+                    alt="icon_arrow"
+                    src={'./assets/icon_arrow.svg'}
+                    width={30}
+                    height={30}
+                  />
                 </button>
               </div>
               <div className={'dots'}>
@@ -91,12 +103,24 @@ const Content: React.FC<Props> = (props) => {
                   img;
                   return (
                     <div key={index}>
-                      <Image loader={nextImageLoader} src={'./assets/icon_circle-2.svg'} width={10} height={10} />
+                      <Image
+                        loader={nextImageLoader}
+                        alt="icon_circle-2"
+                        src={'./assets/icon_circle-2.svg'}
+                        width={10}
+                        height={10}
+                      />
                     </div>
                   );
                 })}
                 <div className={'here'} ref={dot}>
-                  <Image loader={nextImageLoader} src={'./assets/icon_circle.svg'} width={10} height={10} />
+                  <Image
+                    loader={nextImageLoader}
+                    alt="icon_circle"
+                    src={'./assets/icon_circle.svg'}
+                    width={10}
+                    height={10}
+                  />
                 </div>
               </div>
             </div>
@@ -160,8 +184,7 @@ const Content: React.FC<Props> = (props) => {
       </StyledArrange>
     );
   }
-  // if (type === 'add3') {
-  // }
+
   return <></>;
 };
 
