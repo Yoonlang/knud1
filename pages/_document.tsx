@@ -31,17 +31,17 @@ class AppDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="prefetch" href="/fonts/Poppins-Light.otf" />
-          <link rel="prefetch" href="/fonts/Poppins-Medium.otf" />
-          <link rel="prefetch" href="/fonts/Poppins-Bold.otf" />
+          <link rel="prefetch" href="/fonts/Poppins-Light.woff" />
+          <link rel="prefetch" href="/fonts/Poppins-Medium.woff" />
+          <link rel="prefetch" href="/fonts/Poppins-Bold.woff" />
 
-          <link rel="prefetch" href="/fonts/NotoSansKR-Light.otf" />
-          <link rel="prefetch" href="/fonts/NotoSansKR-Medium.otf" />
-          <link rel="prefetch" href="/fonts/NotoSansKR-Bold.otf" />
+          <link rel="prefetch" href="/fonts/NotoSansKR-Light.woff" />
+          <link rel="prefetch" href="/fonts/NotoSansKR-Medium.woff" />
+          <link rel="prefetch" href="/fonts/NotoSansKR-Bold.woff" />
 
-          <link rel="prefetch" href="/fonts/GmarketSansLight.otf" />
-          <link rel="prefetch" href="/fonts/GmarketSansMedium.otf" />
-          <link rel="prefetch" href="/fonts/GmarketSansBold.otf" />
+          <link rel="prefetch" href="/fonts/GmarketSansLight.woff" />
+          <link rel="prefetch" href="/fonts/GmarketSansMedium.woff" />
+          <link rel="prefetch" href="/fonts/GmarketSansBold.woff" />
         </Head>
         <body>
           <Main />
