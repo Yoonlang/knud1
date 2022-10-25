@@ -25,12 +25,11 @@ const Works: React.FC<Props> = (props) => {
     window.addEventListener('resize', () => {
       const worksCurrent = works.current as HTMLDivElement;
       const unitCurrent = unit.current as HTMLDivElement;
+      if (!worksCurrent || !unitCurrent) return;
       if (worksCurrent.scrollHeight === 0) return;
       const where = worksCurrent.scrollTop / (worksCurrent.scrollHeight / 26);
       unitCurrent.scrollTop = where * unitCurrent.offsetHeight;
     });
-
-    works.current?.addEventListener;
   }, []);
 
   return (
