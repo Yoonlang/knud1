@@ -46,7 +46,7 @@ const Works: React.FC<Props> = (props) => {
               <Work
                 loader={nextImageLoader}
                 alt={data.title}
-                src={`/assets/${data.producer}/thumbnail.png`}
+                src={`./assets/${data.producer}/thumbnail.png`}
                 width={1800}
                 height={1100}
                 priority
