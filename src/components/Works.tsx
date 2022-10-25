@@ -64,7 +64,8 @@ const WorksDiv = styled.div`
   width: 100%;
 
   height: 100%;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   & > div {
     width: 100%;
     height: 100%;

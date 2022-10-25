@@ -59,11 +59,17 @@ export const Page = styled.div`
       bottom: 90px;
       right: 100px;
     }
-    @media (max-width: 1023px) and (min-width: 768px) {
+    @media (max-width: 1023px) and (min-width: 768px) and (min-height: 1100px) {
       width: 480px;
       height: 260px;
       top: 600px;
       left: 140px;
+    }
+    @media (max-width: 1023px) and (min-width: 768px) and (max-height: 1099px) {
+      width: 480px;
+      height: 260px;
+      bottom: 100px;
+      left: 160px;
     }
     @media (max-width: 767px) {
       width: 280px;
