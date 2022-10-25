@@ -50,7 +50,7 @@ export const portfolioData: Obj<any> = {
   knh: {
     titles: {
       thumbnail: './assets/김나현/thumbnail.png',
-      title: 'about KESSLER',
+      title: 'KESSLER',
       slogan: 'from PIECE to PEACE!',
       detail:
         'KESSLER는 지구로 떨어진 우주쓰레기를 재활용하여 만든 제품과 브랜드 아이덴티티를 담은 굿즈들을 판매해, 얻은 수익의 일부를 우주쓰레기 청소 기업에 후원합니다. 또한 제품 사용자들에게 우주쓰레기의 심각성을 알리는 역할을 합니다.',
@@ -75,7 +75,7 @@ export const portfolioData: Obj<any> = {
       },
       {
         type: 'portfolio',
-        title: 'from PIECE to PEACE : KESSLER',
+        title: 'about KESSLER',
         imgs: ['./assets/김나현/pf_1.png', './assets/김나현/pf_2.png', './assets/김나현/pf_3.png'],
       },
       {

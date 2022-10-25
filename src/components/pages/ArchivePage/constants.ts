@@ -7,7 +7,7 @@ interface ArchiveDataInterface {
 
 export const ARCHIVE_DATA: ArchiveDataInterface[] = [
   { producer: '곽나영', producerInitial: 'gny', title: '곽테일', subTitle: 'kwacktail' },
-  { producer: '김나현', producerInitial: 'knh', title: 'about KESSLER' },
+  { producer: '김나현', producerInitial: 'knh', title: 'KESSLER' },
   { producer: '김미현', producerInitial: 'kmh', title: 'FLOVE' },
   { producer: '김의정', producerInitial: 'kej', title: '여우 영이의 첫외출' },
   { producer: '김현주', producerInitial: 'khj', title: 'òsso' },
