@@ -543,7 +543,7 @@ export const portfolioData: Obj<any> = {
     contents: [
       {
         type: 'slide',
-        imgs: ['./assets/이아림/slide_1.jpg', './assets/이아림/slide_2.jpg'],
+        imgs: ['./assets/이아림/slide_1.png', './assets/이아림/slide_2.png'],
         detail: ``,
       },
       {
