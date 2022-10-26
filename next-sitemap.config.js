@@ -9,6 +9,10 @@ module.exports = {
         userAgent: '*',
         allow: '/',
       },
+      {
+        userAgent: 'Yeti',
+        allow: '/',
+      },
     ],
     additionalSitemaps: ['https://knud1.com/server-sitemap.xml'],
   },
