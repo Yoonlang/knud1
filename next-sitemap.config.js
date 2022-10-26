@@ -4,6 +4,12 @@ module.exports = {
   generateRobotsTxt: true,
   exclude: ['/server-sitemap.xml'],
   robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
     additionalSitemaps: ['https://knud1.com/server-sitemap.xml'],
   },
 };
