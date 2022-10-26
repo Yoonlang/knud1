@@ -76,11 +76,17 @@ export const Page = styled.div`
       bottom: 100px;
       left: 160px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 767px) and (min-width: 480px) {
       width: 280px;
-      height: 150px;
-      bottom: 90px;
-      left: 120px;
+      height: 140px;
+      bottom: 40px;
+      left: 150px;
+    }
+    @media (max-width: 479px) {
+      width: 180px;
+      height: 100px;
+      bottom: 20px;
+      left: 150px;
     }
   }
   & .unit::-webkit-scrollbar {
