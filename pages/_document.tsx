@@ -31,17 +31,17 @@ class AppDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="prefetch" href="/fonts/Poppins-Light.woff" />
-          <link rel="prefetch" href="/fonts/Poppins-Medium.woff" />
-          <link rel="prefetch" href="/fonts/Poppins-Bold.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/Poppins-Light.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/Poppins-Medium.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/Poppins-Bold.woff" />
 
-          <link rel="prefetch" href="/fonts/NotoSansKR-Light.woff" />
-          <link rel="prefetch" href="/fonts/NotoSansKR-Medium.woff" />
-          <link rel="prefetch" href="/fonts/NotoSansKR-Bold.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/NotoSansKR-Light.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/NotoSansKR-Medium.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/NotoSansKR-Bold.woff" />
 
-          <link rel="prefetch" href="/fonts/GmarketSansLight.woff" />
-          <link rel="prefetch" href="/fonts/GmarketSansMedium.woff" />
-          <link rel="prefetch" href="/fonts/GmarketSansBold.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/GmarketSansLight.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/GmarketSansMedium.woff" />
+          <link rel="preload" as="font" type="font/woff" href="/fonts/GmarketSansBold.woff" />
         </Head>
         <body>
           <Main />
