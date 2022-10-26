@@ -44,6 +44,11 @@ export const portfolioData: Obj<any> = {
         title: 'APP & PACKAGE',
         imgs: ['./assets/곽나영/추가_2-1.gif', './assets/곽나영/추가_2-2.png'],
       },
+      {
+        type: 'add3',
+        title: 'Expression Video',
+        video: '곽나영',
+      },
     ],
   },
 

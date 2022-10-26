@@ -186,7 +186,12 @@ const Content: React.FC<Props> = (props) => {
     );
   }
   if (type === 'add3') {
-    return <StyledAdd3>{video && <Video src={require(`/public/assets/${video}/추가_3.mp4`)} />}</StyledAdd3>;
+    return (
+      <StyledAdd3>
+        <Title>{title}</Title>
+        {video && <Video src={require(`/public/assets/${video}/추가_3.mp4`)} />}
+      </StyledAdd3>
+    );
   }
 
   return <></>;
