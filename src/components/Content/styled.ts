@@ -183,6 +183,14 @@ export const StyledArrange = styled.div`
   width: 100%;
 `;
 
+export const StyledAdd3 = styled.div`
+  width: 100%;
+  height: auto;
+  & video {
+    width: 100%;
+  }
+`;
+
 export const Title = styled.h2`
   margin: 0;
   color: #fff;
