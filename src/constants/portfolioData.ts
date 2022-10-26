@@ -404,7 +404,7 @@ export const portfolioData: Obj<any> = {
       {
         type: 'add3',
         title: '그때의 시간, 당신의 색감_miol',
-        video: './assets/송희주/추가_3.mp4',
+        video: '송희주',
       },
     ],
   },
@@ -931,7 +931,7 @@ export const portfolioData: Obj<any> = {
       {
         type: 'add3',
         title: 'APP_Motion',
-        video: './assets/조은지/추가_3.mp4',
+        video: '조은지',
       },
     ],
   },

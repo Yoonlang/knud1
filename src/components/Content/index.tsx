@@ -1,7 +1,8 @@
+import Video from 'components/common/Video';
 import Image from 'next/future/image';
 import { useEffect, useRef } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
-import { MyImage, StyledAdd1, StyledArrange, StyledSlide, Title } from './styled';
+import { MyImage, StyledAdd1, StyledAdd3, StyledArrange, StyledSlide, Title } from './styled';
 
 interface Props {
   content: {
@@ -15,7 +16,7 @@ interface Props {
 }
 
 const Content: React.FC<Props> = (props) => {
-  const { type, title, detail, imgs, img } = props.content;
+  const { type, title, detail, imgs, img, video } = props.content;
   const slide = useRef<HTMLDivElement>(null);
   const dot = useRef<HTMLDivElement>(null);
   const left = useRef<HTMLButtonElement>(null);
@@ -183,6 +184,9 @@ const Content: React.FC<Props> = (props) => {
         })}
       </StyledArrange>
     );
+  }
+  if (type === 'add3') {
+    return <StyledAdd3>{video && <Video src={require(`/public/assets/${video}/추가_3.mp4`)} />}</StyledAdd3>;
   }
 
   return <></>;
