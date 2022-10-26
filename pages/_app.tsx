@@ -3,6 +3,7 @@ import DefaultLayoutPC from 'components/templates/DefaultLayoutPC';
 import { NextSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 import GlobalStyle from 'others/GlobalStyle';
 import useMobileDetect from 'utils/useMobileDetect';
 
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ],
         }}
       />
+      <GoogleAnalytics trackPageViews />
       <Head>
         <link rel="shortcut icon" href="./assets/126_logo.svg" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
