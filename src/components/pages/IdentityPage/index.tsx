@@ -5,9 +5,9 @@ import React from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
 import { IdentityPageMobileWrapper, IdentityPagePCWrapper } from './styled';
 import posterImg from '/public/assets/identity/poster.gif';
-import fontImg from '/public/assets/identity/font.png';
-import dorokImg from '/public/assets/identity/dorok.png';
-import goodsImg from '/public/assets/identity/goods.png';
+import fontImg from '/public/assets/identity/font.webp';
+import dorokImg from '/public/assets/identity/dorok.webp';
+import goodsImg from '/public/assets/identity/goods.webp';
 import Video from 'components/common/Video';
 import useMobileDetect from 'utils/useMobileDetect';
 
@@ -34,18 +34,32 @@ const IdentityPage: React.FC = () => {
           <div className="item-list">
             <ItemFrame title="Poster">
               <Row>
-                <Image loader={nextImageLoader} src={posterImg} alt={'Poster'} priority className="poster" />
-                <Image loader={nextImageLoader} src={posterImg} alt={'Poster'} priority className="poster" />
+                <Image
+                  loader={nextImageLoader}
+                  src={posterImg}
+                  alt={'Poster'}
+                  priority
+                  className="poster"
+                  sizes="100vw"
+                />
+                <Image
+                  loader={nextImageLoader}
+                  src={posterImg}
+                  alt={'Poster'}
+                  priority
+                  className="poster"
+                  sizes="100vw"
+                />
               </Row>
             </ItemFrame>
             <ItemFrame title="Font">
-              <Image loader={nextImageLoader} src={fontImg} alt={'Font'} placeholder="empty" priority />
+              <Image loader={nextImageLoader} src={fontImg} alt={'Font'} placeholder="empty" priority sizes="100vw" />
             </ItemFrame>
             <ItemFrame title="Dorok">
-              <Image loader={nextImageLoader} src={dorokImg} alt={'Dorok'} placeholder="empty" priority />
+              <Image loader={nextImageLoader} src={dorokImg} alt={'Dorok'} placeholder="empty" priority sizes="100vw" />
             </ItemFrame>
             <ItemFrame title="Goods">
-              <Image loader={nextImageLoader} src={goodsImg} alt={'Goods'} placeholder="empty" priority />
+              <Image loader={nextImageLoader} src={goodsImg} alt={'Goods'} placeholder="empty" priority sizes="100vw" />
             </ItemFrame>
           </div>
         </IdentityPageMobileWrapper>
@@ -69,19 +83,40 @@ const IdentityPage: React.FC = () => {
 
           <ItemFrame title="Poster">
             <Row>
-              <Image loader={nextImageLoader} src={posterImg} alt={'Poster'} priority className="poster" />
-              <Image loader={nextImageLoader} src={posterImg} alt={'Poster'} priority className="poster" />
-              <Image loader={nextImageLoader} src={posterImg} alt={'Poster'} priority className="poster" />
+              <Image
+                loader={nextImageLoader}
+                src={posterImg}
+                alt={'Poster'}
+                priority
+                className="poster"
+                sizes="100vw"
+              />
+              <Image
+                loader={nextImageLoader}
+                src={posterImg}
+                alt={'Poster'}
+                priority
+                className="poster"
+                sizes="100vw"
+              />
+              <Image
+                loader={nextImageLoader}
+                src={posterImg}
+                alt={'Poster'}
+                priority
+                className="poster"
+                sizes="100vw"
+              />
             </Row>
           </ItemFrame>
           <ItemFrame title="Font">
-            <Image loader={nextImageLoader} src={fontImg} alt={'Font'} priority />
+            <Image loader={nextImageLoader} src={fontImg} alt={'Font'} priority sizes="100vw" />
           </ItemFrame>
           <ItemFrame title="Dorok">
-            <Image loader={nextImageLoader} src={dorokImg} alt={'Dorok'} priority />
+            <Image loader={nextImageLoader} src={dorokImg} alt={'Dorok'} priority sizes="100vw" />
           </ItemFrame>
           <ItemFrame title="Goods">
-            <Image loader={nextImageLoader} src={goodsImg} alt={'Goods'} priority />
+            <Image loader={nextImageLoader} src={goodsImg} alt={'Goods'} priority sizes="100vw" />
           </ItemFrame>
         </IdentityPagePCWrapper>
       )}

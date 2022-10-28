@@ -23,7 +23,15 @@ const DefaultLayoutPC: React.FC<Props> = (props) => {
       <Row className="nav">
         <Link href={AppPaths.home.href} passHref>
           <a>
-            <Image src="/assets/126_logo.svg" alt="126-logo" width={81.5} height={41} placeholder="empty" priority />
+            <Image
+              src="/assets/126_logo.svg"
+              alt="126-logo"
+              width={81.5}
+              height={41}
+              placeholder="empty"
+              priority
+              sizes="100vw"
+            />
           </a>
         </Link>
 

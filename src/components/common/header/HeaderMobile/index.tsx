@@ -19,7 +19,15 @@ const HeaderMobile = React.forwardRef<HTMLAnchorElement, Props>((props, ref) => 
       <Row className="header-wrap">
         <Link href={AppPaths.home.href} passHref ref={ref}>
           <a>
-            <Image src="/assets/126_logo.svg" alt="126-logo" width={51} height={26} placeholder="empty" priority />
+            <Image
+              src="/assets/126_logo.svg"
+              alt="126-logo"
+              width={51}
+              height={26}
+              placeholder="empty"
+              priority
+              sizes="100vw"
+            />
           </a>
         </Link>
 
