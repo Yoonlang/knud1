@@ -5,7 +5,7 @@ import { TEAMS_DATA } from './constants';
 import { TeamsPageMobileWrapper, TeamsPagePCWrapper } from './styled';
 import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
-import allTeams from '../../../../public/assets/teams/all_teams.png';
+import allTeams from '../../../../public/assets/teams/all_teams.webp';
 import useMobileDetect from 'utils/useMobileDetect';
 
 const TeamsPage: React.FC = () => {
@@ -24,6 +24,7 @@ const TeamsPage: React.FC = () => {
             height={1500}
             placeholder="empty"
             priority
+            sizes="100vw"
           />
           <p className="description">
             안녕하세요 가을의 끝자락, 겨울에 초입에 서서 인사드립니다. 수많은 계절들 속에서 유독 마음이 설레는 계절이
@@ -43,6 +44,7 @@ const TeamsPage: React.FC = () => {
                 height={404}
                 placeholder="empty"
                 priority
+                sizes="100vw"
               />
 
               <Row>
@@ -69,6 +71,7 @@ const TeamsPage: React.FC = () => {
             height={1500}
             placeholder="empty"
             priority
+            sizes="100vw"
           />
           <Row className="description-wrapper">
             <p className="description">
@@ -94,6 +97,7 @@ const TeamsPage: React.FC = () => {
                   height={404}
                   placeholder="empty"
                   priority
+                  sizes="100vw"
                 />
 
                 <Column>

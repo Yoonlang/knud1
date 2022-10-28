@@ -27,12 +27,13 @@ const ArchivePage: React.FC = () => {
             <div key={archive.title} className={'content'}>
               <Image
                 loader={nextImageLoader}
-                src={`/assets/archive/mobile/mobile_archive_${index + 1}.png`}
+                src={`/assets/archive/mobile/mobile_archive_${index + 1}.webp`}
                 alt={archive.title}
                 width={478}
                 height={611}
                 placeholder="empty"
                 priority
+                sizes="100vw"
                 onClick={() => linkToPortfolio(archive.producerInitial)}
               />
               <p className="title">{archive.title}</p>
@@ -48,12 +49,13 @@ const ArchivePage: React.FC = () => {
             <div key={index} className={'content'} onClick={() => linkToPortfolio(archive.producerInitial)}>
               <Image
                 loader={nextImageLoader}
-                src={`/assets/archive/pc/pc_archive_${index + 1}.png`}
+                src={`/assets/archive/pc/pc_archive_${index + 1}.webp`}
                 alt={archive.title}
                 width={1151}
                 height={818}
                 placeholder="empty"
                 priority
+                sizes="100vw"
               />
               <Row className="text-wrap">
                 <p className="producer">{archive.producer}</p>

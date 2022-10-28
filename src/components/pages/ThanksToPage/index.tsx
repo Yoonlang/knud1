@@ -6,7 +6,7 @@ import { PARTNERS_DATA, PROFESSOR_DATA } from './constants';
 import { ThanksToPageMobileWrapper, ThanksToPagePCWrapper } from './styled';
 import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
-import allProf from '../../../../public/assets/partners/all-prof_img.png';
+import allProf from '../../../../public/assets/partners/all-prof_img.webp';
 import useMobileDetect from 'utils/useMobileDetect';
 
 const ThanksToPage: React.FC = () => {
@@ -26,6 +26,7 @@ const ThanksToPage: React.FC = () => {
               height={670}
               placeholder="empty"
               priority
+              sizes="100vw"
             />
             <p className="description">
               지난 4년간, 우리 디자인학과 학생들은 각자의 고정된 시각에서 벗어나 세상을 새롭고 다르게 보는 법을
@@ -47,6 +48,7 @@ const ThanksToPage: React.FC = () => {
                     alt={professor.name}
                     placeholder="empty"
                     priority
+                    sizes="100vw"
                   />
                   <Column>
                     <p className="name">
@@ -70,6 +72,7 @@ const ThanksToPage: React.FC = () => {
                     height={800}
                     placeholder="empty"
                     priority
+                    sizes="100vw"
                   />
 
                   <p className="name">{partner.name}</p>
@@ -105,6 +108,7 @@ const ThanksToPage: React.FC = () => {
               height={670}
               placeholder="empty"
               priority
+              sizes="100vw"
             />
             <Row className="description-wrapper">
               <p className="description">
@@ -131,6 +135,7 @@ const ThanksToPage: React.FC = () => {
                     height={400}
                     placeholder="empty"
                     priority
+                    sizes="100vw"
                   />
 
                   <Column>
@@ -155,6 +160,7 @@ const ThanksToPage: React.FC = () => {
                     height={800}
                     placeholder="empty"
                     priority
+                    sizes="100vw"
                   />
 
                   <p className="name">{partner.name}</p>
