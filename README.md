@@ -1,5 +1,5 @@
 ## 2022 경북대학교 디자인학과 졸업전시
-#### [홈페이지 바로가기](https://cse-seat.com)
+#### [홈페이지 바로가기](https://www.knud1.com/)
 
 ## Preview
 #### Main page
