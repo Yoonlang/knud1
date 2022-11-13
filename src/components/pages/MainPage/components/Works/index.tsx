@@ -1,5 +1,6 @@
-import { RefObject, useEffect, useRef, useState } from 'react';
+import { RefObject, useRef, useState } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
+import { useMount } from 'utils/useMount';
 import { ARCHIVE_DATA } from '../../../ArchivePage/constants';
 import { Work, WorksDiv } from './styled';
 
@@ -12,7 +13,7 @@ const Works: React.FC<Props> = (props) => {
   const works = useRef<HTMLDivElement>(null);
   const [startImageLoading, setStartImageLoading] = useState(false);
 
-  useEffect(() => {
+  useMount(() => {
     if (!unit.current && !works.current) return;
 
     const callback = () => {
@@ -30,11 +31,11 @@ const Works: React.FC<Props> = (props) => {
       works.current?.removeEventListener('scroll', callback);
       window.removeEventListener('resize', callback);
     };
-  }, []);
+  });
 
-  useEffect(() => {
+  useMount(() => {
     setStartImageLoading(true);
-  }, []);
+  });
 
   return (
     <WorksDiv ref={works}>

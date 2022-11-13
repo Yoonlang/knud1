@@ -4,18 +4,19 @@ import MainIcon from 'components/pages/MainPage/components/MainIcon';
 import Nav from 'components/pages/MainPage/components/Nav';
 import Works from 'components/pages/MainPage/components/Works';
 import Image from 'next/future/image';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
 import { ARCHIVE_DATA } from '../ArchivePage/constants';
 import { FixedTypo, Mobile, Page, PC, Rotate } from './styled';
+import { useMount } from 'utils/useMount';
 
 const MainPage: React.FC = () => {
   const [startImageLoading, setStartImageLoading] = useState(false);
   const unit = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useMount(() => {
     setStartImageLoading(true);
-  }, []);
+  });
 
   return (
     <Page>
