@@ -1,6 +1,45 @@
-import { Obj } from 'utils/Obj';
+import { Producer, ProducerName, ProducerTitle } from './producer';
 
-export const portfolioData: Obj<any> = {
+interface Title {
+  thumbnail: string;
+  title: ProducerTitle[Producer];
+  slogan: string;
+  detail: string;
+  hashtag: string[];
+}
+
+interface Profile {
+  img: string;
+  name: ProducerName[Producer];
+  mail: string;
+  insta: string;
+  call: string;
+}
+
+interface Info {
+  uri: Producer;
+  icon: string;
+  profile: Profile;
+}
+
+type ContentType = 'slide' | 'portfolio' | 'add1' | 'add2' | 'add3';
+
+interface Content {
+  type: ContentType;
+  title?: string;
+  img?: string;
+  imgs?: string[];
+  detail?: string;
+  video?: ProducerName[Producer];
+}
+
+interface PorfolioInterface {
+  titles: Title;
+  info: Info;
+  contents: Content[];
+}
+
+export const portfolioData: Record<Producer, PorfolioInterface> = {
   gny: {
     titles: {
       thumbnail: './assets/곽나영/thumbnail.png',

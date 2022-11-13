@@ -1,7 +1,7 @@
+import { PRODUCER, PRODUCER_NAME, PRODUCER_TITLE } from 'constants/producer';
 import { RefObject, useRef, useState } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
 import { useMount } from 'utils/useMount';
-import { ARCHIVE_DATA } from '../../../ArchivePage/constants';
 import { Work, WorksDiv } from './styled';
 
 interface Props {
@@ -40,13 +40,13 @@ const Works: React.FC<Props> = (props) => {
   return (
     <WorksDiv ref={works}>
       {startImageLoading &&
-        ARCHIVE_DATA.map((data, index) => {
+        Object.values(PRODUCER).map((producer, index) => {
           return (
             <div key={index}>
               <Work
                 loader={nextImageLoader}
-                alt={data.title}
-                src={`./assets/${data.producer}/thumbnail.png`}
+                alt={PRODUCER_TITLE[producer]}
+                src={`./assets/${PRODUCER_NAME[producer]}/thumbnail.png`}
                 width={1800}
                 height={1100}
                 priority

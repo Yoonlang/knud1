@@ -6,9 +6,9 @@ import Works from 'components/pages/MainPage/components/Works';
 import Image from 'next/future/image';
 import { useRef, useState } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
-import { ARCHIVE_DATA } from '../ArchivePage/constants';
 import { FixedTypo, Mobile, Page, PC, Rotate } from './styled';
 import { useMount } from 'utils/useMount';
+import { PRODUCER_NAME } from 'constants/producer';
 
 const MainPage: React.FC = () => {
   const [startImageLoading, setStartImageLoading] = useState(false);
@@ -23,11 +23,11 @@ const MainPage: React.FC = () => {
       <div className={'unit'} ref={unit}>
         {startImageLoading && (
           <>
-            {ARCHIVE_DATA.map((data, index) => (
+            {Object.values(PRODUCER_NAME).map((producerName, index) => (
               <div key={index}>
                 <Image
                   loader={nextImageLoader}
-                  src={`./assets/${data.producer}/personal_unit.png`}
+                  src={`./assets/${producerName}/personal_unit.png`}
                   alt="personal_unit"
                   width={880}
                   height={270}
