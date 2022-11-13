@@ -1,6 +1,6 @@
 import { Producer, ProducerName, ProducerTitle } from './producer';
 
-interface Title {
+interface TitleInterface {
   thumbnail: string;
   title: ProducerTitle[Producer];
   slogan: string;
@@ -8,7 +8,7 @@ interface Title {
   hashtag: string[];
 }
 
-interface Profile {
+export interface ProfileInterface {
   img: string;
   name: ProducerName[Producer];
   mail: string;
@@ -16,15 +16,15 @@ interface Profile {
   call: string;
 }
 
-interface Info {
+interface InfoInterface {
   uri: Producer;
   icon: string;
-  profile: Profile;
+  profile: ProfileInterface;
 }
 
 type ContentType = 'slide' | 'portfolio' | 'add1' | 'add2' | 'add3';
 
-interface Content {
+export interface ContentInterface {
   type: ContentType;
   title?: string;
   img?: string;
@@ -34,9 +34,9 @@ interface Content {
 }
 
 interface PorfolioInterface {
-  titles: Title;
-  info: Info;
-  contents: Content[];
+  titles: TitleInterface;
+  info: InfoInterface;
+  contents: ContentInterface[];
 }
 
 export const portfolioData: Record<Producer, PorfolioInterface> = {

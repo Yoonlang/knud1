@@ -1,18 +1,12 @@
 import Video from 'components/common/Video';
+import { ContentInterface } from 'constants/portfolioData';
 import Image from 'next/future/image';
 import { useEffect, useRef } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
 import { MyImage, StyledAdd1, StyledAdd3, StyledArrange, StyledSlide, Title } from './styled';
 
 interface Props {
-  content: {
-    type: string;
-    title?: string | null;
-    detail?: string | null;
-    imgs?: string[];
-    img?: string;
-    video?: string;
-  };
+  content: ContentInterface;
 }
 
 const Content: React.FC<Props> = (props) => {
@@ -100,8 +94,7 @@ const Content: React.FC<Props> = (props) => {
                 </button>
               </div>
               <div className={'dots'}>
-                {imgs?.map((img, index) => {
-                  img;
+                {imgs?.map((_, index) => {
                   return (
                     <div key={index}>
                       <Image
