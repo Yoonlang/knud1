@@ -1,8 +1,8 @@
-import { AnimatedColBar, AnimatedBar } from 'components/AnimatedBar';
+import { AnimatedColBar, AnimatedBar } from 'components/pages/MainPage/components/AnimatedBar';
 import SideBar from 'components/common/SideBar';
-import MainIcon from 'components/MainIcon';
-import Nav from 'components/Nav';
-import Works from 'components/Works';
+import MainIcon from 'components/pages/MainPage/components/MainIcon';
+import Nav from 'components/pages/MainPage/components/Nav';
+import Works from 'components/pages/MainPage/components/Works';
 import Image from 'next/future/image';
 import { useEffect, useRef, useState } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';

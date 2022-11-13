@@ -1,24 +1,6 @@
-import { AppPathsArray } from 'constants/AppPaths';
-import Link from 'next/link';
-import { Fragment } from 'react';
 import styled from 'styled-components';
 
-const Nav: React.FC = () => {
-  return (
-    <NavDiv>
-      {AppPathsArray.map(({ href, linkText }, index) => {
-        if (index === 0) return <Fragment key={index}></Fragment>;
-        return (
-          <Link href={href} passHref key={index}>
-            <MenuLink>{linkText}</MenuLink>
-          </Link>
-        );
-      })}
-    </NavDiv>
-  );
-};
-
-const NavDiv = styled.div`
+export const NavDiv = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
@@ -33,7 +15,7 @@ const NavDiv = styled.div`
   }
 `;
 
-const MenuLink = styled.a`
+export const MenuLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,5 +32,3 @@ const MenuLink = styled.a`
     transform: scale(1.2);
   }
 `;
-
-export default Nav;

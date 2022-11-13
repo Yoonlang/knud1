@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
-import GlobalStyle from 'others/GlobalStyle';
+import GlobalStyle from 'theme/GlobalStyle';
 import useMobileDetect from 'utils/useMobileDetect';
 
 function MyApp({ Component, pageProps }: AppProps) {

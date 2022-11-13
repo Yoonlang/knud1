@@ -1,12 +1,12 @@
 import FooterPC from 'components/common/footer/FooterPC';
-import Profile from 'components/Profile';
+import Profile from 'components/templates/PortfolioLayout/components/Profile';
 import { ContentLayout, StyledPortfolioLayout } from './styled';
 import { nextImageLoader } from 'utils/imageLoader';
 import { StyledImage } from 'components/common/styled/elements';
 import Image from 'next/future/image';
 import Link from 'next/link';
 import FooterMobile from 'components/common/footer/FooterMobile';
-import Content from 'components/Content';
+import Content from 'components/templates/PortfolioLayout/components/Content';
 import { portfolioData } from 'constants/portfolioData';
 
 interface Props {
