@@ -1,16 +1,11 @@
 import { StyledProfile } from './styled';
 import { nextImageLoader } from 'utils/imageLoader';
 import { StyledImage } from 'components/common/styled/elements';
+import { ProfileInterface } from 'constants/portfolioData';
 
 interface Props {
   main?: boolean;
-  data: {
-    img: string;
-    name: string;
-    mail: string;
-    insta: string;
-    call: string;
-  };
+  data: ProfileInterface;
 }
 
 const Profile: React.FC<Props> = (props) => {

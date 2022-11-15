@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { drawOne, drawTwentySix } from '../others/drawFunctions';
+import { drawOne, drawTwentySix } from '../../../../../utils/drawFunctions';
 
 const MainIcon: React.FC = () => {
   const canvasOne = useRef<HTMLCanvasElement>(null);

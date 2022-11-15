@@ -1,8 +1,8 @@
-import Image from 'next/future/image';
-import { RefObject, useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
+import { PRODUCER, PRODUCER_NAME, PRODUCER_TITLE } from 'constants/producer';
+import { RefObject, useRef, useState } from 'react';
 import { nextImageLoader } from 'utils/imageLoader';
-import { ARCHIVE_DATA } from './pages/ArchivePage/constants';
+import { useMount } from 'utils/useMount';
+import { Work, WorksDiv } from './styled';
 
 interface Props {
   unit: RefObject<HTMLDivElement>;
@@ -13,7 +13,7 @@ const Works: React.FC<Props> = (props) => {
   const works = useRef<HTMLDivElement>(null);
   const [startImageLoading, setStartImageLoading] = useState(false);
 
-  useEffect(() => {
+  useMount(() => {
     if (!unit.current && !works.current) return;
 
     const callback = () => {
@@ -31,22 +31,22 @@ const Works: React.FC<Props> = (props) => {
       works.current?.removeEventListener('scroll', callback);
       window.removeEventListener('resize', callback);
     };
-  }, []);
+  });
 
-  useEffect(() => {
+  useMount(() => {
     setStartImageLoading(true);
-  }, []);
+  });
 
   return (
     <WorksDiv ref={works}>
       {startImageLoading &&
-        ARCHIVE_DATA.map((data, index) => {
+        Object.values(PRODUCER).map((producer, index) => {
           return (
             <div key={index}>
               <Work
                 loader={nextImageLoader}
-                alt={data.title}
-                src={`./assets/${data.producer}/thumbnail.png`}
+                alt={PRODUCER_TITLE[producer]}
+                src={`./assets/${PRODUCER_NAME[producer]}/thumbnail.png`}
                 width={1800}
                 height={1100}
                 priority
@@ -66,48 +66,5 @@ const Works: React.FC<Props> = (props) => {
     </WorksDiv>
   );
 };
-
-const WorksDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  & > div {
-    width: 100%;
-    height: 100%;
-    & img {
-      opacity: 0.5;
-    }
-  }
-  @media (min-width: 1024px) {
-    gap: 100px;
-    min-width: 1950px;
-  }
-  @media (max-width: 1023px) {
-    gap: 400px;
-    & > div {
-      margin-top: -50px;
-      display: flex;
-      min-height: 100vh;
-      justify-content: center;
-      transform: rotate(-15deg);
-    }
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    z-index: 0;
-  }
-`;
-
-const Work = styled(Image)`
-  @media (min-width: 1024px) {
-    width: 1800px;
-  }
-  @media (max-width: 1023px) {
-    height: 115%;
-  }
-`;
 
 export default Works;

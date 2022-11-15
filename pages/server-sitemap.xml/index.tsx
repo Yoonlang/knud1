@@ -1,7 +1,7 @@
 // pages/server-sitemap.xml/index.tsx
 import { getServerSideSitemap } from 'next-sitemap';
 import { GetServerSideProps } from 'next';
-import { ARCHIVE_DATA } from 'components/pages/ArchivePage/constants';
+import { PRODUCER } from 'constants/producer';
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const fields = [
@@ -25,9 +25,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       loc: 'https://knud1.com/thanksto',
       lastmod: new Date().toISOString(),
     },
-    ...ARCHIVE_DATA.map((data) => {
+    ...Object.values(PRODUCER).map((producer) => {
       return {
-        loc: `https://knud1.com/portfolio/${data.producerInitial}`,
+        loc: `https://knud1.com/portfolio/${producer}`,
         lastmod: new Date().toISOString(),
       };
     }),

@@ -3,9 +3,9 @@ import React from 'react';
 import { ArchivePageMobileWrapper, ArchivePagePCWrapper } from './styled';
 import Image from 'next/future/image';
 import { nextImageLoader } from 'utils/imageLoader';
-import { ARCHIVE_DATA } from './constants';
 import { useRouter } from 'next/router';
 import useMobileDetect from 'utils/useMobileDetect';
+import { Producer, PRODUCER, PRODUCER_NAME, PRODUCER_SUBTITLE, PRODUCER_TITLE } from 'constants/producer';
 
 const ArchivePage: React.FC = () => {
   const isMobile = useMobileDetect();
@@ -13,8 +13,8 @@ const ArchivePage: React.FC = () => {
   const router = useRouter();
 
   const linkToPortfolio = React.useCallback(
-    (producerInitial: string): void => {
-      router.push(`/portfolio/${producerInitial}`);
+    (producer: Producer): void => {
+      router.push(`/portfolio/${producer}`);
     },
     [router]
   );
@@ -23,20 +23,20 @@ const ArchivePage: React.FC = () => {
     <>
       {isMobile && (
         <ArchivePageMobileWrapper>
-          {ARCHIVE_DATA.map((archive, index) => (
-            <div key={archive.title} className={'content'}>
+          {Object.values(PRODUCER).map((producer, index) => (
+            <div key={producer} className={'content'}>
               <Image
                 loader={nextImageLoader}
                 src={`/assets/archive/mobile/mobile_archive_${index + 1}.png`}
-                alt={archive.title}
+                alt={PRODUCER_TITLE[producer]}
                 width={478}
                 height={611}
                 placeholder="empty"
                 priority
-                onClick={() => linkToPortfolio(archive.producerInitial)}
+                onClick={() => linkToPortfolio(producer)}
               />
-              <p className="title">{archive.title}</p>
-              <p className="producer">{archive.producer}</p>
+              <p className="title">{PRODUCER_TITLE[producer]}</p>
+              <p className="producer">{PRODUCER_NAME[producer]}</p>
             </div>
           ))}
         </ArchivePageMobileWrapper>
@@ -44,22 +44,24 @@ const ArchivePage: React.FC = () => {
 
       {!isMobile && (
         <ArchivePagePCWrapper>
-          {ARCHIVE_DATA.map((archive, index) => (
-            <div key={index} className={'content'} onClick={() => linkToPortfolio(archive.producerInitial)}>
+          {Object.values(PRODUCER).map((producer, index) => (
+            <div key={index} className={'content'} onClick={() => linkToPortfolio(producer)}>
               <Image
                 loader={nextImageLoader}
                 src={`/assets/archive/pc/pc_archive_${index + 1}.png`}
-                alt={archive.title}
+                alt={PRODUCER_TITLE[producer]}
                 width={1151}
                 height={818}
                 placeholder="empty"
                 priority
               />
               <Row className="text-wrap">
-                <p className="producer">{archive.producer}</p>
+                <p className="producer">{PRODUCER_NAME[producer]}</p>
                 <Column>
-                  <p className="title">{archive.title}</p>
-                  {archive.subTitle && <p className="subtitle">{archive.subTitle}</p>}
+                  <p className="title">{PRODUCER_TITLE[producer]}</p>
+                  {producer === (PRODUCER['gny'] || PRODUCER['ojh'] || PRODUCER['lyr'] || PRODUCER['lwj']) && (
+                    <p className="subtitle">{PRODUCER_SUBTITLE[producer]}</p>
+                  )}
                 </Column>
               </Row>
             </div>
